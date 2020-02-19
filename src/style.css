@@ -1,0 +1,28 @@
+.row2 img {
+    width: 36px;
+    height: 36px;
+}
+
+h5,
+ul,
+p,
+label {
+    color: antiquewhite;
+}
+
+.footer {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    width: 100%;
+    background: #202020;
+}
+
+.copyright {
+    color: antiquewhite;
+}
+
+.footer-copyright text-center py-3 {
+    background: #101010;
+}
