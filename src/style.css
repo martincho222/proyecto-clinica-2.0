@@ -1,0 +1,46 @@
+#datos {
+  background-color: gray;
+  color: #ffd1a6;
+}
+
+.itaes {
+  text-align: center;
+}
+
+.itaes > img {
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+}
+
+.datos {
+  padding: 10px;
+}
+
+.direccion i {
+  color: blue;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.telefono i {
+  color: aqua;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.email i {
+  color: red;
+  font-size: 20px;
+  padding: 5px;
+}
+
+#mapa {
+  text-align: center;
+}
+
+iframe {
+  height: 300px;
+  width: 95%;
+  margin: 20px;
+}
