@@ -1,19 +1,36 @@
 #datos {
-  background-color: gray;
-  color: #ffd1a6;
+  background-color: #ffd1a6;
+  color: black;
+}
+
+
+.logoD > img {
+  margin: 10px;
+}
+
+.iconoD {
+  height: 80px;
+  width: 80px;
+}
+.nombreImg {
+  height: 60px;
+  width: 100px;
 }
 
 .itaes {
   text-align: center;
+  border: solid 1px black;
+  margin: 10px;
 }
 
-.itaes > img {
+.itaes > a > img {
   height: 100px;
   width: 100px;
   margin: 10px;
 }
 
 .datos {
+  text-align: center;
   padding: 10px;
 }
 
@@ -40,7 +57,7 @@
 }
 
 iframe {
-  height: 300px;
+  height: 250px;
   width: 95%;
   margin: 20px;
 }
