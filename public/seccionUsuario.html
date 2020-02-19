@@ -3,23 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../src/seccionUsuario.css"> -->
     <title>Document</title>
 </head>
 <body>
     <!-- INCIO NAVBAR -->
 
     <div>
-        <p class="container">NAVBAR</p>
+        <nav class="navbar navbarUsuario navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Navbar</a>
+        </nav>
+        
     </div>
 
     <!-- FIN NAVBAR -->
 
     <!-- INICIO DATOS PACIENTE -->
-    <div class="container">
-        DATOS PACIENTE
-    </div>
+    
+        <div class="container containerDatos">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <h3 class="titulosUsuarios">Info. Paciente</h3>
+                    <ul class="list-group ulUsuarios">
+                        <li class="list-group-item">Nombre: Martin Miguel</li>
+                        <li class="list-group-item">Apellido: Jerez Leal</li>
+                        <li class="list-group-item">Documento: 32115613</li>
+                        <li class="list-group-item">Fecha de Nacimiento: 11/04/1986 </li>
+                        <li class="list-group-item">Edad: 33 </li>
+                    </ul>
+    
+                </div>
+    
+                <div class="col-md-4 col-sm-12">
+                    <h3 class="titulosUsuarios">Datos Obra Social</h3>
+                    <ul class="list-group ulUsuarios">
+                        <li class="list-group-item">Obra Social: Red de Seguros Medicos </li>
+                        <li class="list-group-item">N°. Obra Social: 654987654231</li>
+                        <li class="list-group-item">Ordenes Autorizadas: 10</li>
+                    </ul>
+    
+                </div>
+    
+                <div class="col-md-4 col-sm-12">
+                    <h3 class="titulosUsuarios">Datos Clinicos Paciente</h3>
+                    <div class="accordion acordionUsuario ulUsuarios" id="accordionExample" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <div class="card">
+                          <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                              <button class="btn btnUsuario">
+                                Historia Clinica
+                              </button>
+                            </h2>
+                          </div>
+                      
+                          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus 
+                            </div>
+                          </div>
+                        </div>
+    
+                </div>
+            </div>
+        </div>   
+    
     <!-- FIN DATOS PACIENTE -->
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- INICIO ESPECIALIDAD Y MEDICOS -->
     <div class="container">
         <p>ESPECIALIDAD Y MEDICOS</p>
