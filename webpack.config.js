@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-   entry: {
+  entry: {
     main: "./src/index.js",
     about: "./src/seccionUsuario.js"
   },
@@ -67,4 +67,4 @@ module.exports = {
       filename: "styles.css"
     })
   ]
-
+};
