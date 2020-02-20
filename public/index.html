@@ -1,17 +1,56 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Getting Started</title>
-    <link rel="stylesheet" href="../src/style.css">
-  </head>
-  <body>
-    <!-- INICIO NAVBAR -->
-    <div class="container">
-      <p>NAVBAR</p>
-    </div>
-    <!-- FIN NAVBAR -->
+<head>
+  <title>Getting Started</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
+</head>
 
-    <!-- INICIO CAROUSEL -->
+<body>
+  <!-- INICIO NAVBAR -->
+  <div class="pos-f-t">
+    <nav class="navbar navbar-expand-lg navbar-light"
+      style="height: 100px; background-color: rgba(141, 183, 199, 0.5);">
+      <!-- Kalima Icon & Font -->
+      <img class="" src="/src/navbar/img/Icono2.svg" data-toggle="collapse" data-target="#ExternalContent"
+        style="width: 60px; height: 60px;" alt="">
+      <img class="mr-auto" src="/src/navbar/img/Kalima Font.svg" style="width: 120px; height: 40px;" alt="">
+      <!-- External Content desde Icono -->
+      <div class="collapse" id="ExternalContent">
+        <div class="bg-dark p-4">
+          <h5 class="text-white h4">Collapsed content</h5>
+          <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+      </div>
+      <!-- Items Navbar-->
+      <ul class="navbar-nav" style="font-size: x-large;">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Institucion</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Turno Online
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+      </ul>
+      <!-- HC Font -->
+      <!--     <img class="ml-auto" src="/src/navbar/img/HC Font Bold.svg" style="width: 120px; height: 40px;" alt=""> -->
+    </nav>
+  </div>
+  <!-- FIN NAVBAR -->
+      <!-- INICIO CAROUSEL -->
     <div class="container-fluid">
       <div class="uno row">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -119,18 +158,22 @@
       </div>
     </div>
 
-    <!-- FIN SECCIONES -->
+  <!-- INICIO SECCIONES -->
+  <div class="container">
+    <p>SECCIONES</p>
+  </div>
+  <!-- FIN SECCIONES -->
 
-    <!-- INICIO DATOS Y DIRECCION -->
-    <div class="container">
-      <p>DATOS Y DIRECCION</p>
-    </div>
-    <!-- FIN DATOS Y DIRECCION -->
+  <!-- INICIO DATOS Y DIRECCION -->
+  <div class="container">
+    <p>DATOS Y DIRECCION</p>
+  </div>
+  <!-- FIN DATOS Y DIRECCION -->
 
-    <!-- INICIO FOOTER -->
-    <div class="container">
-      <p>FOOTER</p>
-    </div>
-    <!-- FIN FOOTER -->
+  <!-- INICIO FOOTER -->
+  <div class="container">
+    <p>FOOTER</p>
+  </div>
+  <!-- FIN FOOTER -->
 
 </html>
