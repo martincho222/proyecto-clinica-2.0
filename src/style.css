@@ -1,0 +1,76 @@
+
+.row2 img {
+    width: 36px;
+    height: 36px;
+}
+
+h5,
+ul,
+p,
+label {
+    color: antiquewhite;
+}
+
+.footer {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    width: 100%;
+    background: #202020;
+}
+
+.copyright {
+    color: antiquewhite;
+}
+
+.footer-copyright text-center py-3 {
+    background: #101010;
+}
+
+.tamano{
+  width : 1200px ;
+  height: 600px;
+  margin-left: 65px;
+}
+.carousel-inner{
+  align-items: center;
+}
+
+.uno {  background-color: bisque;
+}
+
+.card-body {
+  background-color: rgb(82, 75, 72);
+  opacity: 0.6;
+  margin-left: 75px;
+  position: absolute;
+  top: 20px;
+  width:600px ;
+  
+}
+.card-body-uno {
+  background-color: rgb(82, 75, 72) ;
+  opacity: 0.6;
+  margin-left: 75px;
+  position: absolute;
+  top: 450px;
+  left:580px ;
+  width:600px ;
+  height:100px ;
+}
+.card-body-dos {
+  background-color: rgb(82, 75, 72);
+  opacity: 0.6;
+  margin-left: 75px;
+  position: absolute;
+  top: 250px;
+  left: 300px;
+  width:600px ;
+
+}
+
+.primer {
+  float: left;
+}
+
