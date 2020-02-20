@@ -54,14 +54,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html"
     }),
-    new HtmlWebpackPlugin({
-      template: "./public/seccionUsuario.html",
-    }),
+   
     new MiniCssExtractPlugin({
       filename: "styles.css"
     }),
-    new MiniCssExtractPlugin({
-      filename: "seccionUsuario.css"
-    })
+    
   ]
 };
