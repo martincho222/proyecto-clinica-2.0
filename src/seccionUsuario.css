@@ -17,6 +17,7 @@
       rgba(138, 210, 207, 1) 100%,
       rgba(0, 212, 255, 1) 100%
     );
+
   }
   
   .navbarUsuario {
@@ -49,11 +50,15 @@
   .acordionUsuario {
     box-shadow: 5px 10px gainsboro;
   }
-  .btnUsuario{
+  /* .btnUsuario{
       border: none !important;
       box-shadow: none !important;
-  }
-  .btnUsuario:hover{
+  } */
+  /* .btnUsuario:hover{
       border: none !important;
       box-shadow: none !important;
+  } */
+
+  .list-group-item{
+    color: black;
   }
