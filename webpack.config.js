@@ -57,6 +57,7 @@ module.exports = {
       chunks: ['main'],
       filename: 'index.html'
     }),
+
     new HtmlWebpackPlugin({
       template: "./public/seccionUsuario.html",
       inject: true,
@@ -66,5 +67,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "styles.css"
     })
+
   ]
-}
+};
