@@ -1,3 +1,17 @@
+body{
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+.tamano{
+  width : 100vw ;
+  height: 100vh ;
+  /* height: 600px; */
+  /* margin-left: 70px; */
+}
+.carousel-item{
+  display: flex;
+}
 /*INICIO SERVICIOS*/
 .tarjeta{
   display: flex;
@@ -46,7 +60,7 @@
 .card img{
     flex: 1 1 auto;
     padding: 3rem 5rem;
-
+}
 
 .row2 img {
     width: 36px;
@@ -61,43 +75,50 @@ label {
 }
 
 .footer {
-    margin: 0px;
-    padding: 0px;
+   
     box-sizing: border-box;
     font-family: sans-serif;
-    width: 100%;
+    width: 100vw;
     background: #202020;
 }
 
 .copyright {
-    color: antiquewhite;
+    color: #202020;
 }
 
 .footer-copyright text-center py-3 {
     background: #101010;
 }
 
-.tamano{
-  width : 1200px ;
+/* .tamano{
+  width : 100vw ;
   height: 600px;
   margin-left: 65px;
-}
+
+} */
 .carousel-inner{
   align-items: center;
 }
 
-.uno {  background-color: bisque;
+.uno {  background-color:white;
 }
 
 .card-body {
   background-color: rgb(82, 75, 72);
-  opacity: 0.6;
+  opacity: 0.8;
   margin-left: 75px;
   position: absolute;
   top: 20px;
   width:600px ;
-  
+  /* transform-origin: 50% 50%; */
+
+    /* transition-property: transform;
+    transition-timing-function: linear;
+    transform: perspective(2000px) translateX(0px) translateY(-26.4348px) translateZ(0px) rotate(0deg) skewX(0deg) skewY(0deg) scaleX(1) scaleY(1);
+    display: none;
+    visibility: hidden; */
 }
+
 .card-body-uno {
   background-color: rgb(82, 75, 72) ;
   opacity: 0.6;
@@ -108,13 +129,14 @@ label {
   width:600px ;
   height:100px ;
 }
+
 .card-body-dos {
   background-color: rgb(82, 75, 72);
   opacity: 0.6;
   margin-left: 75px;
   position: absolute;
   top: 250px;
-  left: 300px;
+  left: 200px;
   width:600px ;
 
 }
@@ -123,4 +145,7 @@ label {
   float: left;
 
 }
+
+
+
 

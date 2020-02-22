@@ -58,11 +58,21 @@ module.exports = {
       filename: 'index.html'
     }),
 
+
+    // new HtmlWebpackPlugin({
+    //   template: "./public/seccionUsuario.html"
+    // }),
+
+    new MiniCssExtractPlugin({
+      filename: "styles.css"
+    }),
+
     new HtmlWebpackPlugin({
       template: "./public/seccionUsuario.html",
       inject: true,
       chunks: ['about'],
       filename: 'seccionUsuario.html'
+
     }),
     new MiniCssExtractPlugin({
       filename: "styles.css"
