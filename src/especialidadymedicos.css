@@ -1,16 +1,16 @@
 .espe{
-    width: 350px;
-    background-color: rgb(250, 234, 241);
+    width: 350px !important;
+    background-color: rgb(250, 234, 241) !important;
     
 
 }
 .med{
-    width: 350px;
-    background-color: rgb(250, 234, 241);
+    width: 350px !important;
+    background-color: rgb(250, 234, 241) !important;
     
 }
 .alto{
-    height: 500px;
+    height: 500px !important;
     background-color: #fdaaa5f8;
 }
 .titulo{
