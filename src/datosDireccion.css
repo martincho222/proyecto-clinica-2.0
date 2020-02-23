@@ -1,5 +1,6 @@
 #datos {
-  background-color: #ffd1a6;
+  /* background-color: #ffd1a6; */
+  background-color:   rgba(76, 247, 156, 0.5);
   color: black;
 }
 
@@ -18,7 +19,6 @@
 
 .itaes {
   text-align: center;
-  border: solid 1px black;
   margin: 10px;
 }
 
@@ -31,6 +31,7 @@
 .datos {
   text-align: center;
   padding: 10px;
+  
 }
 
 .direccion i {
