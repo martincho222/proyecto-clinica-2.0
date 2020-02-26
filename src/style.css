@@ -87,13 +87,18 @@ body {
   background-color: white;
 }
 
-.card-body {
+.tarjUno {
   background-color: rgb(82, 75, 72);
   opacity: 0.8;
+  margin-left: 15px;
   margin-left: 75px;
   position: absolute;
-  top: 20px;
-  width: 600px;
+  top: 30px;
+  width:600px ;
+}
+
+.tarjDos {
+
   /* transform-origin: 50% 50%; */
 
   /* transition-property: transform;
@@ -101,20 +106,19 @@ body {
     transform: perspective(2000px) translateX(0px) translateY(-26.4348px) translateZ(0px) rotate(0deg) skewX(0deg) skewY(0deg) scaleX(1) scaleY(1);
     display: none;
     visibility: hidden; */
-}
-
-.card-body-uno {
-  background-color: rgb(82, 75, 72);
+  background-color: rgb(82, 75, 72) ;
   opacity: 0.6;
   margin-left: 75px;
   position: absolute;
   top: 450px;
-  left: 580px;
-  width: 600px;
-  height: 100px;
+  left:650px ;
+  width:600px ;
+  height:100px ;
 }
 
-.card-body-dos {
+
+.tarjTres {
+
   background-color: rgb(82, 75, 72);
   opacity: 0.6;
   margin-left: 75px;

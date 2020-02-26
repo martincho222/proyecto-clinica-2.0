@@ -5,6 +5,8 @@
   <title>Getting Started</title>
   <link rel="stylesheet" href="../src/style.css">
   <script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  
 </head>
 
 
@@ -26,7 +28,7 @@
       <!-- Items Navbar-->
       <ul class="navbar-nav" style="font-size: x-large;">
         <li class="nav-item active">
-          <a class="nav-link" href="seccionUsuario.html">Inicio</a>
+          <a class="nav-link " href="seccionUsuario.html">Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Institucion</a>
@@ -65,8 +67,10 @@
             <img src="../src/imagenes/emergencia2.jpg" class="tamano" alt="...">
             <div class="carousel-caption-uno d-none d-md-block">
               <div class="primer" style="width: 650px; height: 150px;">
-                <div class="card-body ">
-                  <h5 class="card-title text-white">EMERGENCIA</h5>
+
+                <div class="card-body tarjUno animated zoomInRight">
+                  <h2 class="card-title text-white">EMERGENCIA</h2>
+
                   <p class="card-text text-white">Con un equipamiento de ultima tecnologia e integracion edilicia de
                     rapido acceso al resto de las areas. </p>
 
@@ -78,9 +82,10 @@
             <img src="../src/imagenes/quirófano1.jpg" class="tamano" alt="...">
             <div class="carousel-caption-dos d-none d-md-block">
               <div class="segundo" style="width: 650px; height: 150px;">
-                <div class="card-body-uno">
-                  <h5 class="card-title text-white">QUIROFANO</h5>
-                  <button class="bg bg-dark text-white">leer mas</button>
+
+                <div class="card-body-uno tarjDos animated zoomInUp ">
+                  <h2 class="card-title text-white">QUIROFANO</h2>
+
 
                 </div>
               </div>
@@ -90,8 +95,10 @@
             <img src="../src/imagenes/internacion1.jpg" class="tamano" alt="...">
             <div class="carousel-caption-tres d-none d-md-block">
               <div class="tercero" style="width: 650px; height: 150px;">
-                <div class="card-body-dos">
-                  <h5 class="card-title text-white">INTERNACION</h5>
+
+                <div class="card-body-dos tarjTres animated zoomInDown ">
+                  <h2 class="card-title text-white">INTERNACION</h2>
+
                   <p class="card-text text-white"> La internacion es una modalidad de atencion destinada a pacientes que
                     requieren una mayor supervision y cuidado dentro de un ambito especifico donde cuenten con un
                     control medico y de enfermenria mas cercano. </p>
@@ -104,8 +111,10 @@
             <img src="../src/imagenes/diagnostico img1.jpg" class="tamano" alt="...">
             <div class="carousel-caption-uno d-none d-md-block">
               <div class="primer" style="width: 650px; height: 150px;">
-                <div class="card-body">
-                  <h5 class="card-title text-white">DIAGNOSTICO POR IMAGEN</h5>
+
+                <div class="card-body tarjUno animated zoomInRight">
+                  <h2 class="card-title text-white">DIAGNOSTICO POR IMAGEN</h2>
+
                   <p class="card-text text-white"> Con salas independientes para mamografias, tomografias y 5 salas mas
                     para la realizacion de ecografias, ademas de una sala para interpretacion y revision de las imagenes
                     por parte de profesionales.
@@ -119,10 +128,12 @@
             <img src="../src/imagenes/hemodinamia1.jpg" class="tamano" alt="...">
             <div class="carousel-caption-dos d-none d-md-block">
               <div class="segundo" style="width: 650px; height: 150px;">
-                <div class="card-body-uno">
-                  <h5 class="card-title text-white">HEMODINAMIA</h5>
-                  <p class="card-text text-white">With supporting text below as a natural lead-in to additional content.
-                  </p>
+
+                <div class="card-body-uno tarjDos animated zoomInUp ">
+                  <h2 class="card-title text-white">HEMODINAMIA</h2>
+                  <!-- <p class="card-text text-white">With supporting text below as a natural lead-in to additional content.
+                  </p> -->
+
 
                 </div>
               </div>
@@ -132,10 +143,12 @@
             <img src="../src/imagenes/unidad coronaria1.jpg" class="tamano" alt="...">
             <div class="carousel-caption-tres d-none d-md-block">
               <div class="tercero" style="width: 650px; height: 150px;">
-                <div class="card-body-dos">
-                  <h5 class="card-title text-white">UNIDAD CORONARIA</h5>
-                  <p class="card-text text-white">With supporting text below as a natural lead-in to additional content.
-                  </p>
+
+                <div class="card-body-dos tarjTres animated zoomInDown ">
+                  <h2 class="card-title text-white">UNIDAD CORONARIA</h2>
+                  <!-- <p class="card-text text-white">With supporting text below as a natural lead-in to additional content.
+                  </p> -->
+
 
                 </div>
               </div>
@@ -207,7 +220,7 @@
   <!-- INICIO DATOS Y DIRECCION -->
   <div class="container-fluid">
     <div class="row" id="datos">
-      <div class="col-4">
+      <div class="col-md-4 col-sm-12">
         
         <div class="itaes">
           <a href="https://www.itaes.org.ar/Inicio.aspx"><img src="../src/imagenes/itaes.jpg" alt=""></a>
@@ -216,7 +229,7 @@
           Establecimientos de Salud
         </div>
       </div>
-      <div class="col-4 datos">
+      <div class="col-md-4 col-sm-12 datos">
         <div>
           <p class="direccion"><i class="fas fa-map-marker-alt"></i>Direccion <br> General Paz 576</p>
         </div>
@@ -227,7 +240,7 @@
           <p class="email"><i class="fas fa-envelope"></i>Email <br> kalima@gmail.com</p>
         </div>
       </div>
-      <div class="col-4" id="mapa">
+      <div class="col-md-4 col-sm-12" id="mapa">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1171.0094581844467!2d-65.20716585983828!3d-26.836651409413097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0e8d0271b7%3A0x4915101fc1a3e6f4!2spiso%209%20oficina%202%2C%20Gral.%20Paz%20576%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1582028669200!5m2!1ses-419!2sar"
           frameborder="0" style="border:0;" allowfullscreen=""></iframe>
