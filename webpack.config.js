@@ -75,9 +75,6 @@ module.exports = {
       filename: 'seccionUsuario.html'
 
     }),
-    new MiniCssExtractPlugin({
-      filename: "styles.css"
-    })
 
   ]
 };

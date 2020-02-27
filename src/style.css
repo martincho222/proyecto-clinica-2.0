@@ -2,7 +2,7 @@ body{
   overflow-x: hidden;
   margin: 0px;
   padding: 0px;
-  background-color: rgba(76, 247, 156, 0.5) !important;
+  background: rgba(76, 247, 156, 0.5) !important;
 }
 .tamano{
   width : 100vw ;
@@ -53,6 +53,8 @@ body{
       flex-direction: column-reverse;
   }
 }
+
+
 /*FIN SERVICIOS*/
 
 
@@ -141,3 +143,32 @@ body{
   float: left;
 
 }
+
+
+.segundoNav{
+  text-align: center !important;
+}
+
+
+
+.navIcon{
+  background: rgba(76, 247, 156, 0.5) !important;
+}
+.navIcon1{
+  background:rgba(76, 247, 156, 0.5) !important;
+}
+
+.colorText{
+  color: #516fca  !important;
+  background: #36e186  !important;
+}
+
+.colorText1{
+  color:#516fca  !important;
+  background: #36e186 !important;
+}
+
+.nav-link{
+  color: white !important;
+}
+
