@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: {
+   entry: {
     main: "./src/index.js",
     about: "./src/seccionUsuario.js"
   },
@@ -11,6 +11,7 @@ module.exports = {
     filename: "[name].js",
     path: path.resolve(__dirname, "build")
   },
+  
   module: {
     rules: [
       {
@@ -58,15 +59,23 @@ module.exports = {
       filename: 'index.html'
     }),
 
+
+    // new HtmlWebpackPlugin({
+    //   template: "./public/seccionUsuario.html"
+    // }),
+
+    new MiniCssExtractPlugin({
+      filename: "styles.css"
+    }),
+
     new HtmlWebpackPlugin({
       template: "./public/seccionUsuario.html",
       inject: true,
       chunks: ['about'],
       filename: 'seccionUsuario.html'
+
     }),
-    new MiniCssExtractPlugin({
-      filename: "styles.css"
-    })
 
   ]
 };
+
