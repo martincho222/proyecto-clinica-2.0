@@ -1,0 +1,63 @@
+#datos {
+  /* background-color: #ffd1a6; */
+  background-color:   rgba(76, 247, 156, 0.5);
+  color: black;
+}
+
+.logoD > img {
+  margin: 10px;
+}
+
+.iconoD {
+  height: 80px;
+  width: 80px;
+}
+.nombreImg {
+  height: 60px;
+  width: 100px;
+}
+
+.itaes {
+  text-align: center;
+  margin: 10px;
+}
+
+.itaes > a > img {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+}
+
+.datos {
+  text-align: center;
+  padding: 10px;
+  
+}
+
+.direccion i {
+  color: black;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.telefono i {
+  color: black;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.email i {
+  color: black;
+  font-size: 20px;
+  padding: 5px;
+}
+
+#mapa {
+  text-align: center;
+}
+
+iframe {
+  height: 250px;
+  width: 95%;
+  margin: 20px;
+}
