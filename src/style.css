@@ -1,9 +1,26 @@
+*{
+  scroll-behavior: smooth !important;
+}
 body{
   overflow-x: hidden;
   margin: 0px;
   padding: 0px;
   background: rgba(76, 247, 156, 0.5) !important;
+  box-sizing: border-box;
 }
+
+.dropdown-menu{
+  background: rgb(76, 247, 156) !important;
+}
+.dropdown-menu .dropdown-item{
+color: white;
+
+}
+.dropdown-item:hover{
+  /* background: rgba(79, 260, 160, 0.5) !important; */
+  color:black !important;
+}
+
 .tamano{
   width : 100vw ;
   height: 100vh ;

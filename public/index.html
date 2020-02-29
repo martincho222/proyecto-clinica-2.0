@@ -7,7 +7,7 @@
   <script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  
+
 </head>
 
 
@@ -17,14 +17,15 @@
     <nav class="navbar navbar-light navIcon1">
       <a class="navbar-brand" href="#"><img class="img-fluid img1" src="../src/navbar/img/Icono1.svg" alt="">
         <img class="img-fluid img2" src="../src/navbar/img/Kalima Font.svg" alt=""></a>
-        
+
     </nav>
   </div>
   <div class="container-fluid colorText">
     <div class="row">
       <div class="col-12">
         <nav class="navbar navbar-expand-lg navbar-light colorText1">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
@@ -36,14 +37,20 @@
                 <a class="nav-link" href="#">Institucional</a>
               </li>
               <li class="nav-item ml-5">
-                <a class="nav-link" href="#">Contacto</a>
+                <a class="nav-link" href="#contacto">Contacto</a>
               </li>
               <li class="nav-item ml-5">
                 <a class="nav-link" href="#">Nuestros Valores</a>
               </li>
-              
-              <li class="nav-item ml-5">
-                <a class="nav-link" href="#">Login</a>
+
+              <li class="nav-item dropdown ml-5">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  LogIn
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Usuario</a>
+                  <a class="dropdown-item" href="./loginAdmin.html">Administracion</a>
+                  
               </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -175,40 +182,50 @@
     </div>
   </div>
 
-    <!--INICIO SERVICIOS-->
+  <!--INICIO SERVICIOS-->
 
-    <section class="servicios container fluid">
-      <div class="tarjeta" data-aos="fade-right">
-             <div class="cuerpoTexto">
-                 <h5 class="titulo">ODONTOLOGÍA</h5>
-                 <p class="texto">El servicio de odontología de la clínica Kalima, brinda atención integral del aparato estomatognatico del paciente. Realizando diagnóstico, tratamiento y prevención de las enfermedades del mismo el cual incluye además de los dientes (tejidos blandos y duros) encías,  tejido periodontal, maxilar superior e inferior y articulación temporomandibular. </p>
-             </div>
-          <div class="cuerpoImagen">
-              <img src="src/imagenes/odonto.jpg" class="imagenCard">
-          </div>
+  <section class="servicios container-fluid">
+    <div class="tarjeta" data-aos="fade-right">
+      <div class="cuerpoTexto">
+        <h5 class="titulo">ODONTOLOGÍA</h5>
+        <p class="texto">El servicio de odontología de la clínica Kalima, brinda atención integral del aparato
+          estomatognatico del paciente. Realizando diagnóstico, tratamiento y prevención de las enfermedades del mismo
+          el cual incluye además de los dientes (tejidos blandos y duros) encías, tejido periodontal, maxilar superior e
+          inferior y articulación temporomandibular. </p>
       </div>
-      <div class="tarjeta tarjetaDos" data-aos="fade-left">
-          <div class="cuerpoImagen">
-              <img src="src/imagenes/oftalmolo.jpg" class="imagenCard">
-          </div>
-          <div class="cuerpoTexto">
-              <h5 class="titulo">OFTALMOLOGÍA</h5>
-              <p class="texto"> Disponemos de los más avanzados equipos, que cuentan con la mejor y más avanzada tecnología de punta de la región. Aquí se realizan prácticas de Microcirugía Ocular (cataratas, glaucoma, maculopatías, entre otras), como así también Estudios Oftalmológicos  de Alta Complejidad.</p>
-          </div>
+      <div class="cuerpoImagen">
+        <img src="src/imagenes/odonto.jpg" class="imagenCard">
       </div>
-      <div class="tarjeta" data-aos="fade-right">
-          <div class="cuerpoTexto">
-              <h5 class="titulo">LABORATORIO</h5>
-              <p class="texto">El 60-70% de las decisiones relacionadas al diagnóstico de distintas patologías, monitoreo del  tratamiento y los criterios de internación y externacion de los pacientes, están justificados por pruebas de laboratorio de análisis clínicos. El servicio de laboratorio, involucra las especialidades de microbiología, endocrinología, química clínica, hematología, inmunología y  biología molecular. Esta tarea es llevada a cabo por profesionales altamente capacitados e idóneos en la profesión bioquímica utilizando instrumental técnicamente de avanzada.</p>
-          </div>
-       <div class="cuerpoImagen">
-           <img src="src/imagenes/analisis.jpg" class="imagenCard">
-          </div>
+    </div>
+    <div class="tarjeta tarjetaDos" data-aos="fade-left">
+      <div class="cuerpoImagen">
+        <img src="src/imagenes/oftalmolo.jpg" class="imagenCard">
       </div>
+      <div class="cuerpoTexto">
+        <h5 class="titulo">OFTALMOLOGÍA</h5>
+        <p class="texto"> Disponemos de los más avanzados equipos, que cuentan con la mejor y más avanzada tecnología de
+          punta de la región. Aquí se realizan prácticas de Microcirugía Ocular (cataratas, glaucoma, maculopatías,
+          entre otras), como así también Estudios Oftalmológicos de Alta Complejidad.</p>
+      </div>
+    </div>
+    <div class="tarjeta" data-aos="fade-right">
+      <div class="cuerpoTexto">
+        <h5 class="titulo">LABORATORIO</h5>
+        <p class="texto">El 60-70% de las decisiones relacionadas al diagnóstico de distintas patologías, monitoreo del
+          tratamiento y los criterios de internación y externacion de los pacientes, están justificados por pruebas de
+          laboratorio de análisis clínicos. El servicio de laboratorio, involucra las especialidades de microbiología,
+          endocrinología, química clínica, hematología, inmunología y biología molecular. Esta tarea es llevada a cabo
+          por profesionales altamente capacitados e idóneos en la profesión bioquímica utilizando instrumental
+          técnicamente de avanzada.</p>
+      </div>
+      <div class="cuerpoImagen">
+        <img src="src/imagenes/analisis.jpg" class="imagenCard">
+      </div>
+    </div>
   </section>
 
-    
-    <!-- FIN SECCIONES -->
+
+  <!-- FIN SECCIONES -->
 
   </section>
   <!-- FIN SERVICIOS -->
@@ -217,7 +234,7 @@
 
 
   <!-- INICIO DATOS Y DIRECCION -->
-  <div class="container-fluid">
+  <div class="container-fluid" id="contacto">
     <div class="row" id="datos">
       <div class="col-4">
         <div>
@@ -350,7 +367,9 @@
 
 
   <!-- FIN FOOTER -->
-  <script src="https://account.snatchbot.me/script.js"></script><script>window.sntchChat.Init(93473)</script>  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://account.snatchbot.me/script.js"></script>
+  <script>window.sntchChat.Init(93473)</script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
