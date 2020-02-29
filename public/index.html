@@ -6,51 +6,59 @@
   <link rel="stylesheet" href="../src/style.css">
   <script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   
 </head>
 
 
 <body>
   <!-- INICIO NAVBAR -->
-  <div class="pos-f-t">
-    <nav class="navbar navbar-expand-lg navbar-light" style="height: 100px; background-color: rgba(76, 247, 156, 0.5);">
-      <!-- Kalima Icon & Font -->
-      <img class="" src="/src/navbar/img/Icono2.svg" data-toggle="collapse" data-target="#ExternalContent"
-        style="width: 60px; height: 60px;" alt="">
-      <img class="mr-auto" src="/src/navbar/img/Kalima Font.svg" style="width: 120px; height: 40px;" alt="">
-      <!-- External Content desde Icono -->
-      <div class="collapse" id="ExternalContent">
-        <div class="bg-dark p-4">
-          <h5 class="text-white h4">Collapsed content</h5>
-          <span class="text-muted">Toggleable via the navbar brand.</span>
-        </div>
-      </div>
-      <!-- Items Navbar-->
-      <ul class="navbar-nav" style="font-size: x-large;">
-        <li class="nav-item active">
-          <a class="nav-link " href="seccionUsuario.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Institucion</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Turno Online
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
-        </li>
-      </ul>
-      <!-- HC Font -->
-      <!--     <img class="ml-auto" src="/src/navbar/img/HC Font Bold.svg" style="width: 120px; height: 40px;" alt=""> -->
+
+
+  <div class="container-fluid navIcon">
+    <nav class="navbar navbar-light navIcon1">
+      <a class="navbar-brand" href="#"><img class="img-fluid img1" src="../src/navbar/img/Icono1.svg" alt="">
+        <img class="img-fluid img2" src="../src/navbar/img/Kalima Font.svg" alt=""></a>
+        
+
     </nav>
+  </div>
+  <div class="container-fluid colorText">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg navbar-light colorText1">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mx-auto mt-2 mt-lg-0 ulNav">
+              <li class="nav-item active ml-5">
+                <a class="nav-link" href="seccionUsuario.html">Inicio</a>
+              </li>
+              <li class="nav-item ml-5">
+                <a class="nav-link" href="#">Institucional</a>
+              </li>
+              <li class="nav-item ml-5">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+              <li class="nav-item ml-5">
+                <a class="nav-link" href="#">Nuestros Valores</a>
+              </li>
+              
+              <li class="nav-item ml-5">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search">
+              <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </div>
   </div>
   <!-- FIN NAVBAR -->
   <!-- INICIO CAROUSEL -->
@@ -64,7 +72,7 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../src/imagenes/emergencia2.jpg" class="tamano" alt="...">
+            <img src="../src/imagenes/emergencia2.jpg" class="tamano img-fluid" alt="...">
             <div class="carousel-caption-uno d-none d-md-block">
               <div class="primer" style="width: 650px; height: 150px;">
 
@@ -79,7 +87,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="../src/imagenes/quirófano1.jpg" class="tamano" alt="...">
+            <img src="../src/imagenes/quirófano1.jpg" class="tamano img-fluid" alt="...">
             <div class="carousel-caption-dos d-none d-md-block">
               <div class="segundo" style="width: 650px; height: 150px;">
 
@@ -92,7 +100,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="../src/imagenes/internacion1.jpg" class="tamano" alt="...">
+            <img src="../src/imagenes/internacion1.jpg" class="tamano img-fluid" alt="...">
             <div class="carousel-caption-tres d-none d-md-block">
               <div class="tercero" style="width: 650px; height: 150px;">
 
@@ -108,7 +116,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="../src/imagenes/diagnostico img1.jpg" class="tamano" alt="...">
+            <img src="../src/imagenes/diagnostico img1.jpg" class="tamano img-fluid" alt="...">
             <div class="carousel-caption-uno d-none d-md-block">
               <div class="primer" style="width: 650px; height: 150px;">
 
@@ -125,7 +133,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="../src/imagenes/hemodinamia1.jpg" class="tamano" alt="...">
+            <img src="../src/imagenes/hemodinamia1.jpg" class="tamano img-fluid" alt="...">
             <div class="carousel-caption-dos d-none d-md-block">
               <div class="segundo" style="width: 650px; height: 150px;">
 
@@ -140,7 +148,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="../src/imagenes/unidad coronaria1.jpg" class="tamano" alt="...">
+            <img src="../src/imagenes/unidad coronaria1.jpg" class="tamano img-fluid" alt="...">
             <div class="carousel-caption-tres d-none d-md-block">
               <div class="tercero" style="width: 650px; height: 150px;">
 
@@ -172,10 +180,11 @@
     </div>
   </div>
 
+
     <!--INICIO SERVICIOS-->
 
     <section class="servicios container fluid">
-      <div class="tarjeta">
+      <div class="tarjeta" data-aos="fade-right">
              <div class="cuerpoTexto">
                  <h5 class="titulo">ODONTOLOGÍA</h5>
                  <p class="texto">El servicio de odontología de la clínica Kalima, brinda atención integral del aparato estomatognatico del paciente. Realizando diagnóstico, tratamiento y prevención de las enfermedades del mismo el cual incluye además de los dientes (tejidos blandos y duros) encías,  tejido periodontal, maxilar superior e inferior y articulación temporomandibular. </p>
@@ -184,7 +193,7 @@
               <img src="src/imagenes/odonto.jpg" class="imagenCard">
           </div>
       </div>
-      <div class="tarjeta tarjetaDos">
+      <div class="tarjeta tarjetaDos" data-aos="fade-left">
           <div class="cuerpoImagen">
               <img src="src/imagenes/oftalmolo.jpg" class="imagenCard">
           </div>
@@ -193,7 +202,7 @@
               <p class="texto"> Disponemos de los más avanzados equipos, que cuentan con la mejor y más avanzada tecnología de punta de la región. Aquí se realizan prácticas de Microcirugía Ocular (cataratas, glaucoma, maculopatías, entre otras), como así también Estudios Oftalmológicos  de Alta Complejidad.</p>
           </div>
       </div>
-      <div class="tarjeta">
+      <div class="tarjeta" data-aos="fade-right">
           <div class="cuerpoTexto">
               <h5 class="titulo">LABORATORIO</h5>
               <p class="texto">El 60-70% de las decisiones relacionadas al diagnóstico de distintas patologías, monitoreo del  tratamiento y los criterios de internación y externacion de los pacientes, están justificados por pruebas de laboratorio de análisis clínicos. El servicio de laboratorio, involucra las especialidades de microbiología, endocrinología, química clínica, hematología, inmunología y  biología molecular. Esta tarea es llevada a cabo por profesionales altamente capacitados e idóneos en la profesión bioquímica utilizando instrumental técnicamente de avanzada.</p>
@@ -201,26 +210,16 @@
        <div class="cuerpoImagen">
            <img src="src/imagenes/analisis.jpg" class="imagenCard">
           </div>
-      </div>
   </section>
 
-    
-    <!-- FIN SECCIONES -->
 
-  </section>
-  <!-- FIN SERVICIOS -->
   <!-- FIN SECCIONES -->
-
-
 
   <!-- INICIO DATOS Y DIRECCION -->
   <div class="container-fluid">
     <div class="row" id="datos">
-      <div class="col-4">
-        <div>
-          <div class="logoD"><img class="iconoD" src="../src/imagenes/icono.jpg" alt=""><img class="nombreImg"
-              src="../src/imagenes/nombre.jpg" alt=""></div>
-        </div>
+      <div class="col-md-4 col-sm-12">
+        
         <div class="itaes">
           <a href="https://www.itaes.org.ar/Inicio.aspx"><img src="../src/imagenes/itaes.jpg" alt=""></a>
           <br>
@@ -228,7 +227,7 @@
           Establecimientos de Salud
         </div>
       </div>
-      <div class="col-4 datos">
+      <div class="col-md-4 col-sm-12 datos">
         <div>
           <p class="direccion"><i class="fas fa-map-marker-alt"></i>Direccion <br> General Paz 576</p>
         </div>
@@ -239,7 +238,7 @@
           <p class="email"><i class="fas fa-envelope"></i>Email <br> kalima@gmail.com</p>
         </div>
       </div>
-      <div class="col-4" id="mapa">
+      <div class="col-md-4 col-sm-12" id="mapa">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1171.0094581844467!2d-65.20716585983828!3d-26.836651409413097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0e8d0271b7%3A0x4915101fc1a3e6f4!2spiso%209%20oficina%202%2C%20Gral.%20Paz%20576%2C%20T4000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1582028669200!5m2!1ses-419!2sar"
           frameborder="0" style="border:0;" allowfullscreen=""></iframe>
@@ -256,9 +255,9 @@
 
         <div class="row">
 
-          <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+          <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1 mr-5">
             <a href=" index.html ">
-              <img src="../src/img/Kalima_2_a.jpg ">
+              <img class="img-fluid" src="../src/img/Kalima_2_a.jpg ">
             </a>
           </div>
 
@@ -343,10 +342,21 @@
   </div>
 
 
-  </footer>
+      </div>
+
+      <div class="footer-copyright text-center py-3 ">
+        <p>© 2020 Copyright:</p> <a href="https://kalima.com "> Kalima.com</a>
+      </div>
+
+
+    </footer>
 
 
   <!-- FIN FOOTER -->
+  <script src="https://account.snatchbot.me/script.js"></script><script>window.sntchChat.Init(93473)</script>  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
