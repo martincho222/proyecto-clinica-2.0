@@ -1,0 +1,19 @@
+.pies{
+    height: 250px;
+}
+.naveg{
+    height: 70px;
+}
+.seccion{
+    height: 150px;
+}
+.secciones{
+    
+    flex-direction: row;
+}
+.graf{
+    height: 400px;
+}
+.graf{
+    height: 200px;
+}
