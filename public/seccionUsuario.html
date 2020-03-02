@@ -7,7 +7,9 @@
       src="https://kit.fontawesome.com/2ed0c63b08.js"
       crossorigin="anonymous"
     ></script>
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Document</title>
   </head>
 
@@ -164,7 +166,7 @@
           </div>
         </div>
   
-        <div class="col-6">
+        <div class="col-6" >
           <h3>Lista de Medicos</h3>
           <ul class="list-group">
             <li class="list-group-item">Cras justo odio</li>
@@ -182,74 +184,90 @@
     
     <!-- FIN ESPECIALIDAD Y MEDICOS -->
 
-    <!-- INICIO TURNOS - LISTA DE TURNOS -->
-    <div class="container containerDatos">
-      <div class="row">
-        <div class="col-6 outline-primary">
-          <div class="card">
-            <div class="card-body ">
-              <h1 class="text-center">Turno</h1>
-              <form>
-                <div class="form-group">
-                  <label>Descripcion Turno</label>
-                  <textarea
-                    class="form-control"
-                    id="descripcionTurno"
-                    rows="3"
-                  ></textarea>
-                </div>
-                <div class="form-group">
-                  <label>Especialidad</label>
-                  <select class="form-control" id="especialidades">
-                    <option>Medico Clinico</option>
-                    <option>Oftagmologia</option>
-                    <option>Traumatologia</option>
-                    <option>Dermatologia</option>
-                    <option>Dermatdsfsdfdsologia</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Medicos</label>
-                  <select class="form-control" id="doctores">
-                    <option>Dr. ....</option>
-                    <option>Dra. ....</option>
-                    <option>Dr. ....</option>
-                    <option>Dr. ....</option>
-                    <option>Dra. ....</option>
-                    <option>Dr. ....</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Fecha</label>
-                  <input type="datetime-local" />
-                </div>
-                <div class="text-center">
-                  <button type="submit" class="btn btn-primary">Enviar</button>
-                </div>
-              </form>
-            </div>
-          </div>
+
+<!-- INICIO TURNOS - LISTA DE TURNOS -->
+<div  class="container-fluid containerDatos" data-aos="fade-down">
+  <div class="row" data-aos="fade-left">
+    <div id="efectoCard" class="col-6 outline-primary">
+      <div  class="card " >
+        <div class="card-body cuerpoTurnos" data-aos="fade-up">
+      <h1 class="text-center">Turno</h1>
+      <form id="formulario">
+        <div class="form-group" data-aos="fade-left">
+          <label >Descripcion Turno</label>
+          <textarea class="form-control" id="descripcionTurno" rows="3"></textarea>
         </div>
-        <div class="col-6 outline-primary">
-          <div class="card">
-            <div class="card-body">
-              <h1 class="text-center">Lista de Turnos</h1>
-              <ul>
-                <li>aadasdsad</li>
-                <li>aadasdsad</li>
-                <li>aadasdsad</li>
-                <li>aadasdsad</li>
-                <li>aadasdsad</li>
-                <li>aadasdsad</li>
-              </ul>
-            </div>
-          </div>
+        <div class="form-group" data-aos="fade-left">
+          <label  >Especialidad</label>
+          <select  class="form-control " id="especialidades">
+            <option>ALERGIA E INMUNOLOGÍA</option>
+            <option>ANATOMÍA PATOLÓGICA</option>
+            <option>ANESTESIOLOGÍA</option>
+            <option>ANGIOLOGÍA GENERAL y HEMODINAMIA</option>
+            <option>CARDIOLOGÍA</option>
+            <option>CARDIÓLOGO INFANTIL</option>
+            <option>CIRUGÍA GENERAL</option>
+            <option>CIRUGÍA CARDIOVASCULAR</option>
+            <option>CLÍNICA MÉDICA</option>
+            <option>DERMATOLOGÍA</option>
+            <option>DIAGNOSTICO POR IMÁGENES</option>
+            <option>ENDOCRINOLOGÍA</option>
+            <option>GASTROENTEROLOGÍA</option>
+            <option>GINECOLOGÍA</option>
+            <option>HEMATOLOGÍA</option>
+            <option>INFECTOLOGÍA</option>
+            <option>MEDICINA DEL DEPORTE</option>
+            <option>NEUMONOLOGÍA</option>
+            <option>NEUROLOGÍA</option>
+            <option>OBSTETRICIA</option>
+            <option>OFTALMOLOGÍA</option>
+            <option>ONCOLOGÍA</option>
+            <option>ORTOPEDIA Y TRAUMATOLOGÍA</option>
+            <option>OTORRINOLARINGOLOGÍA</option>
+            <option>PEDIATRÍA</option>
+            <option>PSIQUIATRÍA</option>
+            <option>REUMATOLOGÍA</option>
+            <option>TERAPIA INTENSIVA</option>
+            <option>TOXICOLOGÍA</option>
+            <option>UROLOGÍA</option>
+            <option>NEFROLOGÍA</option>
+            <option>MEDICINA NUCLEAR</option>
+          </select>
+        </div>
+        <div class="form-group " data-aos="fade-left">
+          <label>Medicos</label>
+          <select  class="form-control" id="doctores">
+            <option>Dr. ....</option>
+            <option>Dra. ....</option>
+            <option>Dr. ....</option>
+            <option>Dr. ....</option>
+            <option>Dra. ....</option>
+            <option>Dr. ....</option>
+          </select>
+        </div>
+        <div class="form-group " data-aos="fade-left">
+          <label >Fecha</label>
+          <input class="form-control" type="datetime-local">
+        </div>
+        <div class="text-center " data-aos="fade-left">
+        <button type="submit" class="btn btn-primary" >Enviar</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+    <div class="col-6 outline-primary">
+      <div class="card" data-aos="fade-left">
+        <div class="card-body cuerpoListTurnos">
+          <h1 class="text-center">Lista de Turnos</h1>
+          <ul id="cuerpoTurnos">
+            
+          </ul>
         </div>
       </div>
     </div>
-    <br>
-    <br>
-    <br>
+        </div>
+      </div>
     <!-- FIN TURNOS - LISTA DE TURNOS -->
 
     <!--INICIO FOOTER-->
@@ -259,5 +277,10 @@
       </div>
     </div>
     <!--FIN FOOTER-->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   </body>
 </html>
