@@ -19,35 +19,35 @@
 
 .itaes {
   text-align: center;
-  border: solid 1px black;
   margin: 10px;
 }
 
 .itaes > a > img {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   margin: 10px;
 }
 
 .datos {
   text-align: center;
   padding: 10px;
+  
 }
 
 .direccion i {
-  color: blue;
+  color: black;
   font-size: 20px;
   padding: 5px;
 }
 
 .telefono i {
-  color: aqua;
+  color: black;
   font-size: 20px;
   padding: 5px;
 }
 
 .email i {
-  color: red;
+  color: black;
   font-size: 20px;
   padding: 5px;
 }
