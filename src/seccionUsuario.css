@@ -42,7 +42,14 @@
   }
 
   .footer-copyright{
-    border-top: 1px solid yellowgreen;
+    box-sizing: border-box;
+    background: #202020 !important;
+    color: antiquewhite;
+    width: 100vw !important;
+  }
+  .contenedorFooter{
+    border-top: 3px solid yellowgreen;
+    background: #202020 !important;
   }
   
   .selecEsp{

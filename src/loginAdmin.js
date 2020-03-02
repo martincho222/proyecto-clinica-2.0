@@ -45,11 +45,17 @@ document.getElementById('registroAdmin')
 		Registro.matricula.push(matriculaProf);
 		Registro.profesion.push(profesion);
 
+		let alert = document.getElementById('alerta');
+
 		firebase.auth().createUserWithEmailAndPassword(email, password)
 		.catch(function(error) {
 			// Handle Errors here.
 			var errorCode = error.code;
 			var errorMessage = error.message;
+			// alert.innerHTML = `
+			// 	<span class="alert alert-success">${errorCode}</span>
+			
+			// `;
 			console.log(errorCode);
 			console.log(errorMessage);
 		  });

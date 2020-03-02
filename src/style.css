@@ -91,12 +91,16 @@ color: white;
     color: antiquewhite;
 }
 
+
 .copyright {
-    color: #202020 !important;
+    color: #101010 !important;
 }
 
-.footer-copyright text-center py-3 {
-    background: #101010 !important;
+.footer-copyright{
+  
+  background: #202020 !important;
+    color: antiquewhite;
+    
 }
 
 /* .tamano{
