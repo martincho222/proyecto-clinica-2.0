@@ -22,7 +22,7 @@ color: white;
 
 .tamano{
   width : 100vw ;
-  height: 100vh ;
+  height: 100vh !important;
   /* height: 600px; */
   /* margin-left: 70px; */
 }
@@ -103,12 +103,7 @@ color: white;
     
 }
 
-/* .tamano{
-  width : 100vw ;
-  height: 600px;
-  margin-left: 65px;
 
-} */
 .carousel-inner{
   align-items: center;
 }

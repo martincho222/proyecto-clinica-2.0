@@ -45,7 +45,7 @@ document.getElementById('registroAdmin')
 		Registro.matricula.push(matriculaProf);
 		Registro.profesion.push(profesion);
 
-		let alert = document.getElementById('alerta');
+		console.log(Registro.nombre)
 
 		firebase.auth().createUserWithEmailAndPassword(email, password)
 		.catch(function(error) {
