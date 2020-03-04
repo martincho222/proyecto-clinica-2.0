@@ -1,3 +1,6 @@
+*{
+  scroll-behavior: smooth !important;
+}
 body{
   overflow-x: hidden;
   margin: 0px;
@@ -167,7 +170,8 @@ color: white;
 .navIcon{
   background: rgba(76, 247, 156, 0.5) !important;
 }
-.navIcon1{
+
+n.navIcon1{
   background:rgba(76, 247, 156, 0.5) !important;
 }
 
@@ -185,4 +189,24 @@ color: white;
   color: white !important;
 }
 
+.navIcon{
+  background: rgba(76, 247, 156, 0.5) !important;
+}
+.navIcon1{
+  background:rgba(76, 247, 156, 0.5) !important;
+}
+
+.colorText{
+  color: #516fca  !important;
+  background: #36e186  !important;
+}
+
+.colorText1{
+  color:#516fca  !important;
+  background: #36e186 !important;
+}
+
+.nav-link{
+  color: white !important;
+}
 
