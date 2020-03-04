@@ -11,6 +11,7 @@ signInButton.addEventListener('click', () => {
 });
 
 
+
 	// registro de nuevos usuarios
 	let nombres,
 	 apellidos,
@@ -81,15 +82,26 @@ document.getElementById('registroAdmin')
 
 // FLOR AQUI ABAJO HACE LAS FUNCIONES PARA LA LOGICA, YA DESPUES LO INTEGRO CON FIREBASE
 
-
-
+let userAdmin = document.getElementById('adminEmail').value;
+let userPass = document.getElementById('adminPassword').value;
 function logear(){
-        
-	if (document.getElementById('adminEmail').value=='Aqui iria lo de FB' && document.getElementById('adminPassword').value=='Aqui iria lo de FB'){ 
-			document.formAdmin.submit(); 
+        console.log('presionando');
+	if (userAdmin === email  && userPass === password){ 
+			// document.formAdmin.submit(); 
+			firebase.auth().signInWithEmailAndPassword(adminEmail, adminPassword)
+			.catch(function(error) {
+				// Handle Errors here.
+				var errorCode = error.code;
+				var errorMessage = error.message;
+				debugger;
+				console.log(errorCode);
+				console.log(errorMessage);
+				// ...
+				// document.getElementById('inicioSesion').value;
+		  });
 		} 
 		else{ 
-			 alert("Porfavor ingrese, nombre de usuario y contraseña correctos."); 
+			//  alert("Porfavor ingrese, nombre de usuario y contraseña correctos."); 
 		} 
 	} 
 
