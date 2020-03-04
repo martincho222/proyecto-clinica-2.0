@@ -1,42 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/2ed0c63b08.js"
+      crossorigin="anonymous"
+    ></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <!-- INCIO NAVBAR -->
-
-    <div>
-        <p class="container">NAVBAR</p>
+    <div class="container-fluid navIcon">
+      <nav class="navbar navbar-light navIcon1">
+        <a class="navbar-brand" href="#"><img class="img-fluid img1" src="../src/navbar/img/Icono1.svg" alt="">
+          <img class="img-fluid img2" src="../src/navbar/img/Kalima Font.svg" alt=""></a>
+          
+      </nav>
     </div>
-
+    <div class="container-fluid colorText">
+      <div class="row">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-lg navbar-light colorText1">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <ul class="navbar-nav mx-auto mt-2 mt-lg-0 ulNav">
+                <li class="nav-item active ml-5">
+                  <a class="nav-link" href="./index.html">Inicio</a>
+                </li>
+                <li class="nav-item ml-5">
+                  <a class="nav-link" href="#">consultas</a>
+                </li>
+                <li class="nav-item ml-5">
+                  <a class="nav-link" href="#">Contacto</a>
+                </li>
+                <li class="nav-item ml-5">
+                  <a class="nav-link" href="#">Desconectar</a>
+                </li>
+              
+              </ul>
+              
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    
     <!-- FIN NAVBAR -->
 
     <!-- INICIO DATOS PACIENTE -->
-    <div class="container">
-        <p>DATOS PACIENTE</p>    
-    </div>
-    <!-- FIN DATOS PACIENTE -->
 
+    <div class="container containerDatos">
+      <div class="row">
+        <div class="col-md-4 col-sm-12">
+          <h3 class="titulosUsuarios">Info. Paciente</h3>
+          <ul class="list-group ulUsuarios">
+            <li class="list-group-item">Nombre: Martin Miguel</li>
+            <li class="list-group-item">Apellido: Jerez Leal</li>
+            <li class="list-group-item">Documento: 32115613</li>
+            <li class="list-group-item">Fecha de Nacimiento: 11/04/1986</li>
+            <li class="list-group-item">Edad: 33</li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+          <h3 class="titulosUsuarios">Datos Obra Social</h3>
+          <ul class="list-group ulUsuarios">
+            <li class="list-group-item">Obra Social: Red de Seguros Medicos</li>
+            <li class="list-group-item">N°. Obra Social: 654987654231</li>
+            <li class="list-group-item">Ordenes Autorizadas: 10</li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+          <h3 class="titulosUsuarios">Datos Clinicos Paciente</h3>
+          <div class="accordion acordionUsuario" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button
+                    class="btn btn-link btnUsuario"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Historia Clinica
+
+                    <span><i class="fas fa-angle-double-down"></i></span>
+                  </button>
+                </h2>
+              </div>
+
+              <div
+                id="collapseOne"
+                class="collapse hide"
+                aria-labelledby="headingOne"
+                data-parent="#accordionExample"
+              >
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid.
+                </div>
+              </div>
+            </div>
+            <!--hasta aqui card-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIN DATOS PACIENTE -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <!-- INICIO ESPECIALIDAD Y MEDICOS -->
     <div class="container">
-        <p>ESPECIALIDAD Y MEDICOS</p>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <h3>Selecciona Especialidad</h3>
+          <div class="form-group">
+            <select multiple class="form-control selecEsp" id="exampleFormControlSelect2">
+              <option>ALERGIA E INMUNOLOGÍA</option>
+                <option>ANATOMÍA PATOLÓGICA</option>
+                <option>ANESTESIOLOGÍA</option>
+                <option>ANGIOLOGÍA GENERAL y HEMODINAMIA</option>
+                <option>CARDIOLOGÍA</option>
+                <option>CARDIÓLOGO INFANTIL</option>
+                <option>CIRUGÍA GENERAL</option>
+                <option>CIRUGÍA CARDIOVASCULAR</option>
+                <option>CLÍNICA MÉDICA</option>
+                <option>DERMATOLOGÍA</option>
+                <option>DIAGNOSTICO POR IMÁGENES</option>
+                <option>ENDOCRINOLOGÍA</option>
+                <option>GASTROENTEROLOGÍA</option>
+                <option>GINECOLOGÍA</option>
+                <option>HEMATOLOGÍA</option>
+                <option>INFECTOLOGÍA</option>
+                <option>MEDICINA DEL DEPORTE</option>
+                <option>NEUMONOLOGÍA</option>
+                <option>NEUROLOGÍA</option>
+                <option>OBSTETRICIA</option>
+                <option>OFTALMOLOGÍA</option>
+                <option>ONCOLOGÍA</option>
+                <option>ORTOPEDIA Y TRAUMATOLOGÍA</option>
+                <option>OTORRINOLARINGOLOGÍA</option>
+                <option>PEDIATRÍA</option>
+                <option>PSIQUIATRÍA</option>
+                <option>REUMATOLOGÍA</option>
+                <option>TERAPIA INTENSIVA</option>
+                <option>TOXICOLOGÍA</option>
+                <option>UROLOGÍA</option>
+                <option>NEFROLOGÍA</option>
+                <option>MEDICINA NUCLEAR</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="col-6" >
+          <h3>Lista de Medicos</h3>
+          <ul class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+          </ul>
+        </div>
+      </div>
     </div>
-<!-- FIN ESPECIALIDAD Y MEDICOS -->
+    <br>
+    <br>
+    <br>
+    
+    <!-- FIN ESPECIALIDAD Y MEDICOS -->
+
 
 <!-- INICIO TURNOS - LISTA DE TURNOS -->
-<div class="container">
-    <p>INICIO TURNOS - LISTA DE TURNOS</p>
+<div  class="container-fluid" data-aos="fade-down">
+  <div class="row" data-aos="fade-left">
+    <div id="efectoCard" class="col-6 outline-primary">
+      <div  class="card " >
+        <div class="card-body cuerpoTurnos" data-aos="fade-up">
+      <h1 class="text-center">Turno</h1>
+      <form id="formulario">
+        <div class="form-group" data-aos="fade-left">
+          <label >Descripcion Turno</label>
+          <textarea class="form-control" id="descripcionTurno" rows="3"></textarea>
+        </div>
+        <div class="form-group" data-aos="fade-left">
+          <label  >Especialidad</label>
+          <select  class="form-control " id="especialidades">
+            <option>ALERGIA E INMUNOLOGÍA</option>
+            <option>ANATOMÍA PATOLÓGICA</option>
+            <option>ANESTESIOLOGÍA</option>
+            <option>ANGIOLOGÍA GENERAL y HEMODINAMIA</option>
+            <option>CARDIOLOGÍA</option>
+            <option>CARDIÓLOGO INFANTIL</option>
+            <option>CIRUGÍA GENERAL</option>
+            <option>CIRUGÍA CARDIOVASCULAR</option>
+            <option>CLÍNICA MÉDICA</option>
+            <option>DERMATOLOGÍA</option>
+            <option>DIAGNOSTICO POR IMÁGENES</option>
+            <option>ENDOCRINOLOGÍA</option>
+            <option>GASTROENTEROLOGÍA</option>
+            <option>GINECOLOGÍA</option>
+            <option>HEMATOLOGÍA</option>
+            <option>INFECTOLOGÍA</option>
+            <option>MEDICINA DEL DEPORTE</option>
+            <option>NEUMONOLOGÍA</option>
+            <option>NEUROLOGÍA</option>
+            <option>OBSTETRICIA</option>
+            <option>OFTALMOLOGÍA</option>
+            <option>ONCOLOGÍA</option>
+            <option>ORTOPEDIA Y TRAUMATOLOGÍA</option>
+            <option>OTORRINOLARINGOLOGÍA</option>
+            <option>PEDIATRÍA</option>
+            <option>PSIQUIATRÍA</option>
+            <option>REUMATOLOGÍA</option>
+            <option>TERAPIA INTENSIVA</option>
+            <option>TOXICOLOGÍA</option>
+            <option>UROLOGÍA</option>
+            <option>NEFROLOGÍA</option>
+            <option>MEDICINA NUCLEAR</option>
+          </select>
+        </div>
+        <div class="form-group " data-aos="fade-left">
+          <label>Medicos</label>
+          <select  class="form-control" id="doctores">
+            <option>Dr. ....</option>
+            <option>Dra. ....</option>
+            <option>Dr. ....</option>
+            <option>Dr. ....</option>
+            <option>Dra. ....</option>
+            <option>Dr. ....</option>
+          </select>
+        </div>
+        <div class="form-group " data-aos="fade-left">
+          <label >Fecha</label>
+          <input class="form-control" type="datetime-local">
+        </div>
+        <div class="text-center " data-aos="fade-left">
+        <button type="submit" class="btn btn-primary" >Enviar</button>
+      </div>
+      </form>
+    </div>
+  </div>
 </div>
-<!-- FIN TURNOS - LISTA DE TURNOS -->
+    <div class="col-6 outline-primary">
+      <div class="card" data-aos="fade-left">
+        <div class="card-body cuerpoListTurnos">
+          <h1 class="text-center">Lista de Turnos</h1>
+          <ul id="cuerpoTurnos">
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+        </div>
+      </div>
+    <!-- FIN TURNOS - LISTA DE TURNOS -->
 
-<!--INICIO FOOTER-->
-<div class="container">
-    <p>FOOTER</p>
-</div>
-<!--FIN FOOTER-->
-</body>
+    <!--INICIO FOOTER-->
+    <div class="container-fluid">
+      <div class="footer-copyright text-center py-3 ">
+        <p>© 2020 Copyright:</p> <a href="https://kalima.com "> Kalima.com</a>
+      </div>
+    </div>
+    <!--FIN FOOTER-->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  </body>
 </html>

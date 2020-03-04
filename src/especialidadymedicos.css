@@ -1,0 +1,19 @@
+.espe{
+    width: 350px !important;
+    background-color: rgb(250, 234, 241) !important;
+    
+
+}
+.med{
+    width: 350px !important;
+    background-color: rgb(250, 234, 241) !important;
+    
+}
+.alto{
+    height: 500px !important;
+    background-color: rgba(76, 247, 156, 0.5);
+}
+.titulo{
+    background-color: rgba(76, 247, 156, 0.5);
+    color: dimgrey;
+}
