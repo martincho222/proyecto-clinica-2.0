@@ -4,7 +4,7 @@ const container = document.getElementById('container');
 
 signUpButton.addEventListener('click', () => {
 	container.classList.add("right-panel-active");
-});
+});	
 
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
@@ -80,3 +80,17 @@ document.getElementById('registroAdmin')
 // 	})
 
 // FLOR AQUI ABAJO HACE LAS FUNCIONES PARA LA LOGICA, YA DESPUES LO INTEGRO CON FIREBASE
+
+
+
+function logear(){
+        
+	if (document.getElementById('adminEmail').value=='Aqui iria lo de FB' && document.getElementById('adminPassword').value=='Aqui iria lo de FB'){ 
+			document.formAdmin.submit(); 
+		} 
+		else{ 
+			 alert("Porfavor ingrese, nombre de usuario y contraseña correctos."); 
+		} 
+	} 
+
+
