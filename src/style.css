@@ -22,7 +22,7 @@ color: white;
 
 .tamano{
   width : 100vw ;
-  height: 100vh ;
+  height: 100vh !important;
   /* height: 600px; */
   /* margin-left: 70px; */
 }
@@ -91,20 +91,19 @@ color: white;
     color: antiquewhite;
 }
 
+
 .copyright {
-    color: #202020 !important;
+    color: #101010 !important;
 }
 
-.footer-copyright text-center py-3 {
-    background: #101010 !important;
+.footer-copyright{
+  
+  background: #202020 !important;
+    color: antiquewhite;
+    
 }
 
-/* .tamano{
-  width : 100vw ;
-  height: 600px;
-  margin-left: 65px;
 
-} */
 .carousel-inner{
   align-items: center;
 }
@@ -209,4 +208,6 @@ n.navIcon1{
 .nav-link{
   color: white !important;
 }
+
+
 

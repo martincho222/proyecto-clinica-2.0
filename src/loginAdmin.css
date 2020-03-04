@@ -6,6 +6,11 @@
 
 }
 
+.volverInicio{
+    z-index: 6;
+   
+}
+
 .body {
    
     background: url(../src/img/Marketing-para-clínicas.jpg) no-repeat;

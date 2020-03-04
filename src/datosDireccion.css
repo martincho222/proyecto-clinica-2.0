@@ -20,12 +20,15 @@
 .itaes {
   text-align: center;
   margin: 10px;
+  
 }
 
 .itaes > a > img {
   height: 150px;
   width: 150px;
   margin: 10px;
+  border-radius: 100%;
+  
 }
 
 .datos {
