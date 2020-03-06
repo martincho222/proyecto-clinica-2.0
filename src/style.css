@@ -29,7 +29,7 @@ color: white;
 
 .tamano{
   width : 100vw ;
-  height: 100vh ;
+  height: 100vh !important;
   /* height: 600px; */
   /* margin-left: 70px; */
 }
@@ -107,20 +107,19 @@ color: white;
     color: antiquewhite;
 }
 
+
 .copyright {
-    color: #202020 !important;
+    color: #101010 !important;
 }
 
-.footer-copyright text-center py-3 {
-    background: #101010 !important;
+.footer-copyright{
+  
+  background: #202020 !important;
+    color: antiquewhite;
+    
 }
 
-/* .tamano{
-  width : 100vw ;
-  height: 600px;
-  margin-left: 65px;
 
-} */
 .carousel-inner{
   align-items: center;
 }
@@ -193,7 +192,7 @@ color: white;
 .navIcon{
   background: rgba(76, 247, 156, 0.5) !important;
 }
-.navIcon1{
+n.navIcon1{
   background:rgba(76, 247, 156, 0.5) !important;
 }
 
@@ -231,4 +230,6 @@ color: white;
 .nav-link{
   color: white !important;
 }
+
+
 
