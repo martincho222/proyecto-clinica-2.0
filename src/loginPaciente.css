@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
 }
 .fondo{
     height: 100%;
@@ -12,28 +13,28 @@
 }
 .loginform{
     width: 380px;
-    height: 480px;
+    height: 500px;
     position: relative;
-    margin: 6px auto;
+    margin: 6% auto;
     background: #fff;
     padding: 5px;
     overflow: hidden;
+    text-align: start;
+    border-radius: 30px;
+    font-family: 'Muli', serif;
+    opacity: 0.8;
+
+
 }
 .botones{
- width: 220px;
- margin: 35px auto;
+width: 220px;
+ margin: 20px auto;
  position: relative;
  box-shadow: 0 0 20px 9px #16a085 ;
+ border-radius: 30px;
  
 }
-.btn{
- top: 0;
- left: 0;
- position: absolute;
- width: 110px;
- height: 100%;
- background: linear-gradient(to right, #1abc9c,  #16a085);
-}
+
 /* #1abc9c */
 .toggle-btn{
     padding: 10px 30px;
@@ -42,16 +43,30 @@
     border: 0;
     outline: none;
     position: relative;
-}
+}#btn{
+    top: 0;
+    width: 220px;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #26c6da, #80deea); 
+    border-radius: 30px;
+    transition: .5s;
+  }
 .iconos{
-    margin: 30px auto;
+    margin: 50px auto;
     text-align: center;
     cursor: pointer;
 }
+.iconos img{
+    width: 50px;   
+}
+
 .input-group{
     top: 180px;
     position: absolute;
-    width: 280px;
+    width: 300px;
     transition: .5s;
 
 }
@@ -65,13 +80,20 @@
     border-bottom: 1px solid #999;
     outline: none;
     background: transparent;
+    
+
+    
+}
+.input-field:hover {
+    box-shadow: 0 0 10px 6px #16a085 ;
+    border-radius: 10px;
 }
 .submit-btn{
-    width: 85%;
-    padding:10px 30px;
+    width: 300px;
+    padding:10px 20px;
     cursor: pointer;
     margin: auto;
-    background: linear-gradient(to right, #1abc9c,  #16a085);
+    background: linear-gradient(to right, #1abc9c, #7edad5);
     border:0;
     outline: none;
     border-radius: 30px;
@@ -88,5 +110,5 @@
     left: 50px;
 }
 #registro{
-    left: 50px;
+    left: 450px;
 }

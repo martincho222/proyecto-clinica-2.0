@@ -4,40 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login Paciente</title>
-    <link rel="stylesheet" href="loginPaciente.css">
+    <link rel="stylesheet" href="../src/loginPaciente.css">
+    
+    <script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBEPXhWbOjW8crzXRnYgz6h6q4uc2h5CgY",
+        authDomain: "loginp-9e543.firebaseapp.com",
+        databaseURL: "https://loginp-9e543.firebaseio.com",
+        projectId: "loginp-9e543",
+        storageBucket: "loginp-9e543.appspot.com",
+        messagingSenderId: "223990251278",
+        appId: "1:223990251278:web:264c23bcbc1904d0c1615f"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
 </head>
+
+
 <body>
     <div class="fondo">
         <div class="loginform">
             <div class="botones">
-               <div class="btn"></div> 
-                <button type="button" class="toggle-btn" onclick="login()">Sing In</button> 
-                <button type="button" class="toggle-btn" onclick="registro()">Sing Up</button> 
-                <div class="iconos">
-                    <a href="#" class="social socialAdmin"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social socialAdmin"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social socialAdmin"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <form id="login" class="input-group">
-                    <input type="text" class="input-field" placeholder="Usuario" required>
-
-                    <input type="text" class="input-field" placeholder="Contraseña" required>
-                    <input type="checkbox" class="chech-box"><span>Recordar contraseña</span>
-                    <button type="submit" class="submit-btn">Ingresar</button>
-                </form>
-                <form id="registro" class="input-group">
-                    <input type="text" class="input-field" placeholder="Usuario" required>
-                    <input type="email" class="input-field" placeholder="Email" required>
-
-                    <input type="text" class="input-field" placeholder="Contraseña" required>
-                    <input type="checkbox" class="chech-box"><span>Acepto los terminos y condiciones</span>
-                    <button type="submit" class="submit-btn">Registrarme</button>
-                </form>
+               <div id="btn"></div> 
+                <button type="button" class="toggle-btn" onclick="login()" >Sing In</button> 
+                <button type="button" id="btnbtn" class="toggle-btn" onclick="register()"  >Sing Up</button> 
             </div>
-            
-        </div>
+              <div class="container">
+                  <div class="iconos">
+                     <img src="../src/img/facebook.png">
+                     <img src="../src/img/gmail.png">
+                     <img src="../src/img/twitter.png">
+                    </div>
+                 <form id="login" class="input-group">
+                    <input type="email" id="email2" class="input-field" placeholder="Email" required>
+                    <input type="password"  id="contra2" class="input-field" placeholder="Contraseña" required>
+                    <i class="fa fa-eye" id="mostrar"></i>
+ 
+                    <input type="checkbox" class="chech-box"><span>Recordar contraseña</span>
+                    <br>
+                    <br>
+                    <button type="button" onclick="logIn()" class="submit-btn">Ingresar</button>
 
+                   </form>
+                  <form id="registro" class="input-group">
+                    <input type="text" id="nombre" class="input-field" placeholder="Nombre" required>
+                    <input type="text" id="apellido" class="input-field" placeholder="Apellido" required>
+                    <input type="email" id="email" class="input-field" placeholder="Email" required>                                    
+                    <input type="password" id="contrasena" class="input-field" placeholder="Contraseña" required>
+                    <input type="checkbox" class="chech-box" required><span>Acepto los terminos y condiciones</span>
+                    <button type="button" onclick="registrar()" class="submit-btn">Registrarme</button>
+                     </form>
+            </div>
+        </div>
     </div>
-    
+    </div>
+    <script src="../src/loginPaciente.js"></script>
+    <script>
+        let log = document.getElementById("login");
+        let registro = document.getElementById("registro");
+        let btn = document.getElementById("btn");
+
+        function register(){
+                log.style.left= "-400px";
+                registro.style.left="50px";
+                 btn.style.left="110px";
+        }
+
+        function login(){
+            log.style.left= "50px";
+            registro.style.left="450px";
+            btn.style.left="0";}
+      </script>
+
+
+
 </body>
 </html>
