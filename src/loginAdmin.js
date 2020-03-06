@@ -4,11 +4,12 @@ const container = document.getElementById('container');
 
 signUpButton.addEventListener('click', () => {
 	container.classList.add("right-panel-active");
-});
+});	
 
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
+
 
 
 	// registro de nuevos usuarios
@@ -45,11 +46,17 @@ document.getElementById('registroAdmin')
 		Registro.matricula.push(matriculaProf);
 		Registro.profesion.push(profesion);
 
+		console.log(Registro.nombre)
+
 		firebase.auth().createUserWithEmailAndPassword(email, password)
 		.catch(function(error) {
 			// Handle Errors here.
 			var errorCode = error.code;
 			var errorMessage = error.message;
+			// alert.innerHTML = `
+			// 	<span class="alert alert-success">${errorCode}</span>
+			
+			// `;
 			console.log(errorCode);
 			console.log(errorMessage);
 		  });
@@ -74,3 +81,28 @@ document.getElementById('registroAdmin')
 // 	})
 
 // FLOR AQUI ABAJO HACE LAS FUNCIONES PARA LA LOGICA, YA DESPUES LO INTEGRO CON FIREBASE
+
+let userAdmin = document.getElementById('adminEmail').value;
+let userPass = document.getElementById('adminPassword').value;
+function logear(){
+        console.log('presionando');
+	if (userAdmin === email  && userPass === password){ 
+			// document.formAdmin.submit(); 
+			firebase.auth().signInWithEmailAndPassword(adminEmail, adminPassword)
+			.catch(function(error) {
+				// Handle Errors here.
+				var errorCode = error.code;
+				var errorMessage = error.message;
+				debugger;
+				console.log(errorCode);
+				console.log(errorMessage);
+				// ...
+				// document.getElementById('inicioSesion').value;
+		  });
+		} 
+		else{ 
+			//  alert("Porfavor ingrese, nombre de usuario y contraseña correctos."); 
+		} 
+	} 
+
+
