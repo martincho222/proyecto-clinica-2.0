@@ -8,27 +8,14 @@
     <script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
 
      <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+  
     
-  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+  
 
  
 
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyC7rlTbny4mroeytOqwRciKolT6OGhijk0",
-    authDomain: "prueba-validacion-d4b73.firebaseapp.com",
-    databaseURL: "https://prueba-validacion-d4b73.firebaseio.com",
-    projectId: "prueba-validacion-d4b73",
-    storageBucket: "prueba-validacion-d4b73.appspot.com",
-    messagingSenderId: "956489182896",
-    appId: "1:956489182896:web:3262ee70f9cfb1e9309575"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  </script>
+
 
 
 </head>
@@ -107,8 +94,8 @@
             <input id="adminPassword" class="inputAdmin" type="password" placeholder="Password" required/>
             <a class="socialAdmin" href="#">¿Olvidaste tu contraseña?</a>
 
-            <button onclick="logear()" class="btnAdmin" type="button" id="inicioSesion"><a href="./adm.html">Iniciar Sesión</a></button>
-
+            <button onclick="logear()" class="btnAdmin" type="button" id="inicioSesion"><a href="#" class="btnLink">Iniciar Sesión</a></button>
+              <div id="contenido"></div>
           </form>
         </div>
         <div class="overlay-container">
@@ -131,6 +118,36 @@
 
       
 
-     <script src="../src/loginAdmin.js"></script>
+     
+    
+
+
+
+
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyC7rlTbny4mroeytOqwRciKolT6OGhijk0",
+      authDomain: "prueba-validacion-d4b73.firebaseapp.com",
+      databaseURL: "https://prueba-validacion-d4b73.firebaseio.com",
+      projectId: "prueba-validacion-d4b73",
+      storageBucket: "prueba-validacion-d4b73.appspot.com",
+      messagingSenderId: "956489182896",
+      appId: "1:956489182896:web:3262ee70f9cfb1e9309575"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    
+    </script>
+    <script src="../src/loginAdmin.js"></script>
 </body>
 </html>

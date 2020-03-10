@@ -1,3 +1,6 @@
+// import 'bootstrap';
+// import './index.scss';
+
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
@@ -10,7 +13,11 @@ signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
 
+// FIN DEL JS PARA EL LOGIN Y REGISTRO DE ADMINISTRADOR.-
+  
 
+var db = firebase.firestore();
+  
 
 	// registro de nuevos usuarios
 	let nombres,
@@ -60,49 +67,110 @@ document.getElementById('registroAdmin')
 			console.log(errorCode);
 			console.log(errorMessage);
 		  });
+
+		  db.collection("admin").add({
+			nombre: nombres,
+			apellido: apellidos,
+			email: email,
+			password: password,
+			matricula: matriculaProf,
+			especialidad: profesion
+		  
+		  
+		  })
+		  .then(function(docRef) {
+			console.log("Document written with ID: ", docRef.id);
+		  })
+		  .catch(function(error) {
+			console.error("Error adding document: ", error);
+		  });
 		
 	})
 
-// document.getElementById('inicioSesion')
-// 	.addEventListener('click', ()=>{
 
-// 		let adminEmail = document.getElementById('adminEmail').value;
-// 		let adminPassword = document.getElementById('adminPassword').value;
 
-// 		firebase.auth().signInWithEmailAndPassword(adminEmail, adminPassword)
-// 			.catch(function(error) {
-// 				// Handle Errors here.
-// 				var errorCode = error.code;
-// 				var errorMessage = error.message;
-// 				console.log(errorCode);
-// 				console.log(errorMessage);
-// 				// ...
-// 		  });
-// 	})
 
-// FLOR AQUI ABAJO HACE LAS FUNCIONES PARA LA LOGICA, YA DESPUES LO INTEGRO CON FIREBASE
-
-let userAdmin = document.getElementById('adminEmail').value;
-let userPass = document.getElementById('adminPassword').value;
 function logear(){
-        console.log('presionando');
-	if (userAdmin === email  && userPass === password){ 
-			// document.formAdmin.submit(); 
-			firebase.auth().signInWithEmailAndPassword(adminEmail, adminPassword)
-			.catch(function(error) {
-				// Handle Errors here.
-				var errorCode = error.code;
-				var errorMessage = error.message;
-				debugger;
-				console.log(errorCode);
-				console.log(errorMessage);
-				// ...
-				// document.getElementById('inicioSesion').value;
-		  });
-		} 
-		else{ 
-			//  alert("Porfavor ingrese, nombre de usuario y contraseña correctos."); 
-		} 
+	
+	let userAdmin = document.getElementById('adminEmail').value;
+	let userPass = document.getElementById('adminPassword').value;
+        // console.log('presionando');
+	// if (userAdmin === email  && userPass === password){ 
+	// 		document.formAdmin.submit(); 
+	// 		firebase.auth().signInWithEmailAndPassword(userAdmin, userPass)
+	// 		.catch(function(error) {
+	// 			// Handle Errors here.
+	// 			var errorCode = error.code;
+	// 			var errorMessage = error.message;
+	// 			debugger;
+	// 			console.log(errorCode);
+	// 			console.log(errorMessage);
+	// 			...
+	// 			document.getElementById('inicioSesion').value;
+	// 	  });
+	// 	} 
+	// 	else{ 
+	// 		 alert("Porfavor ingrese, nombre de usuario y contraseña correctos."); 
+	// 	} 
+	firebase.auth().signInWithEmailAndPassword(userAdmin, userPass).catch(function(error) {
+		// Handle Errors here.
+		var errorCode = error.code;
+		var errorMessage = error.message;
+		// ...
+		console.log(errorCode);
+		console.log(errorMessage);
+	  });
+
+	  observador ();
+
 	} 
+	
+	var contenido = document.getElementById('contenido');
+function observador (){
+	console.log('verificando');
+	firebase.auth().onAuthStateChanged(function(user) {
+		if (user) {
+			console.log('existe usuario activo');
+			// ingresarDatos();
+			
+			// redireccionar();
+		  // User is signed in.
+		  var displayName = user.displayName;
+		  var email = user.email;
+		  var emailVerified = user.emailVerified;
+		  var photoURL = user.photoURL;
+		  var isAnonymous = user.isAnonymous;
+		  var uid = user.uid;
+		  var providerData = user.providerData;
+		  contenido.style.setProperty('color', '#2daf18')
+		  contenido.innerHTML = `Usuario Registrado`
+			location.href = "adm.html"
+		  // ...
+		} else {
+		  // User is signed out.
+		  console.log('no existe usuario activo');
+		  contenido.style.setProperty('color', '#f81321')
+		  contenido.innerHTML += `Usuario no Registrado`;
+		  // ...
+		}
+		
+	  });
+}
+
+// var contenido = document.getElementById('contenido');
+// function ingresarDatos(){
+	
+// 	contenido.innerHTML = `	estas registrado`
+
+// }
 
 
+
+
+
+// db.collection("admin").get().then((querySnapshot) => {
+//     querySnapshot.forEach((doc) => {
+// 		console.log(`${doc.id} => ${doc.data().nombre}`);
+		
+//     });
+// });

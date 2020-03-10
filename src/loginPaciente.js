@@ -1,3 +1,5 @@
+var db = firebase.firestore();
+
 function registrar(){
  let email = document.getElementById('email').value;
  let nombre = document.getElementById('nombre').value;
@@ -12,10 +14,29 @@ function registrar(){
     console.log(errorMessage);
     // ...
   });
+
+  db.collection("user").add({
+    nombre: nombre,
+    apellido: apellido,
+    email: email,
+    password: contrasena
+    
+    
+    })
+    .then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+    console.error("Error adding document: ", error);
+    });
+
+
   document.getElementById('email').value = "";
   document.getElementById('nombre').value ="";
   document.getElementById('apellido').value ="";
   document.getElementById('contrasena').value ="";
+
+  
 
 }
 
