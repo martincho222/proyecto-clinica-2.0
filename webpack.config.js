@@ -89,7 +89,15 @@ module.exports = {
       chunks: ['adm'],
       filename: 'adm.html'
 
-    }),
 
+    }),
+    new HtmlWebpackPlugin({
+      template: "./public/loginPaciente.html",
+      inject: true,
+      chunks: ['paciente'],
+      filename: 'loginPaciente.html'
+
+
+    }),
   ]
 };
