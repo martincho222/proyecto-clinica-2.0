@@ -168,9 +168,9 @@ function observador (){
 
 
 
-db.collection("admin").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-		console.log(`${doc.id} => ${doc.data().nombre}`);
+// db.collection("admin").get().then((querySnapshot) => {
+//     querySnapshot.forEach((doc) => {
+// 		console.log(`${doc.id} => ${doc.data().nombre}`);
 		
-    });
-});
+//     });
+// });
