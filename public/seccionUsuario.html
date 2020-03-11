@@ -238,9 +238,11 @@
             <option>Dr. ....</option>
           </select>
         </div>
-        <div class="form-group " data-aos="fade-left">
+        <div class="form-group" data-aos="fade-left">
           <label >Fecha</label>
-          <input class="form-control" type="datetime-local">
+          <input class="form-control" id="fecha" type="date" value='2020-03-20'>
+          <label >Hora</label>
+          <input class="form-control" id='hora' type="time" value='00:00'>
         </div>
         <div class="text-center " data-aos="fade-left">
         <button type="submit" class="btn btn-primary" >Enviar</button>
@@ -254,11 +256,7 @@
         <div class="card-body cuerpoListTurnos">
           <h1 class="text-center">Lista de Turnos</h1>
           <ul id="cuerpoTurnos">
-            <li>aslkdjalskdj</li>
-            <li>aslkdjalskdj</li>
-            <li>aslkdjalskdj</li>
-            <li>aslkdjalskdj</li>
-            <li>aslkdjalskdj</li>
+            
           </ul>
         </div>
       </div>
@@ -276,6 +274,7 @@
     <!--FIN FOOTER-->
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../src/seccionUsuario/indexSeccionTurnos.js"></script>
   <script>
     AOS.init();
   </script>
