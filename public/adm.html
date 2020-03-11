@@ -2,70 +2,150 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="../src/adm.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../src/adm.css">
+    <script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+
 </head>
 
 <body>
-  <div class="container-fluid ">
-    <div class="row">
-      <div class="col-12 bg-light">
-        <h4>navbar</h4>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
 
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid">
-    <div class="row ">
-      <div class="col-sm-12 col-md-3 col-lg-3 col-lg-3 bg-warning">
-        <h4>sidebar</h4>
+            <div class="sidebar-header">
+                <h3>Kalima</h3>
+            </div>
 
-      </div>
+            <ul class="list-unstyled components">
+                <p class="paragraph">Panel Administrador</p>
+                <li>
+                    <a class="linkAdmin" href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Inicio</a>
+
+                </li>
+                <li>
+                    <a class="linkAdmin" href="#">Turnos</a>
+                </li>
+
+                <li>
+                    <a class="linkAdmin" href="#">Notificaciones</a>
+                </li>
+                <li>
+                    <a class="linkAdmin" href="#">Estadisticas</a>
+                </li>
+                <li>
+                    <a class="linkAdmin" href="#">Especialidades</a>
+                </li>
+                <li>
+                    <a class="linkAdmin" href="#">Pacientes</a>
+                </li>
+            </ul>
+
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light navbarAdministracion">
+                <div class="container-fluid">
+                    <div>
+                        <button type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fas fa-align-left"></i>
+
+                        </button>
+                        <img class="img-fluid img2" style="margin: 10px; max-width: 100px;" src="../src/navbar/img/Kalima Font.svg"
+                            alt="">
+                        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button"
+                            data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-align-justify"></i>
+                        </button>
+
+                    </div>
+                    <!--AQUI TERMINA EL BOTON QUE ACCIONA EL SIDEBAR-->
+
+                    <!--AQUI EMPIEZA EL CONTENIDO DEL NAVBAR-->
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="http://localhost:8080/">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <i class="fas fa-bell"></i>
+                            </li>
+                            <li class="nav-item">
+                                
+                            </li>
+                        </ul>
+                    </div>
 
 
 
 
-      <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9 bg-danger">
-        <h4>secciones</h4>
-        <div class="row justify-content-center">
-          <div class="col-sm-11 col-md-3 col-lg-3 col-xl-3 m-3 bg-primary seccion">
-            <h5>seccion 1</h5>
-          </div>
-          <div class="col-sm-11 col-md-3 col-lg-3 col-xl-3 m-3 bg-primary seccion ">
-            <h5>seccion 1</h5>
-          </div>
-          <div class="col-sm-11 col-md-3 col-lg-3 col-xl-3 m-3 bg-primary seccion">
-            <h5>seccion 1</h5>
-          </div>
 
-          <div class="col-sm-11 col-md-5 col-lg-5 col-xl-5 m-3 bg-primary grf">
-            <h5>seccion 1</h5>
-          </div>
-          <div class="col-sm-11 col-md-5 col-lg-5 col-xl-5 m-3 bg-primary grf">
-            <h5>seccion 1</h5>
-          </div>
-          <div class="col-sm-11 col-md-8 col-lg-8 col-xl-8 m-3 bg-primary grf">
-            <h5>seccion 1</h5>
-          </div>
 
+                    <!--AQUI TERMINA EL NAVBAR-->
+
+                </div>
+            </nav>
         </div>
 
-      </div>
 
+        <!--AQUI COMIENZAN LAS SECCIONES-->
+        <!--ESCRIBIR EL CODIGO AQUI-->
+        <!--AQUI TERMINA LAS SECCIONES-->
     </div>
-  </div>
-  <div class="container-fluid ">
-    <div class="row">
-      <div class="col-12 bg-dark pies ">
-        <h4>footer</h4>
-      </div>
-    </div>
-  </div>
 
-  <script src="../src/adm.js"></script>
+    <div class="overlay"></div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay1').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+    <script src="../src/adm.js"></script>
 </body>
 
 </html>
