@@ -1,75 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="../src/adm.css">
-    <title>Document</title>
 
-</head>
+    <!-- FontAwesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+      crossorigin="anonymous"></script>
+    <script defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+      crossorigin="anonymous"></script>
+    <!-- GridStack -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/gridstack@1.1.0/dist/gridstack.min.css"
+      />
+    <script
+      src="https://cdn.jsdelivr.net/npm/gridstack@1.1.0/dist/gridstack.all.js"></script>
+    <!-- Scroll -->
+    <link rel="stylesheet"
+      href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
 
-<body>
-  <div class="container-fluid ">
-    <div class="row">
-      <div class="col-12 bg-light">
-        <h4>navbar</h4>
+    <title>Admin Panel</title>
 
+  </head>
+
+  <body>
+    <div class="container-fluid">
+
+      <!-- Navbar -->
+      <div class="row">
+        <div class="col-12 bg-light">
+          <h4>navbar</h4>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="container-fluid">
-    <div class="row ">
-      <div class="col-sm-12 col-md-3 col-lg-3 col-lg-3 bg-warning">
-        <h4>sidebar</h4>
 
-      </div>
+      <!-- Main -->
+      <div class="row" id="panel">
+
+        <!-- Side Bar -->
+        <div class="col-sm-12 col-md-2 bg-warning">
+        </div>
+
+        <!-- Tablero -->
+        <div class="col-sm-12 col-md-10">
+
+          <!-- Grid Stack -->
+          <div class="mt-3 mb-3 grid-stack">
+
+            <!-- Primera Linea -->
+            <div class="grid-stack-item" data-gs-min-width="2"
+              data-gs-min-height="2" data-gs-width="4" data-gs-height="2"
+              data-gs-max-width="6" data-gs-max-height="4">
+              <div class="row m-1 rounded modulo grid-stack-item-content">
+                <div class="col-6 d-flex align-items-center">
+                  <img class="icono img-fluid" height="60"
+                    src="/src/seccionAdmin/img/icons/002-bitcoin.png" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-stack-item" data-gs-min-width="2"
+              data-gs-min-height="2" data-gs-width="4" data-gs-height="2"
+              data-gs-max-width="6" data-gs-max-height="4">
+              <div class="row m-1 rounded modulo grid-stack-item-content">
+                <div class="col-6 d-flex align-items-center">
+                  <img class="icono img-fluid" height="60"
+                    src="/src/seccionAdmin/img/icons/012-email.png" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-stack-item" data-gs-min-width="2"
+              data-gs-min-height="2" data-gs-width="4" data-gs-height="2"
+              data-gs-max-width="6" data-gs-max-height="4">
+              <div class="row m-1 rounded modulo grid-stack-item-content">
+                <div class="col-6 d-flex align-items-center">
+                  <img class="icono img-fluid" height="60"
+                    src="/src/seccionAdmin/img/icons/004-analytics.png" alt="">
+                </div>
+              </div>
+            </div>
+
+            <!-- Segunda Linea -->
+            <div class="grid-stack-item" data-gs-min-width="4"
+              data-gs-min-height="3" data-gs-width="6" data-gs-height="4"
+              data-gs-max-width="12" data-gs-max-height="6">
+              <div data-simplebar class="row m-1 rounded modulo
+                grid-stack-item-content">
+                <div class="col-12">
+                  <canvas class="col-12" id="myChart2"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-stack-item" data-gs-min-width="4"
+              data-gs-min-height="3" data-gs-width="6" data-gs-height="4"
+              data-gs-max-width="12" data-gs-max-height="6">
+              <div data-simplebar class="row m-1 rounded modulo
+                grid-stack-item-content">
+                <div class="col-12">
+                  <canvas class="col-12" id="myChart1"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tecera Linea -->
+            <div class="grid-stack-item" data-gs-min-width="2"
+              data-gs-min-height="2" data-gs-width="4" data-gs-height="2"
+              data-gs-max-width="6" data-gs-max-height="4">
+              <div class="row m-1 rounded modulo grid-stack-item-content">
+                <div class="col-6 d-flex align-items-center">
+                  <input type="text" class="textb" placeholder="Agregar Tarea">
+                  <div class="notcomp">
+                    <h3>No Completadas</h3>
+
+                    <div class="task">
+                      task
+                      <i class="fas fa-trash-alt"></i>
+                      <i class="fas fa-check"></i>
+                    </div>
+                  </div>
+
+                  <div class="comp">
+                    <h3>Completadas</h3>
+                    <div class="task">
+                      task
+                      <i class="fas fa-trash-alt"></i>
+                    </div>
+
+                    <div class="task">
+                      task
+                      <i class="fas fa-trash-alt"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 
 
 
-      <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9 bg-danger">
-        <h4>secciones</h4>
-        <div class="row justify-content-center">
-          <div class="col-sm-11 col-md-3 col-lg-3 col-xl-3 m-3 bg-primary seccion">
-            <h5>seccion 1</h5>
-          </div>
-          <div class="col-sm-11 col-md-3 col-lg-3 col-xl-3 m-3 bg-primary seccion ">
-            <h5>seccion 1</h5>
-          </div>
-          <div class="col-sm-11 col-md-3 col-lg-3 col-xl-3 m-3 bg-primary seccion">
-            <h5>seccion 1</h5>
-          </div>
 
-          <div class="col-sm-11 col-md-5 col-lg-5 col-xl-5 m-3 bg-primary grf">
-            <h5>seccion 1</h5>
-          </div>
-          <div class="col-sm-11 col-md-5 col-lg-5 col-xl-5 m-3 bg-primary grf">
-            <h5>seccion 1</h5>
-          </div>
-          <div class="col-sm-11 col-md-8 col-lg-8 col-xl-8 m-3 bg-primary grf">
-            <h5>seccion 1</h5>
+
+
+
           </div>
 
         </div>
 
+        <!-- Footer -->
+        <div class="row">
+          <div class="col-12 bg-dark pies">
+            <h4>footer</h4>
+          </div>
+        </div>
+
       </div>
 
-    </div>
-  </div>
-  <div class="container-fluid ">
-    <div class="row">
-      <div class="col-12 bg-dark pies ">
-        <h4>footer</h4>
-      </div>
 
-    </div>
-  </div>
+      <script src="../src/adm.js"></script>
+    </body>
 
-  <script src="../src/adm.js"></script>
-
-</body>
-
-</html>
+  </html>
