@@ -1,0 +1,11 @@
+@import './index.scss';
+
+
+.turnosAdmin > .card > .card-header{
+    background-color: gray;
+    text-align: center;
+}
+
+.turnosAdmin > .card > .card-body{
+    border: solid 1px black ;
+}
