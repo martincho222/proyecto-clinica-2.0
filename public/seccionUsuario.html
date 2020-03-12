@@ -232,9 +232,11 @@
             <option>Dr. ....</option>
           </select>
         </div>
-        <div class="form-group " data-aos="fade-left">
+        <div class="form-group" data-aos="fade-left">
           <label >Fecha</label>
-          <input class="form-control" type="datetime-local">
+          <input class="form-control" id="fecha" type="date" value='2020-03-20'>
+          <label >Hora</label>
+          <input class="form-control" id='hora' type="time" value='00:00'>
         </div>
         <div class="text-center " data-aos="fade-left">
         <button type="submit" class="btn btn-primary" >Enviar</button>
@@ -247,12 +249,8 @@
       <div class="card" data-aos="fade-left">
         <div class="card-body cuerpoListTurnos">
           <h1 class="text-center">Lista de Turnos</h1>
-          <ul id="cuerpoTurnos">
-            <li>aslkdjalskdj</li>
-            <li>aslkdjalskdj</li>
-            <li>aslkdjalskdj</li>
-            <li>aslkdjalskdj</li>
-            <li>aslkdjalskdj</li>
+          <ul id="cuerpoTurnos2">
+            
           </ul>
         </div>
       </div>
@@ -269,7 +267,28 @@
     </div>
     <!--FIN FOOTER-->
 
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Turno</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../src/seccion turnos/indexSeccionTurnos.js"></script>
   <script>
     AOS.init();
   </script>
