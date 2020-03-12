@@ -13,7 +13,7 @@ signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
 
-// FIN DEL JS PARA EL LOGIN Y REGISTRO DE ADMINISTRADOR.-
+// INICIO LOGIN Y REGISTRO DE ADMINISTRADOR.-
   
 
 var db = firebase.firestore();
@@ -27,43 +27,49 @@ var db = firebase.firestore();
 	 matriculaProf,
 	 profesion;
 
-const Registro ={
-	nombre: [],
-	apellido: [],
-	email: [],
-	contraseña: [],
-	matricula: [],
-	profesion: []
-}
+// const Registro ={
+// 	nombre: [],
+// 	apellido: [],
+// 	email: [],
+// 	contraseña: [],
+// 	matricula: [],
+// 	profesion: []
+// }
+
+	// Registro.nombre.push(nombres);
+		// Registro.apellido.push(apellidos);
+		// Registro.email.push(email);
+		// Registro.contraseña.push(password);
+		// Registro.matricula.push(matriculaProf);
+		// Registro.profesion.push(profesion);
+
+
+
+
+		// const email2 = 'lala@kalima.com.ar';
+		const isValidEmail = /(\w+)@kalima.com.ar/gi.test(email);
+		if(email === isValidEmail){}
+
+		
 
 document.getElementById('registroAdmin')
 	.addEventListener('click', ()=>{
 
-		 nombres = document.getElementById('nombresAdm').value;
-		 apellidos = document.getElementById('apellidosAdm').value;
-		 email = document.getElementById('emailAdm').value;
-		 password = document.getElementById('passwordAdm').value;
-		 matriculaProf = document.getElementById('matriculaProfAdm').value;
-		 profesion = document.getElementById('profesionAdm').value;
-	
-		Registro.nombre.push(nombres);
-		Registro.apellido.push(apellidos);
-		Registro.email.push(email);
-		Registro.contraseña.push(password);
-		Registro.matricula.push(matriculaProf);
-		Registro.profesion.push(profesion);
+		nombres = document.getElementById('nombresAdm').value;
+		apellidos = document.getElementById('apellidosAdm').value;
+		email = document.getElementById('emailAdm').value;
+		password = document.getElementById('passwordAdm').value;
+		matriculaProf = document.getElementById('matriculaProfAdm').value;
+		profesion = document.getElementById('profesionAdm').value;
+		
 
-		console.log(Registro.nombre)
-
-		firebase.auth().createUserWithEmailAndPassword(email, password)
-		.catch(function(error) {
+		
+			firebase.auth().createUserWithEmailAndPassword(email, password)
+			.catch(function(error) {
 			// Handle Errors here.
 			var errorCode = error.code;
 			var errorMessage = error.message;
-			// alert.innerHTML = `
-			// 	<span class="alert alert-success">${errorCode}</span>
 			
-			// `;
 			console.log(errorCode);
 			console.log(errorMessage);
 		  });
@@ -76,18 +82,19 @@ document.getElementById('registroAdmin')
 			matricula: matriculaProf,
 			especialidad: profesion,
 			historia: "",
-			ObraSocial: '',
-            ObraSocialN: '',
-            OrdenesAprob: '' 
+			
 		  
 		  
 		  })
 		  .then(function(docRef) {
+			console.log(isValidEmail);
 			console.log("Document written with ID: ", docRef.id);
 		  })
 		  .catch(function(error) {
 			console.error("Error adding document: ", error);
 		  });
+
+			
 		
 	})
 
@@ -132,20 +139,20 @@ function logear(){
 	var contenido = document.getElementById('contenido');
 function observador (){
 	console.log('verificando');
-	firebase.auth().onAuthStateChanged(function(user) {
-		if (user) {
+	firebase.auth().onAuthStateChanged(function(admin) {
+		if (admin) {
 			console.log('existe usuario activo');
 			// ingresarDatos();
 			
 			// redireccionar();
 		  // User is signed in.
-		  var displayName = user.displayName;
-		  var email = user.email;
-		  var emailVerified = user.emailVerified;
-		  var photoURL = user.photoURL;
-		  var isAnonymous = user.isAnonymous;
-		  var uid = user.uid;
-		  var providerData = user.providerData;
+		  var displayName = admin.displayName;
+		  var email = admin.email;
+		  var emailVerified = admin.emailVerified;
+		  var photoURL = admin.photoURL;
+		  var isAnonymous = admin.isAnonymous;
+		  var uid = admin.uid;
+		  var providerData = admin.providerData;
 		  contenido.style.setProperty('color', '#2daf18')
 		  contenido.innerHTML = `Usuario Registrado`
 			location.href = "adm.html"
@@ -162,20 +169,4 @@ function observador (){
 	  });
 }
 
-// var contenido = document.getElementById('contenido');
-// function ingresarDatos(){
-	
-// 	contenido.innerHTML = `	estas registrado`
-
-// }
-
-
-
-
-
-// db.collection("admin").get().then((querySnapshot) => {
-//     querySnapshot.forEach((doc) => {
-// 		console.log(`${doc.id} => ${doc.data().nombre}`);
-		
-//     });
-// });
+// FIN DEL JS PARA EL LOGIN Y REGISTRO DE ADMINISTRADOR.-

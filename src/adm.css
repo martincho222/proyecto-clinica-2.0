@@ -133,7 +133,7 @@ body {
     background: #6d7fcc !important;
 }
 
-.linkAdmin[data-toggle="collapse"] {
+/* .linkAdmin[data-toggle="collapse"] {
     position: relative;
 }
 
@@ -143,7 +143,7 @@ body {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-}
+} */
 
 ul ul a {
     font-size: 0.9em !important;
