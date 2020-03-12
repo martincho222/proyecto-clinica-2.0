@@ -19,7 +19,8 @@ function registrar(){
     nombre: nombre,
     apellido: apellido,
     email: email,
-    password: contrasena
+    password: contrasena,
+    historia: ''
     
     
     })

@@ -74,7 +74,11 @@ document.getElementById('registroAdmin')
 			email: email,
 			password: password,
 			matricula: matriculaProf,
-			especialidad: profesion
+			especialidad: profesion,
+			historia: "",
+			ObraSocial: '',
+            ObraSocialN: '',
+            OrdenesAprob: '' 
 		  
 		  
 		  })
@@ -146,11 +150,12 @@ function observador (){
 		  contenido.innerHTML = `Usuario Registrado`
 			location.href = "adm.html"
 		  // ...
+		//   localStorage.clear();
 		} else {
 		  // User is signed out.
 		  console.log('no existe usuario activo');
 		  contenido.style.setProperty('color', '#f81321')
-		  contenido.innerHTML += `Usuario no Registrado`;
+		  contenido.innerHTML = `Usuario no Registrado`;
 		  // ...
 		}
 		
