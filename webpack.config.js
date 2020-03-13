@@ -8,6 +8,7 @@ module.exports = {
     about: "./src/seccionUsuario.js",
     admin: "./src/loginAdmin.js",
     adm: "./src/adm.js",
+    perfilAdmin: "./src/perfilAdmin.js"
   },
   output: {
     filename: "[name].js",
@@ -97,6 +98,12 @@ module.exports = {
       filename: 'adm.html'
 
     }),
+    new HtmlWebpackPlugin ({
+      template: "./public/perfilAdmin.html",
+      inject: true,
+      chunks: ['perfilAdmin'],
+      filename: 'perfilAdmin.html' 
+    })
 
   ]
 };
