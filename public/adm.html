@@ -59,7 +59,11 @@
               <div class="row m-1 rounded modulo grid-stack-item-content">
                 <div class="col-6 d-flex align-items-center">
                   <img class="icono img-fluid" height="60"
-                    src="/src/seccionAdmin/img/icons/002-bitcoin.png" alt="">
+                    src="/src/seccionAdmin/img/icons/006-checklist.png" alt="">
+                </div>
+                <div class="row col-6 d-block">
+                  <h1 class="col-8">0</h1>
+                  <h4 class="col-4">Turnos Solicitados</h4>
                 </div>
               </div>
             </div>
@@ -70,7 +74,11 @@
               <div class="row m-1 rounded modulo grid-stack-item-content">
                 <div class="col-6 d-flex align-items-center">
                   <img class="icono img-fluid" height="60"
-                    src="/src/seccionAdmin/img/icons/012-email.png" alt="">
+                    src="/src/seccionAdmin/img/icons/010-chat.png" alt="">
+                </div>
+                <div class="row col-6 d-block">
+                  <h1 class="col-8">0</h1>
+                  <h4 class="col-4">Consultas Recibidas</h4>
                 </div>
               </div>
             </div>
@@ -82,6 +90,10 @@
                 <div class="col-6 d-flex align-items-center">
                   <img class="icono img-fluid" height="60"
                     src="/src/seccionAdmin/img/icons/004-analytics.png" alt="">
+                </div>
+                <div class="row col-6 d-block">
+                  <h1 class="col-8">0</h1>
+                  <h4 class="col-4">Nuevas Actividades</h4>
                 </div>
               </div>
             </div>
@@ -111,59 +123,47 @@
 
             <!-- Tecera Linea -->
             <div class="grid-stack-item" data-gs-min-width="2"
-              data-gs-min-height="2" data-gs-width="4" data-gs-height="2"
-              data-gs-max-width="6" data-gs-max-height="4">
-              <div class="row m-1 rounded modulo grid-stack-item-content">
-                <div class="col-6 d-flex align-items-center">
-                  <input type="text" class="textb" placeholder="Agregar Tarea">
-                  <div class="notcomp">
-                    <h3>No Completadas</h3>
+              data-gs-min-height="2" data-gs-width="6" data-gs-height="6"
+              data-gs-max-width="6" data-gs-max-height="8">
+              <div data-simplebar class="modulo-tareas row m-1 rounded
+                grid-stack-item-content">
+                <div class="col-12">
+                  <input type="text" id="input-task" class="input-task mt-2 mb-2" placeholder="Agregar Tarea">
+                  <div id="notcomp-box" class="notcomp">
+                    <h3 class="m-3">No Completadas</h3>
 
-                    <div class="task">
-                      task
-                      <i class="fas fa-trash-alt"></i>
-                      <i class="fas fa-check"></i>
-                    </div>
                   </div>
 
-                  <div class="comp">
-                    <h3>Completadas</h3>
-                    <div class="task">
-                      task
-                      <i class="fas fa-trash-alt"></i>
-                    </div>
-
-                    <div class="task">
-                      task
-                      <i class="fas fa-trash-alt"></i>
-                    </div>
+                  <div id="comp-box" class="comp">
+                    <h3 class="m-3">Completadas</h3>
+                    
                   </div>
                 </div>
               </div>
             </div>
 
-
-
-
-
-
-
-
           </div>
 
-        </div>
 
-        <!-- Footer -->
-        <div class="row">
-          <div class="col-12 bg-dark pies">
-            <h4>footer</h4>
-          </div>
+
+
+
+
         </div>
 
       </div>
 
+      <!-- Footer -->
+      <div class="row">
+        <div class="col-12 bg-dark pies">
+          <h4>footer</h4>
+        </div>
+      </div>
 
-      <script src="../src/adm.js"></script>
-    </body>
+    </div>
 
-  </html>
+
+    <script src="../src/adm.js"></script>
+  </body>
+
+</html>
