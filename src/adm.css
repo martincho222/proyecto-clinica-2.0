@@ -11,7 +11,7 @@ a:focus {
   transition: all 0.3s;
 }
 
-.navbar {
+.navbar-admin {
   padding: 15px 10px;
   background: #36e186;
   border: none;
