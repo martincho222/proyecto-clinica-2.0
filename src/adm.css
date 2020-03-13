@@ -1,29 +1,19 @@
+/*
+    DEMO STYLE
+*/
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-body {
-  font-family: "Poppins", sans-serif;
-  background: #fafafa;
-}
-
-.paragraph {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
-  line-height: 1.7em;
-  color: #999;
-}
-
-.linkAdmin,
-.linkAdmin:hover,
-.linkAdmin:focus {
+a,
+a:hover,
+a:focus {
   color: inherit;
   text-decoration: none;
   transition: all 0.3s;
 }
 
-.navbarAdministracion {
+.navbar {
   padding: 15px 10px;
-  background-color: #36e186 !important;
+  background: #36e186;
   border: none;
   border-radius: 0;
   margin-bottom: 40px;
@@ -55,7 +45,7 @@ body {
   height: 100vh;
   z-index: 999;
   background: #7386d5;
-  color: #fff !important;
+  color: #fff;
   transition: all 0.3s;
   overflow-y: scroll;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
@@ -115,34 +105,33 @@ body {
   padding: 10px;
 }
 
-#sidebar ul li .linkAdmin {
+#sidebar ul li a {
   padding: 10px;
   font-size: 1.1em;
   display: block;
 }
 
-#sidebar ul li .linkAdmin:hover {
-  color: #7386d5 !important;
-  background: #fff !important;
+#sidebar ul li a:hover {
+  color: #7386d5;
+  background: #fff;
 }
 
-#sidebar ul li.active > .linkAdmin,
-.linkAdmin[aria-expanded="true"] {
-  color: #fff !important;
-  background: #6d7fcc !important;
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #6d7fcc;
 }
 
-.linkAdmin[data-toggle="collapse"] {
+a[data-toggle="collapse"] {
   position: relative;
 }
 
 .dropdown-toggle::after {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
 }
 
 ul ul a {
@@ -188,9 +177,7 @@ a.article:hover {
   right: 0;
 }
 
-
-.fa-bell{
-  margin: 10px;
-  font-size: 30px;
-  color: #6d7fcc;
+.fa-bell {
+  margin: 5px;
+  font-size: 20px;
 }
