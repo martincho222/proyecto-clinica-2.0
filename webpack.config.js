@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-   entry: {
+  entry: {
     main: "./src/index.js",
     about: "./src/seccionUsuario.js",
     admin: "./src/loginAdmin.js",
@@ -16,7 +16,7 @@ module.exports = {
     filename: "[name].js",
     path: path.resolve(__dirname, "build")
   },
-  
+
   module: {
     rules: [
       {
