@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 * {
-  font-family: "montserrat", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: rgb(83, 83, 83);
 }
 
@@ -74,7 +76,7 @@ h3 {
   width: 100%;
   background: rgba(255, 255, 255, 0.5);
   padding: 18px;
-  margin: 6px 0;
+  margin: 6px  0;
   overflow: hidden;
 }
 
@@ -114,11 +116,12 @@ h3 {
   background: rgb(44, 62, 80);
 }
 
-.event-date h2 {
+.event-date h2, h5{
   color: rgb(230, 230, 230);
 }
 
 .event-title {
+  width: 100rem;
   background: rgb(52,73,94);
 }
 

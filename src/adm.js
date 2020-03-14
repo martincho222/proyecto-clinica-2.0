@@ -6,6 +6,7 @@ import 'chart.js';
 import 'izimodal';
 
 GridStack.init();
+$("#modal").iziModal();
 
 /* Charts */
 var chartConsultas = document.getElementById('chart-consultas').getContext('2d');
@@ -106,12 +107,10 @@ inputTask.addEventListener("keyup", function (e) {
         compIcon.addEventListener("click", function () {
             var p = $(this).parent();
             p.fadeOut(function () {
+                compBox.append(tarea);
                 p.fadeIn();
             });
-            p.fadeOut(function () {
-                p.remove();
-                compBox.append(p);
-            });
+            $(this).remove();
         });
 
         notCompBox.append(tarea);

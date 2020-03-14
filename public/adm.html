@@ -24,7 +24,6 @@
     <!-- Scroll -->
     <link rel="stylesheet"
       href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
-
     <title>Admin Panel</title>
 
   </head>
@@ -66,7 +65,7 @@
                     <h1 class="">0</h1>
                   </div>
                   <div class="col-4 d-flex justify-content-center ml-4 mt-2">
-                    <h5 class="">Turnos Solicitados</h5>
+                    <h4 class="">Turnos Solicitados</h4>
                   </div>
                 </div>
               </div>
@@ -85,7 +84,7 @@
                     <h1 class="">0</h1>
                   </div>
                   <div class="col-4 d-flex justify-content-center ml-4 mt-2">
-                    <h5 class="">Consultas Nuevas</h5>
+                    <h4 class="">Consultas Nuevas</h4>
                   </div>
                 </div>
               </div>
@@ -104,105 +103,115 @@
                     <h1 class="">0</h1>
                   </div>
                   <div class="col-4 d-flex justify-content-center ml-4 mt-2">
-                    <h5 class="">Nuevas Actividades</h5>
+                    <h4 class="">Nuevas Actividades</></div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Segunda Linea -->
-            <div class="grid-stack-item" data-gs-min-width="4"
-              data-gs-min-height="3" data-gs-width="6" data-gs-height="4"
-              data-gs-max-width="12" data-gs-max-height="6">
-              <div data-simplebar class="row m-1 rounded modulo
-                grid-stack-item-content">
-                <div class="col-12">
-                  <canvas class="col-12" id="chart-consultas"></canvas>
-                </div>
-              </div>
-            </div>
-
-            <div class="grid-stack-item" data-gs-min-width="4"
-              data-gs-min-height="3" data-gs-width="6" data-gs-height="4"
-              data-gs-max-width="12" data-gs-max-height="6">
-              <div data-simplebar class="row m-1 rounded modulo
-                grid-stack-item-content">
-                <div class="col-12">
-                  <canvas class="col-12" id="chart-turnos"></canvas>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tecera Linea -->
-            <div class="grid-stack-item" data-gs-min-width="3"
-              data-gs-min-height="2" data-gs-width="6" data-gs-height="6"
-              data-gs-max-width="6" data-gs-max-height="8">
-              <div data-simplebar class="modulo-tareas row m-1 rounded
-                grid-stack-item-content">
-                <div class="col-12">
-                  <input type="text" id="input-task" class="input-task mt-2
-                    mb-2" placeholder="Agregar Tarea">
-                  <div id="notcomp-box" class="notcomp">
-                    <h3 class="m-3">Pendientes</h3>
-
-                  </div>
-
-                  <div id="comp-box" class="comp">
-                    <h3 class="m-3">Terminadas</h3>
-
+              <!-- Segunda Linea -->
+              <div class="grid-stack-item" data-gs-min-width="4"
+                data-gs-min-height="3" data-gs-width="6" data-gs-height="4"
+                data-gs-max-width="12" data-gs-max-height="6">
+                <div data-simplebar class="row m-1 rounded modulo
+                  grid-stack-item-content">
+                  <div class="col-12">
+                    <canvas class="col-12" id="chart-consultas"></canvas>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="grid-stack-item" data-gs-min-width="3"
-              data-gs-min-height="2" data-gs-width="6" data-gs-height="6"
-              data-gs-max-width="6" data-gs-max-height="8">
-              <div data-simplebar="" class="modulo-eventos row m-1 rounded
-                grid-stack-item-content d-flex align-items-center">
-
-                <div class="event modulo rounded row mt-2">
-                  <div class="event-date col-3 d-flex align-items-center
-                    justify-content-center">
-                    <h2>25</h2>
+              <div class="grid-stack-item" data-gs-min-width="4"
+                data-gs-min-height="3" data-gs-width="6" data-gs-height="4"
+                data-gs-max-width="12" data-gs-max-height="6">
+                <div data-simplebar class="row m-1 rounded modulo
+                  grid-stack-item-content">
+                  <div class="col-12">
+                    <canvas class="col-12" id="chart-turnos"></canvas>
                   </div>
+                </div>
+              </div>
 
-                  <div class="event-content row col-9 d-block">
-                    <div class="event-title d-flex">
-                      <h6 class="mt-2 ml-3">Turno</h6>
-                    </div>
-                    <div class="event-description">
-                      <p class="ml-2 mt-2">Lorem ipsum dolor sit
-                        amet consectetur adipisicing elit.
-                        Dolores sit ratione tenetur repellat architecto maxime
-                        natus rem, illo obcaecati temporibus.</p>
+              <!-- Tecera Linea -->
+              <div class="grid-stack-item" data-gs-min-width="3"
+                data-gs-min-height="2" data-gs-width="6" data-gs-height="6"
+                data-gs-max-width="6" data-gs-max-height="8">
+                <div data-simplebar class="modulo-tareas row m-1 rounded
+                  grid-stack-item-content">
+                  <div class="col-12">
+                    <input type="text" id="input-task" class="input-task mt-2
+                      mb-2" placeholder="Agregar Tarea">
+                    <div id="notcomp-box" class="notcomp">
+                      <h3 class="m-3">Pendientes</h3>
+
                     </div>
 
+                    <div id="comp-box" class="comp">
+                      <h3 class="m-3">Terminadas</h3>
+
+                    </div>
                   </div>
                 </div>
-
-
               </div>
-            </div>
 
+              <div class="grid-stack-item" data-gs-min-width="3"
+                data-gs-min-height="2" data-gs-width="6" data-gs-height="6"
+                data-gs-max-width="6" data-gs-max-height="8">
+                <div data-simplebar="" class="modulo-eventos row m-1 rounded
+                  grid-stack-item-content d-flex align-items-center">
+
+                  <div class="event modulo rounded row mt-2">
+                    <div class="event-date col-3 d-flex align-items-center
+                      justify-content-center">
+                      <div class="d-block">
+                        <h2 class="event-date-day mb-0">25</h2>
+                        <h5 class="event-date-month mt-0">Ene</h5>
+                      </div>
+                    </div>
+
+                    <div class="event-content row col-9 d-block">
+                      <div class="event-title d-flex">
+                        <h6 class="mt-2 ml-3">Turno</h6>
+                      </div>
+                      <div class="event-description">
+                        <p class="ml-2 mt-2">Lorem ipsum dolor sit
+                          amet consectetur adipisicing elit.
+                          Dolores sit ratione tenetur repellat architecto maxime
+                          natus rem, illo obcaecati temporibus.</p>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- Modal structure -->
+                  <div id="modal"> <!-- data-iziModal-fullscreen="true"  data-iziModal-title="Welcome"  data-iziModal-subtitle="Subtitle"  data-iziModal-icon="icon-home" -->
+                    <!-- Modal content -->
+                  </div>
+
+                  <!-- Trigger to open Modal -->
+                  <a href=""
+                    class="trigger">Modal</a>
+
+                </div>
+              </div>
+
+
+            </div>
 
           </div>
-
         </div>
+
+        <!-- Footer -->
+        <div class="row">
+          <div class="col-12 bg-dark pies">
+            <h4>footer</h4>
+          </div>
+        </div>
+
+
+
       </div>
 
-      <!-- Footer -->
-      <div class="row">
-        <div class="col-12 bg-dark pies">
-          <h4>footer</h4>
-        </div>
-      </div>
+      <script src="../src/adm.js"></script>
+    </body>
 
-
-
-    </div>
-
-    <script src="../src/adm.js"></script>
-  </body>
-
-</html>
+  </html>
