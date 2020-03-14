@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login Paciente</title>
     <link rel="stylesheet" href="../src/loginPaciente.css">
-    
     <script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
 
     
@@ -20,31 +19,40 @@
                <div id="btn"></div> 
                 <button type="button" class="toggle-btn" onclick="login()" >Sing In</button> 
                 <button type="button" id="btnbtn" class="toggle-btn" onclick="register()"  >Sing Up</button> 
+                
             </div>
               <div class="container">
                   <div class="iconos">
-                     <img src="../src/img/facebook.png">
-                     <img src="../src/img/gmail.png">
-                     <img src="../src/img/twitter.png">
+                     <img src="../src/img/avatar.png">
                     </div>
                  <form id="login" class="input-group">
+                  <h2>Welcome, </h2>
+                  <h3>Sing in to continue!</h3>
                     <input type="email" id="email2" class="input-field" placeholder="Email" required>
-                    <input type="password"  id="contra2" class="input-field" placeholder="Contraseña" required>
-                    <i class="fa fa-eye" id="mostrar"></i>
- 
-                    <input type="checkbox" class="chech-box"><span>Recordar contraseña</span>
+                    <input type="password"  id="contra2" class="input-field" placeholder="Paasword" required>
+                    <input type="checkbox" class="chech-box"><span>Remember password </span>
+                    <br>
+                    <button type="button" onclick="logIn()" class="submit-btn">Sing In</button>
                     <br>
                     <br>
-                    <button type="button" onclick="logIn()" class="submit-btn">Ingresar</button>
-
+                    <br>
+                    <br>
+                    <br>
+                   <button type="button" class="button-si" onclick="register()"><i class="fas fa-user-plus"></i> Im a new user, Sing up </button> 
                    </form>
                   <form id="registro" class="input-group">
-                    <input type="text" id="nombre" class="input-field" placeholder="Nombre" required>
-                    <input type="text" id="apellido" class="input-field" placeholder="Apellido" required>
+                    <h2>Welcome, </h2>
+                    <h3>Sing up to get started!</h3>
+                    <input type="text" id="nombre" class="input-field" placeholder="Name" required>
+                    <input type="text" id="apellido" class="input-field" placeholder="Last name" required>
                     <input type="email" id="email" class="input-field" placeholder="Email" required>                                    
-                    <input type="password" id="contrasena" class="input-field" placeholder="Contraseña" required>
+                    <input type="password" id="contrasena" class="input-field" placeholder="Password" required>
                     <input type="checkbox" class="chech-box" required><span>Acepto los terminos y condiciones</span>
-                    <button type="button" onclick="registrar()" class="submit-btn">Registrarme</button>
+                    <button type="button" onclick="registrar()" class="submit-btn">Sing up</button>
+                    <br>
+                    <br>
+                    <button type="button" class="button-si" onclick="login()"><i class="fas fa-user-plus"></i> Already have an account? Sing In  </button> 
+
                      </form>
             </div>
         </div>

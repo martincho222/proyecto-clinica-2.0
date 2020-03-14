@@ -93,6 +93,7 @@ module.exports = {
       chunks: ['adm'],
       filename: 'adm.html'
 
+
     }),
     new HtmlWebpackPlugin({
       template:"./public/turnosAdmin.html",
