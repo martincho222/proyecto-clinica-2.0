@@ -150,7 +150,7 @@ function observador (){
 		  // User is signed out.
 		  console.log('no existe usuario activo');
 		  contenido.style.setProperty('color', '#f81321')
-		  contenido.innerHTML += `Usuario no Registrado`;
+		  contenido.innerHTML = `Usuario no Registrado`;
 		  // ...
 		}
 		
