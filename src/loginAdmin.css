@@ -245,3 +245,7 @@ button.ghost {
 	height: 40px;
 	width: 40px;
 }
+.btnAdmin .btnLink{
+	text-decoration: none;
+	color: white;
+}

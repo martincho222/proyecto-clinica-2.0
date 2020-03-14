@@ -20,15 +20,19 @@ color: white;
   color:cyan !important;
 }
 
+.carousel-inner
+{
+  height: 500px;
+}
 .tamano{
-  width : 100vw ;
-  height: 100vh !important;
-  /* height: 600px; */
-  /* margin-left: 70px; */
+  width : 100vw !important ;
+  height: 100vh;
+  
 }
 .carousel-item{
   display: flex;
 }
+
 
 /*INICIO SERVICIOS*/
 .tarjeta{
