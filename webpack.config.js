@@ -10,11 +10,6 @@ module.exports = {
     adm: "./src/adm.js",
     turnosAdmin: "./src/turnosAdmin.js",
     user: "./src/loginPaciente.js",
-<<<<<<< HEAD
-    adm: "./src/abmMedicos.js",
-=======
-
->>>>>>> 9a0d83c16da33dcfdf007b25f2e0b73cf16b6604
   },
   output: {
     filename: "[name].js",

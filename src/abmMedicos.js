@@ -28,15 +28,15 @@
   db.collection("admin").onSnapshot((querySnapshot) => {
       tabla.innerHTML = '';
     querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data().nombre}`);
+       // console.log(`${doc.id} => ${doc.data().nombre}`);
         tabla.innerHTML +=`
         <tr>
       <th scope="row">${doc.id}</th>
       <td>${doc.data().nombre}</td>
       <td>${doc.data().apellido}</td>
       <td>${doc.data().especialidad}</td>
-      <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')">Eliminar</button></td>
-      <td><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}')">Editar</button></td>
+      <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
+      <td><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}')"><i class="far fa-edit"></i></button></td>
 
       </tr>
         `
@@ -92,3 +92,116 @@ function editar(id, nombre, apellido, especialidad){
     }
 
 }
+
+//BUSQUEDAS - FILTROS - QUERYS
+
+//BOTON BUSCAR POR NOMBRE
+function buscarNom(){
+    document.getElementById('botonSearchN').style.display = 'block';
+    document.getElementById('buscaN').style.display ='none';
+    }
+
+//FILTRAR POR NOMBRE
+
+function filtroNombre(){
+    document.getElementById('filtrar').style.display ='none';
+    document.getElementById('cerrarFiltroN').style.display = 'block';
+    var comparaN = document.getElementById('botonSearchN').value;
+    tabla.innerHTML = "";
+    db.collection("admin").where('nombre', '==',comparaN).get().then((snapshot) => {
+    snapshot.docs.forEach(doc =>{
+        
+        tabla.innerHTML +=(`
+        <tr>
+      <th scope="row">${doc.id}</th>
+      <td>${doc.data().nombre}</td>
+      <td>${doc.data().apellido}</td>
+      <td>${doc.data().especialidad}</td>
+      <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
+      <td><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}')"><i class="far fa-edit"></i></button></td>
+
+      </tr>
+        `);
+    })  
+    });
+
+}
+
+//CERRAR FILTRO
+function cerrarfiltro(){
+    document.getElementById('filtrar').style.display ='block';
+    document.getElementById('cerrarFiltroN').style.display = 'none';
+    document.getElementById('botonSearchN').style.display = 'none';
+    document.getElementById('buscaN').style.display ='block';
+    
+    var tabla= document.getElementById('tabla');
+  db.collection("admin").onSnapshot((querySnapshot) => {
+      tabla.innerHTML = '';
+    querySnapshot.forEach((doc) => {
+       // console.log(`${doc.id} => ${doc.data().nombre}`);
+        tabla.innerHTML +=`
+        <tr>
+      <th scope="row">${doc.id}</th>
+      <td>${doc.data().nombre}</td>
+      <td>${doc.data().apellido}</td>
+      <td>${doc.data().especialidad}</td>
+      <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
+      <td><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}')"><i class="far fa-edit"></i></button></td>
+
+      </tr>
+        `
+    });
+});
+}
+
+  
+//BOTON BUSCAR POR APELLIDO
+function buscarApe(){
+    document.getElementById('botonSearchA').style.display = 'block';
+    document.getElementById('buscaA').style.display ='none';
+    }
+
+//BUSCAR POR APELLIDO
+function filtroApellido(){
+    document.getElementById('filtrar').style.display ='none';
+    document.getElementById('cerrarFiltroA').style.display = 'block';
+    var comparaA = document.getElementById('botonSearchA').value;
+
+}
+  
+
+//FILTRAR POR APELLIDO
+/*db.collection("admin").where('apellido', '==', 'Piscina').get().then((snapshot) => {
+    snapshot.docs.forEach(doc =>{
+        console.log(`
+        <tr>
+      <th scope="row">${doc.id}</th>
+      <td>${doc.data().nombre}</td>
+      <td>${doc.data().apellido}</td>
+      <td>${doc.data().especialidad}</td>
+      <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')">Eliminar</button></td>
+      <td><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}')">Editar</button></td>
+
+      </tr>
+        `);
+    })  
+    });
+
+
+
+//FILTRAR POR ESPECILIDAD
+db.collection("admin").where('especialidad', '==', 'INFECTOLOGÍA').get().then((snapshot) => {
+    snapshot.docs.forEach(doc =>{
+        console.log(`
+        <tr>
+      <th scope="row">${doc.id}</th>
+      <td>${doc.data().nombre}</td>
+      <td>${doc.data().apellido}</td>
+      <td>${doc.data().especialidad}</td>
+      <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"></button></td>
+      <td><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}')">Editar</button></td>
+
+      </tr>
+        `);
+    })  
+    });*/
