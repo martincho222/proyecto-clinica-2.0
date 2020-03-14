@@ -6,7 +6,6 @@ import 'chart.js';
 import 'izimodal';
 
 GridStack.init();
-$("#modal").iziModal();
 
 /* Charts */
 var chartConsultas = document.getElementById('chart-consultas').getContext('2d');
