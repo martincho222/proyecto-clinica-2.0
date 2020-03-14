@@ -7,7 +7,7 @@ module.exports = {
     main: "./src/index.js",
     about: "./src/seccionUsuario.js",
     admin: "./src/loginAdmin.js",
-    adm: "./src/adm.js"
+    adm: "./src/adm.js",
   },
   output: {
     filename: "[name].js",

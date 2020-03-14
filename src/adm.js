@@ -8,8 +8,8 @@ import 'izimodal';
 GridStack.init();
 
 /* Charts */
-var chartConsultas = document.getElementById('chart-consultas').getContext('2d');
-var chartTurnos = document.getElementById('chart-turnos').getContext('2d');
+let chartConsultas = document.getElementById('chart-consultas').getContext('2d');
+let chartTurnos = document.getElementById('chart-turnos').getContext('2d');
 
 Chart.defaults.global.defaultFontFamily = "montserrat";
 Chart.defaults.global.defaultFontStyle;
@@ -20,7 +20,7 @@ var graphConsultasData = new Chart(chartConsultas, {
         labels: ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'],
         datasets: [{
             label: 'Consultas Recibidas',
-            data: [3, 5, 8, 17, 13, 15, 11],
+            data: cantidadConsultas,
             backgroundColor: [
                 'rgba(52, 152, 219, 0.7)',
             ],
@@ -71,9 +71,6 @@ var graphTurnosData = new Chart(chartTurnos, {
 /* Charts End */
 
 /* Tareas Lista */
-let inputTask = document.getElementById("input-task");
-let notCompBox = document.getElementById("notcomp-box");
-let compBox = document.getElementById("comp-box");
 
 inputTask.addEventListener("keyup", function (e) {
     if (e.keyCode === 13 && inputTask.value != "") {
@@ -118,3 +115,4 @@ inputTask.addEventListener("keyup", function (e) {
 });
 
 /* End Tareas Lista */
+
