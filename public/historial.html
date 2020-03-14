@@ -7,6 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="stylesheet" href="../src/adm.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Scrollbar Custom CSS -->
     <link
@@ -70,7 +71,7 @@
             <a class="linkAdmin" href="#">Pacientes</a>
           </li>
           <li class="active">
-            <a class="linkAdmin" href="./historial.html">Historia Clinica y Obra Social</a>
+            <a class="linkAdmin" href="#">Historia Clinica y Obra Social</a>
           </li>
         </ul>
       </nav>
@@ -130,10 +131,57 @@
             </ul>
           </div>
         </nav>
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <!-- <th class="text-center" scope="col">Id</th> -->
+                <th class="text-center" scope="col">Nombre</th>
+                <th class="text-center" scope="col">Apellido</th>
+                <th class="text-center" scope="col">Email</th>
+                <th class="text-center" scope="col">historia</th>
+              </tr>
+            </thead>
+            <tbody id="tabla"></tbody>
+          </table>
+  
+          <div class="container">
+            <div class="row">
+              <div class="col-6" id="historial"></div>
+  
+              <div class="col-6" id="datosObraSocial"></div>
+            </div>
+          </div>
+
       </div>
     </div>
 
     <div class="overlay"></div>
+
+        <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyC7rlTbny4mroeytOqwRciKolT6OGhijk0",
+        authDomain: "prueba-validacion-d4b73.firebaseapp.com",
+        databaseURL: "https://prueba-validacion-d4b73.firebaseio.com",
+        projectId: "prueba-validacion-d4b73",
+        storageBucket: "prueba-validacion-d4b73.appspot.com",
+        messagingSenderId: "956489182896",
+        appId: "1:956489182896:web:3262ee70f9cfb1e9309575"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+<script src="../src/historial.js"></script>
+
 
     <!-- jQuery Custom Scroller CDN -->
     <script
@@ -142,6 +190,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
 
     <script type="text/javascript">
       $(document).ready(function() {
@@ -162,9 +211,12 @@
         });
       });
     </script>
-
-    <script src="../src/adm.js"></script>
-    <!-- <script src="../src/seccionUsuario/agregarTurno.js"></script> -->
     
+    <script src="../src/adm.js"></script>
+    <script src="../src/seccionUsuario/agregarTurno.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
