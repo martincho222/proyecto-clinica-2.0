@@ -7,6 +7,8 @@ const nombrePaciente = document.getElementById("nombrePaciente");
 const apellidoPaciente = document.getElementById("apellidoPaciente");
 const datosObraSocial = document.getElementById("datosObraSocial");
 
+
+//LEER DATOS DE LA BASE FIRESTORE
 //<th class="text-center" scope="row">${doc.id}</th>
 db.collection("user").onSnapshot(querySnapshot => {
   tabla.innerHTML = "";

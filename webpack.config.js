@@ -10,7 +10,8 @@ module.exports = {
     adm: "./src/adm.js",
     turnosAdmin: "./src/turnosAdmin.js",
     user: "./src/loginPaciente.js",
-    historial: "./src/historial.js"
+    historial: "./src/historial.js",
+    abmMedicos: "./src/abmMedicos.js",
 
   },
   output: {
@@ -112,8 +113,14 @@ module.exports = {
       template: "./public/historial.html",
       inject: true,
       chunks: ['historial'],
-      filename: 'historial.html'
+      filename: 'historial.html',
 
+    }),
+    new HtmlWebpackPlugin({
+      template: "./public/abmMedicos.html",
+      inject: true,
+      chunks: ['abmMedicos'],
+      filename: 'abmMedicos.html'
     }),
 
   ]

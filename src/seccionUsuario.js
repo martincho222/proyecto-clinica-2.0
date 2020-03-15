@@ -1,14 +1,7 @@
 import "bootstrap";
 import "./index.scss";
 
-let datos = {
-  nombre: [martin],
-  apellido: [],
-  documento: [],
-  fechNac: [],
-  edad: [],
-  obraSoc: []
-};
+
 
 let ulUsuarios = document.getElementById("ulUsuarios");
 
