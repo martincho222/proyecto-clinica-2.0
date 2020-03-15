@@ -12,7 +12,6 @@ let chartConsultas = document.getElementById('chart-consultas').getContext('2d')
 let chartTurnos = document.getElementById('chart-turnos').getContext('2d');
 
 Chart.defaults.global.defaultFontFamily = "montserrat";
-Chart.defaults.global.defaultFontStyle;
 
 var graphConsultasData = new Chart(chartConsultas, {
     type: 'line',
@@ -116,3 +115,21 @@ inputTask.addEventListener("keyup", function (e) {
 
 /* End Tareas Lista */
 
+/* SideBar Function */
+$(document).ready(function () {
+    $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+    });
+
+    $("#dismiss, .overlay").on("click", function () {
+        $("#sidebar").removeClass("active");
+        $(".overlay").removeClass("active");
+    });
+
+    $("#sidebarCollapse").on("click", function () {
+        $("#sidebar").addClass("active");
+        $(".overlay").addClass("active");
+        $(".collapse.in").toggleClass("in");
+        $("a[aria-expanded=true]").attr("aria-expanded", "false");
+    });
+});

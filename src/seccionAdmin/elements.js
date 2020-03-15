@@ -1,6 +1,7 @@
 /* Notifications */
-let consultasNuevas = document.getElementById("consultas-nuevas");
-let turnosNuevos = document.getElementById("consultas-nuevas");
+let consultasNuevasText = document.getElementById("notif-consultas-nuevas");
+let turnosNuevosText = document.getElementById("notif-turnos-nuevos");
+let actividadesNuevasText = document.getElementById("notif-actividades-nuevas");
 
 /* Charts */
 

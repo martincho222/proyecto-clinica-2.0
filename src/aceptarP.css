@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+.container-fluid {
+    font-family: 'Muli', sans-serif;
+}
+ h2 {
+    /* font-weight: 200; */
+    color: rgb(104, 219, 185);
+    font-size: 30px;
+    /* justify-content: center; */
+    align-items: center;
+ }
+ #deleteModal .modal-header{
+    background-color: #FF7851;
+    border-color: #FF7851; 
+    color: #fff;
+}
+.modal-title{
+    color: #fff;
+}
+#exitoModal .modal-header{
+    background-color: #3ac18c;
+    border-color: #37b885;}

@@ -1,5 +1,8 @@
 /* Notifications */
-let cantidadConsultas = [3, 5, 8, 17, 13, 15, 11];
 
+/* Turnos Nuevos */
 
-/* Charts */
+/* Consultas Nuevas */
+let cantidadConsultas = [3, 2, 8, 17, 13, 15, 11];
+
+/* Actividades Nuevas */
