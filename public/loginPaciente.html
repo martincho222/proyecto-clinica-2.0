@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login Paciente</title>
+    <link rel="stylesheet" href="../src/loginPaciente.css">
+    <script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
+
+    
+
+</head>
+
+
+<body>
+    <div class="fondo">
+        <div class="loginform">
+            <div class="botones">
+               <div id="btn"></div> 
+                <button type="button" class="toggle-btn" onclick="login()" >Sing In</button> 
+                <button type="button" id="btnbtn" class="toggle-btn" onclick="register()"  >Sing Up</button> 
+                
+            </div>
+              <div class="container">
+                  <div class="iconos">
+                     <img src="../src/img/avatar.png">
+                    </div>
+                 <form id="login" class="input-group">
+                  <h2>Welcome, </h2>
+                  <h3>Sing in to continue!</h3>
+                    <input type="email" id="email2" class="input-field" placeholder="Email" required>
+                    <input type="password"  id="contra2" class="input-field" placeholder="Paasword" required>
+                    <input type="checkbox" class="chech-box"><span>Remember password </span>
+                    <br>
+                    <button type="button" onclick="logIn()" class="submit-btn">Sing In</button>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                   <button type="button" class="button-si" onclick="register()"><i class="fas fa-user-plus"></i> Im a new user, Sing up </button> 
+                   </form>
+                  <form id="registro" class="input-group">
+                    <h2>Welcome, </h2>
+                    <h3>Sing up to get started!</h3>
+                    <input type="text" id="nombre" class="input-field" placeholder="Name" required>
+                    <input type="text" id="apellido" class="input-field" placeholder="Last name" required>
+                    <input type="email" id="email" class="input-field" placeholder="Email" required>                                    
+                    <input type="password" id="contrasena" class="input-field" placeholder="Password" required>
+                    <input type="checkbox" class="chech-box" required><span>Acepto los terminos y condiciones</span>
+                    <button type="button" onclick="registrar()" class="submit-btn">Sing up</button>
+                    <br>
+                    <br>
+                    <button type="button" class="button-si" onclick="login()"><i class="fas fa-user-plus"></i> Already have an account? Sing In  </button> 
+
+                     </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyC7rlTbny4mroeytOqwRciKolT6OGhijk0",
+      authDomain: "prueba-validacion-d4b73.firebaseapp.com",
+      databaseURL: "https://prueba-validacion-d4b73.firebaseio.com",
+      projectId: "prueba-validacion-d4b73",
+      storageBucket: "prueba-validacion-d4b73.appspot.com",
+      messagingSenderId: "956489182896",
+      appId: "1:956489182896:web:3262ee70f9cfb1e9309575"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    
+    </script>
+    <script src="../src/loginPaciente.js"></script>
+    <script>
+        let log = document.getElementById("login");
+        let registro = document.getElementById("registro");
+        let btn = document.getElementById("btn");
+
+        function register(){
+                log.style.left= "-400px";
+                registro.style.left="50px";
+                 btn.style.left="110px";
+        }
+
+        function login(){
+            log.style.left= "50px";
+            registro.style.left="450px";
+            btn.style.left="0";}
+      </script>
+
+
+
+</body>
+</html>

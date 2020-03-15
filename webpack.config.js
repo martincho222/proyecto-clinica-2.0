@@ -3,18 +3,23 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-   entry: {
+  entry: {
     main: "./src/index.js",
     about: "./src/seccionUsuario.js",
     admin: "./src/loginAdmin.js",
     adm: "./src/adm.js",
     perfilAdmin: "./src/perfilAdmin.js"
+    turnosAdmin: "./src/turnosAdmin.js",
+    user: "./src/loginPaciente.js",
+    aceptarP: "./src/aceptarP.js",
+
+
   },
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "build")
   },
-  
+
   module: {
     rules: [
       {
@@ -97,13 +102,44 @@ module.exports = {
       chunks: ['adm'],
       filename: 'adm.html'
 
+
     }),
+    new HtmlWebpackPlugin({
+      template:"./public/turnosAdmin.html",
+      inject: true,
+      chunks:['turnosAdmin'],
+      filename:'turnosAdmin.html'
+    }),
+  new HtmlWebpackPlugin({
+      template: "./public/loginPaciente.html",
+      inject: true,
+      chunks: ['user'],
+      filename: 'loginPaciente.html'
+
+    }),
+
     new HtmlWebpackPlugin ({
       template: "./public/perfilAdmin.html",
       inject: true,
       chunks: ['perfilAdmin'],
       filename: 'perfilAdmin.html' 
     })
+
+    new HtmlWebpackPlugin({
+      template: "./public/aceptarP.html",
+      inject: true,
+      chunks: ['aceptarP'],
+      filename: 'aceptarP.html'
+
+    }),
+new HtmlWebpackPlugin({
+      template: "./public/abmMedicos.html",
+      inject: true,
+      chunks: ['adm'],
+      filename: 'abmMedicos.html'
+
+    }),
+
 
   ]
 };

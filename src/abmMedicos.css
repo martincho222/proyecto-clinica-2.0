@@ -1,0 +1,55 @@
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa !important;
+
+}
+.titulo{
+    color:#343a40;
+    background: #fafafa;
+    padding: 12PX;
+    font-size: 30px;
+    border-radius: 5px;
+    margin: auto;
+    
+}
+.navbarAdministracion {
+    background-color: #fafafa !important;
+}
+
+
+#filtrar{
+    background-color: transparent;
+    color: #FFC107;
+    border-color: transparent;
+    font-size: 12px;
+}
+#buscaN, #buscaA, #buscaE, #cerrarFiltroN, #cerrarFiltro, #cerrarFiltroE  {
+    background-color: transparent;
+    border-color: transparent;
+    color: #fff;
+    font-weight: bold;
+
+}
+#botonSearchN, #botonSearchA, #botonSearchE{
+    border: none;
+    border-bottom: solid 1px #fff;
+    background-color: transparent;
+    color: #fff;
+    font-style: italic;
+    width: auto;
+    display: none;
+    display: contents;
+
+}
+input, select{
+    padding: 6px 6px;
+    margin: auto;
+}
+.thead{
+    background-color: #343a40;
+    color: #fff;
+    
+}
+

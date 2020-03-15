@@ -1,0 +1,185 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aceptar pacientes</title>
+<link rel="stylesheet" href="../src/aceptarP.js">
+<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/minty/bootstrap.min.css" rel="stylesheet" integrity="sha384-4HfFay3AYJnEmbgRzxYWJk/Ka5jIimhB/Fssk7NGT9Tj3rkEChpSxLK0btOGzf2I" crossorigin="anonymous">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="../src/aceptarP.css">
+<script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Gestion pacientes</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="#">Turnos</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="#">Notificaciones</a>
+        </li>
+       
+      </ul>
+      
+    </div>
+   </nav>
+   <br>
+    
+    <div class="container-fluid">
+      <h2>Pacientes en espera</h2>
+        <div class="table-wrapper">
+            <table class="table" >
+                <thead class="thead-dark" >
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="Tbody">
+      
+                </tbody>
+              </table>
+        </div>  
+                    <!-- MODAL PARA ELIMINAR PACIENTE -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">DELETE <i class="far fa-trash-alt"></i></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: antiquewhite;">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Esta seguro que quiere eliminar este paciente?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger " onclick="borrarP()">Eliminar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+            <!-- MODAL MSJ DE EXITO -->
+
+        <div class="modal"  id="exitoModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Exito!!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>El paciente ha sido añadido en la lista de activos exitosamente</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal" >Aceptar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <br>
+        <br>
+        <h2>Pacientes activos</h2>
+        <div class="table-wrapper">
+          <table class="table" >
+              <thead class="thead-dark" >
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Hist clinica</th>
+
+                  <th scope="col"><th scope="col"><form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Buscar un paciente">
+                    <button class="btn btn-primary disabled" type="submit">Search</button>
+                  </form></th></th>
+                </tr>
+              </thead>
+              <tbody id="activos">
+                <tr>
+                  
+                  
+                  
+
+                </tr>
+                <tr>
+                  
+                 
+                </tr>
+                <tr>
+                  
+                 
+                </tr>
+              </tbody>
+            </table>
+      </div>
+       
+    </div>
+  <br>
+  <br>
+    <div class="container-fluid contenedorFooter">
+      <div class="footer-copyright text-center py-3">
+        <p>© 2020 Copyright: <a href="https://kalima.com "> Kalima.com</a</p> 
+      </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+
+     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyC7rlTbny4mroeytOqwRciKolT6OGhijk0",
+        authDomain: "prueba-validacion-d4b73.firebaseapp.com",
+        databaseURL: "https://prueba-validacion-d4b73.firebaseio.com",
+        projectId: "prueba-validacion-d4b73",
+        storageBucket: "prueba-validacion-d4b73.appspot.com",
+        messagingSenderId: "956489182896",
+        appId: "1:956489182896:web:3262ee70f9cfb1e9309575"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      
+      </script>
+      <script src="../src/aceptarP.js"></script>
+      
+</body>
+</html>    

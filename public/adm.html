@@ -1,169 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Scrollbar Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
 
-  <link rel="stylesheet" href="../src/adm.css">
-  <title>Document</title>
+    <!-- Font Awesome JS -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-</head>
-
-<body>
-  <div class="container-fluid ">
-    <div class="row">
-      <div class="col-12 bg-light">
-        <h4>navbar</h4>
-
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid">
-    <div class="row ">
-
-      <div class="col-sm-12 col-md-3 col-lg-3 col-lg-3">
-
-        <!--COMIENZA SIDEBAR-->
-        <div class="area">
-          <nav class="main-menu">
-            <ul>
-              <li>
-                <a href="http://justinfarrow.com">
-                  <i class="fa fa-home fa-2x"></i>
-                  <span class="nav-text">
-                    Dashboard
-                  </span>
-                </a>
-
-              </li>
-              <li class="has-subnav">
-                <a href="#">
-                  <i class="fa fa-laptop fa-2x"></i>
-                  <span class="nav-text">
-                    Stars Components
-                  </span>
-                </a>
-
-              </li>
-              <li class="has-subnav">
-                <a href="#">
-                  <i class="fa fa-list fa-2x"></i>
-                  <span class="nav-text">
-                    Forms
-                  </span>
-                </a>
-
-              </li>
-              <li class="has-subnav">
-                <a href="#">
-                  <i class="fa fa-folder-open fa-2x"></i>
-                  <span class="nav-text">
-                    Pages
-                  </span>
-                </a>
-
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-bar-chart-o fa-2x"></i>
-                  <span class="nav-text">
-                    Graphs and Statistics
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-font fa-2x"></i>
-                  <span class="nav-text">
-                    Quotes
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-table fa-2x"></i>
-                  <span class="nav-text">
-                    Tables
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-map-marker fa-2x"></i>
-                  <span class="nav-text">
-                    Maps
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-info fa-2x"></i>
-                  <span class="nav-text">
-                    Documentation
-                  </span>
-                </a>
-              </li>
-            </ul>
-
-            <ul class="logout">
-              <li>
-                <a href="#">
-                  <i class="fa fa-power-off fa-2x"></i>
-                  <span class="nav-text">
-                    Logout
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-
-
-
-
-      <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9 bg-danger">
-        <h4>secciones</h4>
-        <div class="row justify-content-center">
-          <div class="col-sm-11 col-md-3 col-lg-3 col-xl-3 m-3 bg-primary seccion">
-            <h5>seccion 1</h5>
-          </div>
-          <div class="col-sm-11 col-md-3 col-lg-3 col-xl-3 m-3 bg-primary seccion ">
-            <h5>seccion 1</h5>
-          </div>
-          <div class="col-sm-11 col-md-3 col-lg-3 col-xl-3 m-3 bg-primary seccion">
-            <h5>seccion 1</h5>
-          </div>
-
-          <div class="col-sm-11 col-md-5 col-lg-5 col-xl-5 m-3 bg-primary grf">
-            <h5>seccion 1</h5>
-          </div>
-          <div class="col-sm-11 col-md-5 col-lg-5 col-xl-5 m-3 bg-primary grf">
-            <h5>seccion 1</h5>
-          </div>
-          <div class="col-sm-11 col-md-8 col-lg-8 col-xl-8 m-3 bg-primary grf">
-            <h5>seccion 1</h5>
-          </div>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+        <div id="dismiss">
+          <i class="fas fa-arrow-left"></i>
 
         </div>
 
+        <div class="sidebar-header">
+          <h3>Kalima</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+
+            <p class="paragraph">Panel Administrador</p>
+            <li>
+                <a class="linkAdmin" href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Inicio</a>
+
+
+            </li>
+            <li>
+                <a class="linkAdmin" href="#">Turnos</a>
+            </li>
+
+            <li>
+                <a class="linkAdmin" href="#">Notificaciones</a>
+            </li>
+            <li>
+                <a class="linkAdmin" href="#">Estadisticas</a>
+            </li>
+            <li>
+                <a class="linkAdmin" href="#">Especialidades</a>
+            </li>
+            <li>
+                <a class="linkAdmin" href="#">Pacientes</a>
+            </li>
+            <li>
+            <a class="linkAdmin" href="abmMedicos.html">Administración Médicos</a>
+        </li>
+
+        </ul>
+      </nav>
+
+      <!-- Page Content  -->
+      <div id="content">
+        <nav
+          class="navbar-admin navbar-admin navbar-expand-lg navbar-light navbarAdministracion"
+        >
+          <button type="button" id="sidebarCollapse" class="btn btn-info">
+            <i class="fas fa-align-left"></i>
+          </button>
+          <h3>Kalima</h3>
+          <button
+            class="btn btn-dark d-inline-block d-lg-none ml-auto"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-align-justify"></i>
+          </button>
+
+          <!--No funciona-->
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="http://localhost:8080/">Inicio</a>
+              </li>
+              <li class="nav-item active">
+                <span class="badge"><i class="fas fa-bell"></i></span>
+              </li>
+              <li>
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn btn-secondary dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="fas fa-cog"></i>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a
+                      class="dropdown-item"
+                      href="http://localhost:8080/loginAdmin.html?#"
+                      >Desconectarse</a
+                    >
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-
     </div>
-  </div>
-  <div class="container-fluid ">
-    <div class="row">
-      <div class="col-12 bg-dark pies ">
-        <h4>footer</h4>
-      </div>
 
-    </div>
-  </div>
+    <div class="overlay"></div>
 
-  <script src="../src/adm.js"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
-</body>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#sidebar").mCustomScrollbar({
+          theme: "minimal"
+        });
 
+        $("#dismiss, .overlay").on("click", function() {
+          $("#sidebar").removeClass("active");
+          $(".overlay").removeClass("active");
+        });
+
+        $("#sidebarCollapse").on("click", function() {
+          $("#sidebar").addClass("active");
+          $(".overlay").addClass("active");
+          $(".collapse.in").toggleClass("in");
+          $("a[aria-expanded=true]").attr("aria-expanded", "false");
+        });
+      });
+    </script>
+  </body>
 </html>
