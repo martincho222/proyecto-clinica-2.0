@@ -1,23 +1,146 @@
-/*
-    DEMO STYLE
-*/
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+* {
+  font-family: 'Roboto', sans-serif;
+  color: rgb(83, 83, 83);
+}
+
+.body {}
+
+/* Modulos */
+
+.modulo {
+  background-color: rgba(248, 246, 246, 0.9);
+  box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.4s !important;
+  cursor: pointer;
+}
+
+.modulo:hover {
+  background: rgb(255, 255, 255) !important;
+  box-shadow: 0px 6px 11px 0px rgba(202, 202, 202, 0.27);
+}
+
+.neon-beep {
+  min-width: 0.5vw;
+  height: 7em;
+  display: flex;
+  align-self: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: rgb(52, 147, 255);
+}
+
+.grid-stack-item {
+  transition: 0.15s !important;
+}
+
+.icono {
+  max-height: 7em !important;
+}
+
+/* Fin Modulos */
+
+/* ToDo List */
+
+.modulo-tareas {
+  background: rgb(255, 234, 149);
+  box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.27);
+  transition: 0.15s !important;
+}
+
+.modulo-tareas:hover {
+  background: rgb(255, 229, 124);
+  box-shadow: 0px 6px 11px 0px rgba(202, 202, 202, 0.27);
+}
+
+.input-task {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #000;
+  background: none;
+  padding: 10px;
+  outline: none;
+  font-size: 18px;
+}
+
+h3 {
+  margin: 10px 0;
+}
+
+.task {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 18px;
+  margin: 6px 0;
+  overflow: hidden;
+}
+
+.task-icon {
+  float: right;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.comp .task {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+/* End ToDo List */
+
+/* Events list */
+
+.modulo-eventos {
+  background: rgb(114, 124, 126);
+  box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.27);
+  transition: 0.15s !important;
+}
+
+.modulo-eventos:hover {
+  background: rgb(108, 117, 119);
+  box-shadow: 0px 6px 11px 0px rgba(202, 202, 202, 0.27);
+}
+
+.event {
+  background: rgb(235, 235, 235);
+}
+
+.event-date {
+  background: rgb(44, 62, 80);
+}
+
+.event-date h2, h5 {
+  color: rgb(230, 230, 230);
+}
+
+.event-title {
+  width: 100rem;
+  background: rgb(52, 73, 94);
+}
+
+.event-title h6 {
+  color: rgb(240, 236, 236);
+}
+
+/* End Events List */
+
+.footer {
+  width: 100%;
+  height: 10em;
+}
+
+/* Navbar */
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-a,
-a:hover,
-a:focus {
+a, a:hover, a:focus {
   color: inherit;
   text-decoration: none;
   transition: all 0.3s;
 }
 
-.navbar-admin {
-  padding: 15px 10px;
-  background: #36e186;
-  border: none;
-  border-radius: 0;
-  margin-bottom: 40px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+.navbar-panel {
+  background: rgb(71, 71, 71) !important;
+  box-shadow: 0px 6px 11px 0px rgba(59, 59, 59, 0.3);
 }
 
 .navbar-btn {
@@ -85,6 +208,7 @@ a:focus {
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
+
 .overlay.active {
   display: block;
   opacity: 1;
@@ -117,8 +241,7 @@ a:focus {
   background: #fff;
 }
 
-#sidebar ul li.active > a,
-a[aria-expanded="true"] {
+#sidebar ul li.active>a, a[aria-expanded="true"] {
   color: #fff;
   background: #6d7fcc;
 }
@@ -158,8 +281,7 @@ a.download {
   color: #7386d5;
 }
 
-a.article,
-a.article:hover {
+a.article, a.article:hover {
   background: #6d7fcc !important;
   color: #fff !important;
 }
@@ -169,8 +291,8 @@ a.article:hover {
 ----------------------------------------------------- */
 
 #content {
+  background: rgb(159, 159, 161);
   width: 100%;
-  padding: 20px;
   min-height: 100vh;
   transition: all 0.3s;
   position: absolute;
