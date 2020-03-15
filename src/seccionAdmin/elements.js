@@ -10,3 +10,49 @@ let actividadesNuevasText = document.getElementById("notif-actividades-nuevas");
 let inputTask = document.getElementById("input-task");
 let notCompBox = document.getElementById("notcomp-box");
 let compBox = document.getElementById("comp-box");
+
+/* Events List */
+let moduloEventos = document.getElementById("modulo-eventos");
+
+/* Events Object */
+class Turno {
+    constructor(dia, mes, descripcion) {
+        this.dia = dia;
+        this.mes = mes;
+        this.descripcion = descripcion;
+
+        this.htmlCard = `<div class="event modulo rounded row
+        mt-2">
+    <div class="event-date col-3
+            d-flex
+            align-items-center
+            justify-content-center">
+        <div class="d-block">
+            <h2 class="event-date-day
+                    mb-0">
+                    `+ this.dia + `
+                    </h2>
+            <h5 class="event-date-month
+                    mt-0">
+                    ` + this.mes + `
+                    </h5>
+        </div>
+    </div>
+
+    <div class="event-content row
+            col-9
+            d-block">
+        <div class="event-title
+                d-flex">
+            <h6 class="mt-2 ml-3">Turno</h6>
+        </div>
+        <div class="event-description">
+            <p class="ml-2 mt-2">
+            `+ this.descripcion + `
+            </p>
+        </div>
+    </div>
+</div>`;
+    }
+}
+

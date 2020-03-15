@@ -46,7 +46,7 @@ var graphTurnosData = new Chart(chartTurnos, {
         labels: ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'],
         datasets: [{
             label: 'Turnos Recibidos',
-            data: [5, 9, 6, 14, 6, 17, 12],
+            data: cantidadTurnos,
             backgroundColor: [
                 'rgba(26, 188, 156, 0.7)',
             ],
