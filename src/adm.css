@@ -47,7 +47,7 @@ a:focus {
   height: 100vh;
   z-index: 999;
   background: #7386d5;
-  color: #fff;
+  color: #fff !important;
   transition: all 0.3s;
   overflow-y: scroll;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
@@ -98,6 +98,7 @@ a:focus {
 }
 
 #sidebar ul.components {
+  color: #fff !important;
   padding: 20px 0;
   border-bottom: 1px solid #47748b;
 }
@@ -182,4 +183,16 @@ a.article:hover {
 .fa-bell {
   margin: 5px;
   font-size: 20px;
+}
+
+.paragraph{
+  color: #fff;
+  text-decoration: none !important;
+  font-size: 20px;
+
+}
+
+.paragraph:hover{
+  background: #fff;
+  color: #6d7fcc;
 }

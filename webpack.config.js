@@ -12,6 +12,7 @@ module.exports = {
     user: "./src/loginPaciente.js",
     historial: "./src/historial.js",
     abmMedicos: "./src/abmMedicos.js",
+    aceptarP: "./src/aceptarP.js",
 
   },
   output: {
@@ -117,11 +118,20 @@ module.exports = {
 
     }),
     new HtmlWebpackPlugin({
+      template: "./public/aceptarP.html",
+      inject: true,
+      chunks: ['aceptarP'],
+      filename: 'aceptarP.html'
+
+    }),
+new HtmlWebpackPlugin({
       template: "./public/abmMedicos.html",
       inject: true,
       chunks: ['abmMedicos'],
       filename: 'abmMedicos.html'
     }),
+
+
 
   ]
 };
