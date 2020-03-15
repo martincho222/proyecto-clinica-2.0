@@ -8,9 +8,11 @@ module.exports = {
     about: "./src/seccionUsuario.js",
     admin: "./src/loginAdmin.js",
     adm: "./src/adm.js",
+    perfilAdmin: "./src/perfilAdmin.js"
     turnosAdmin: "./src/turnosAdmin.js",
     user: "./src/loginPaciente.js",
     aceptarP: "./src/aceptarP.js",
+
 
   },
   output: {
@@ -88,6 +90,13 @@ module.exports = {
 
     }),
     new HtmlWebpackPlugin({
+      template: "./public/loginUser.html",
+      inject: true,
+      chunks: ['user'],
+      filename: 'loginUser.html'
+
+    }),
+    new HtmlWebpackPlugin({
       template: "./public/adm.html",
       inject: true,
       chunks: ['adm'],
@@ -108,6 +117,14 @@ module.exports = {
       filename: 'loginPaciente.html'
 
     }),
+
+    new HtmlWebpackPlugin ({
+      template: "./public/perfilAdmin.html",
+      inject: true,
+      chunks: ['perfilAdmin'],
+      filename: 'perfilAdmin.html' 
+    })
+
     new HtmlWebpackPlugin({
       template: "./public/aceptarP.html",
       inject: true,
@@ -122,7 +139,6 @@ new HtmlWebpackPlugin({
       filename: 'abmMedicos.html'
 
     }),
-
 
 
   ]
