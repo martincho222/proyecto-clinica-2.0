@@ -1,9 +1,13 @@
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+*{
+    scroll-behavior: smooth;
+
+}
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa !important;
-
+    margin: auto;
 }
 .titulo{
     color:#343a40;
@@ -14,6 +18,8 @@ body {
     margin: auto;
     
 }
+
+
 .navbarAdministracion {
     background-color: #fafafa !important;
 }
@@ -25,7 +31,7 @@ body {
     border-color: transparent;
     font-size: 12px;
 }
-#buscaN, #buscaA, #buscaE, #cerrarFiltroN, #cerrarFiltro, #cerrarFiltroE  {
+#buscaN, #buscaA, #buscaE, #cerrarFiltroN, #cerrarFiltroA, #cerrarFiltroE  {
     background-color: transparent;
     border-color: transparent;
     color: #fff;
@@ -53,3 +59,9 @@ input, select{
     
 }
 
+@media screen and (max-width: 900px) {
+    #table {
+      display: block;
+      overflow-x: auto;
+    }
+}
