@@ -12,6 +12,7 @@ module.exports = {
     turnosAdmin: "./src/turnosAdmin.js",
     user: "./src/loginPaciente.js",
     aceptarP: "./src/aceptarP.js",
+    abmMedicos: "./src/abmMedicos.js"
 
 
   },
@@ -89,13 +90,7 @@ module.exports = {
       filename: 'loginAdmin.html'
 
     }),
-    new HtmlWebpackPlugin({
-      template: "./public/loginUser.html",
-      inject: true,
-      chunks: ['user'],
-      filename: 'loginUser.html'
-
-    }),
+    
     new HtmlWebpackPlugin({
       template: "./public/adm.html",
       inject: true,
@@ -117,6 +112,13 @@ module.exports = {
       filename: 'loginPaciente.html'
 
     }),
+    new HtmlWebpackPlugin({
+      template: "./public/abmMedicos.html",
+      inject: true,
+      chunks: ['abmMedicos'],
+      filename: 'abmMedicos.html'
+
+    }),
 
     new HtmlWebpackPlugin ({
       template: "./public/perfilAdmin.html",
@@ -132,14 +134,6 @@ module.exports = {
       filename: 'aceptarP.html'
 
     }),
-new HtmlWebpackPlugin({
-      template: "./public/abmMedicos.html",
-      inject: true,
-      chunks: ['adm'],
-      filename: 'abmMedicos.html'
-
-    }),
-
 
   ]
 };
