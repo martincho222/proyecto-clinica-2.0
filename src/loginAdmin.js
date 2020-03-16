@@ -119,8 +119,9 @@ function observador() {
     } else {
       // User is signed out.
       console.log("no existe usuario activo");
-      contenido.style.setProperty("color", "#f81321");
       contenido.innerHTML = `Usuario no Registrado`;
+      contenido.style.setProperty("color", "#f81321");
+      
       // ...
     }
   });
