@@ -5,17 +5,27 @@
       var nombre= document.getElementById('nombre').value;
       var apellido= document.getElementById('apellido').value;
       var especialidad= document.getElementById('especialidad').value;
-      
+      var matricula= document.getElementById('matricula').value;
+      var email= document.getElementById('email').value;
+      var password= document.getElementById('password').value;
+
     db.collection("admin").add({
         nombre: nombre,
         apellido: apellido,
         especialidad: especialidad,
+		matricula: matricula,       
+        email: email,
+		password: password,
     })
     .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
         document.getElementById('nombre').value = "";
         document.getElementById('apellido').value= "";
         document.getElementById('especialidad').value= "";
+        document.getElementById('matricula').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('password').value ="";
+    
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
@@ -31,19 +41,20 @@
        // console.log(`${doc.id} => ${doc.data().nombre}`);
         tabla.innerHTML +=`
         <tr>
-      <th scope="row">${doc.id}</th>
       <td>${doc.data().nombre}</td>
       <td>${doc.data().apellido}</td>
       <td>${doc.data().especialidad}</td>
+      <td>${doc.data().matricula}</td>
+      <td>${doc.data().email}</td>
       <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
-      <td><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}')"><i class="far fa-edit"></i></button></td>
+      <td><a href="#nombre"><button class= "btn btn-warning" onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}','${doc.data().matricula}','${doc.data().email}','${doc.data().password}')"><i class="far fa-edit"></i></button></a></td>
 
       </tr>
         `
     });
 });
 //Borra datos
-function eliminar(id, nombre, apellido, especialidad){
+function eliminar(id, nombre, apellido, especialidad, matricula, email, password){
     db.collection("admin").doc(id).delete().then(function() {
         console.log("Document successfully deleted!");
     }).catch(function(error) {
@@ -52,28 +63,42 @@ function eliminar(id, nombre, apellido, especialidad){
 }
 //Editar datos
 
-function editar(id, nombre, apellido, especialidad){
-
+function editar(id, nombre, apellido, especialidad, matricula, email, password){
+    
     document.getElementById('nombre').value = nombre;
     document.getElementById('apellido').value = apellido;
     document.getElementById('especialidad').value = especialidad;
+    document.getElementById('matricula').value = matricula;
+    document.getElementById('email').value = email;
+    document.getElementById('password').value = password;
+    
+    
     var boton = document.getElementById('boton');
     boton.innerHTML ='Editar';
-
+    
     boton.onclick = function(){
+        
         var washingtonRef = db.collection("admin").doc(id);
-
         // Set the "capital" field of the city 'DC'
 
         var nombre =  document.getElementById('nombre').value;
-        var apellido =  document.getElementById('apellido').value;
-        var especialidad =  document.getElementById('especialidad').value
+        var apellido = document.getElementById('apellido').value;
+        var especialidad = document.getElementById('especialidad').value;
+        var matricula = document.getElementById('matricula').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+
 
         return washingtonRef.update({
                 nombre: nombre,
                 apellido: apellido,
                 especialidad: especialidad,
+		        matricula: matricula,
+                email: email,
+		        password: password,
         })
+    
         .then(function() {
             console.log("Document successfully updated!");
             boton.innerHTML ='Guardar';
@@ -83,6 +108,9 @@ function editar(id, nombre, apellido, especialidad){
             document.getElementById('nombre').value = "";
             document.getElementById('apellido').value= "";
             document.getElementById('especialidad').value= "";
+            document.getElementById('matricula').value= "";
+            document.getElementById('email').value= "";
+            document.getElementById('password').value= "";
 
         })
         .catch(function(error) {
@@ -113,12 +141,14 @@ function filtroNombre(){
         
         tabla.innerHTML +=(`
         <tr>
-      <th scope="row">${doc.id}</th>
-      <td>${doc.data().nombre}</td>
-      <td>${doc.data().apellido}</td>
-      <td>${doc.data().especialidad}</td>
+        <td>${doc.data().nombre}</td>
+        <td>${doc.data().apellido}</td>
+        <td>${doc.data().especialidad}</td>
+        <td>${doc.data().matricula}</td>
+        <td>${doc.data().email}</td>
+  
       <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
-      <td><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}')"><i class="far fa-edit"></i></button></td>
+      <td><a href="#nombre"><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}','${doc.data().matricula}','${doc.data().email}')"><i class="far fa-edit"></i></a></button></td>
 
       </tr>
         `);
@@ -141,12 +171,14 @@ function cerrarfiltro(){
        // console.log(`${doc.id} => ${doc.data().nombre}`);
         tabla.innerHTML +=`
         <tr>
-      <th scope="row">${doc.id}</th>
-      <td>${doc.data().nombre}</td>
-      <td>${doc.data().apellido}</td>
-      <td>${doc.data().especialidad}</td>
+        <td>${doc.data().nombre}</td>
+        <td>${doc.data().apellido}</td>
+        <td>${doc.data().especialidad}</td>
+        <td>${doc.data().matricula}</td>
+        <td>${doc.data().email}</td>
+  
       <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
-      <td><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}')"><i class="far fa-edit"></i></button></td>
+      <td><a href="#nombre"><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}','${doc.data().matricula}','${doc.data().email}')"><i class="far fa-edit"></i></button></a></td>
 
       </tr>
         `
@@ -161,47 +193,122 @@ function buscarApe(){
     document.getElementById('buscaA').style.display ='none';
     }
 
-//BUSCAR POR APELLIDO
+//FILTRAR POR APELLIDO
+
 function filtroApellido(){
     document.getElementById('filtrar').style.display ='none';
     document.getElementById('cerrarFiltroA').style.display = 'block';
     var comparaA = document.getElementById('botonSearchA').value;
-
-}
-  
-
-//FILTRAR POR APELLIDO
-/*db.collection("admin").where('apellido', '==', 'Piscina').get().then((snapshot) => {
+    tabla.innerHTML = "";
+    db.collection("admin").where('apellido', '==',comparaA).get().then((snapshot) => {
     snapshot.docs.forEach(doc =>{
-        console.log(`
+        
+        tabla.innerHTML +=(`
         <tr>
-      <th scope="row">${doc.id}</th>
       <td>${doc.data().nombre}</td>
       <td>${doc.data().apellido}</td>
       <td>${doc.data().especialidad}</td>
-      <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')">Eliminar</button></td>
-      <td><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}')">Editar</button></td>
+      <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
+      <td><a href="#nombre"><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad},'${doc.data().matricula}','${doc.data().email}')"><i class="far fa-edit"></i></button></a></td>
 
       </tr>
         `);
     })  
     });
 
+}
+
+//CERRAR FILTRO
+function cerrarfiltro(){
+    document.getElementById('filtrar').style.display ='block';
+    document.getElementById('cerrarFiltroA').style.display = 'none';
+    document.getElementById('botonSearchA').style.display = 'none';
+    document.getElementById('buscaA').style.display ='block';
+    
+    var tabla= document.getElementById('tabla');
+  db.collection("admin").onSnapshot((querySnapshot) => {
+      tabla.innerHTML = '';
+    querySnapshot.forEach((doc) => {
+       // console.log(`${doc.id} => ${doc.data().nombre}`);
+        tabla.innerHTML +=`
+        <tr>
+        <td>${doc.data().nombre}</td>
+        <td>${doc.data().apellido}</td>
+        <td>${doc.data().especialidad}</td>
+        <td>${doc.data().matricula}</td>
+        <td>${doc.data().email}</td>
+  
+      <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
+      <td><a href="#nombre"><button class= "btn btn-warning"onclick="editar('${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}','${doc.data().matricula},'${doc.data().email}')"><i class="far fa-edit"></i></a></button></td>
+
+      </tr>
+        `
+    });
+});
+}
 
 
 //FILTRAR POR ESPECILIDAD
-db.collection("admin").where('especialidad', '==', 'INFECTOLOGÍA').get().then((snapshot) => {
+
+//BOTON BUSCAR POR ESPECIALIDAD
+function buscarEspe(){
+    document.getElementById('botonSearchE').style.display = 'block';
+    document.getElementById('buscaE').style.display ='none';
+    }
+
+//FILTRAR POR ESPECIALIDAD
+
+function filtroEspecialidad(){
+    document.getElementById('filtrar').style.display ='none';
+    document.getElementById('cerrarFiltroE').style.display = 'block';
+    var comparaE = document.getElementById('botonSearchE').value;
+    tabla.innerHTML = "";
+    db.collection("admin").where('especialidad', '==',comparaE).get().then((snapshot) => {
     snapshot.docs.forEach(doc =>{
-        console.log(`
+        
+        tabla.innerHTML +=(`
         <tr>
-      <th scope="row">${doc.id}</th>
-      <td>${doc.data().nombre}</td>
-      <td>${doc.data().apellido}</td>
-      <td>${doc.data().especialidad}</td>
-      <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"></button></td>
-      <td><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}')">Editar</button></td>
+        <td>${doc.data().nombre}</td>
+        <td>${doc.data().apellido}</td>
+        <td>${doc.data().especialidad}</td>
+        <td>${doc.data().matricula}</td>
+        <td>${doc.data().email}</td>
+  
+      <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
+      <td><a href="#nombre"><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}','${doc.data().matricula}','${doc.data().email}')"><i class="far fa-edit"></i></button></a></td>
 
       </tr>
         `);
     })  
-    });*/
+    });
+
+}
+
+//CERRAR FILTRO ESPECIALIDAD
+function cerrarfiltro(){
+    document.getElementById('filtrar').style.display ='block';
+    document.getElementById('cerrarFiltroE').style.display = 'none';
+    document.getElementById('botonSearchE').style.display = 'none';
+    document.getElementById('buscaE').style.display ='block';
+    
+    var tabla= document.getElementById('tabla');
+  db.collection("admin").onSnapshot((querySnapshot) => {
+      tabla.innerHTML = '';
+    querySnapshot.forEach((doc) => {
+       // console.log(`${doc.id} => ${doc.data().nombre}`);
+        tabla.innerHTML +=`
+        <tr>
+        <td>${doc.data().nombre}</td>
+        <td>${doc.data().apellido}</td>
+        <td>${doc.data().especialidad}</td>
+        <td>${doc.data().matricula}</td>
+        <td>${doc.data().email}</td>
+  
+      <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
+      <td><a href="#nombre"><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}','${doc.data().matricula}','${doc.data().email}')"><i class="far fa-edit"></i></button></a></td>
+
+      </tr>
+        `
+    });
+});
+}
