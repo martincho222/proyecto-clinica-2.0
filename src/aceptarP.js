@@ -96,8 +96,7 @@ function acept(id,nombre,apellido,email) {
         
         
         `;
-        
-    
+       
 }
 
 let idUser;

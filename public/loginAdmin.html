@@ -1,178 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-<<<<<<< HEAD
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../src/loginAdmin.css">
-  <script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
-
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
-
-  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
-
-
-
-
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyC7rlTbny4mroeytOqwRciKolT6OGhijk0",
-      authDomain: "prueba-validacion-d4b73.firebaseapp.com",
-      databaseURL: "https://prueba-validacion-d4b73.firebaseio.com",
-      projectId: "prueba-validacion-d4b73",
-      storageBucket: "prueba-validacion-d4b73.appspot.com",
-      messagingSenderId: "956489182896",
-      appId: "1:956489182896:web:3262ee70f9cfb1e9309575"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
-=======
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../src/loginAdmin.css">
-    <script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../src/loginAdmin.css" />
+    <script
+      src="https://kit.fontawesome.com/2ed0c63b08.js"
+      crossorigin="anonymous"
+    ></script>
 
-     <!-- The core Firebase JS SDK is always required and must be listed first -->
-  
-    
-  
-
- 
-
-
-
->>>>>>> 72a36a868d1554366b2e6ecee5c1d1ae8248ed7c
 
 
 </head>
-<div class="container">
-  <button class="volverInicio d-flex justify-content-start" id="">volver</button>
-</div>
+
 
 <body class="body">
-
-
   <div class="container" id="container">
-
-    <div class="form-container sign-up-container">
-      <form class="formAdmin" action="#">
-        <h1 adminTittle>Crear Cuenta</h1>
-        <div class="social-container">
-          <a href="#" class="social socialAdmin"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social socialAdmin"><i class="fab fa-google-plus-g"></i></a>
-          <a href="#" class="social socialAdmin"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <div id="alerta"></div>
-        <input class="inputAdmin" type="text" placeholder="Nombres" id="nombresAdm" required />
-        <input class="inputAdmin" type="text" placeholder="Apellidos" id="apellidosAdm" required />
-        <input class="inputAdmin" type="email" placeholder="Email" id="emailAdm" required />
-        <input class="inputAdmin" type="password" placeholder="Contraseña" id="passwordAdm" required>
-        <input class="inputAdmin" type="text" placeholder="N° Matricula Prof." id="matriculaProfAdm" required />
-        <div class="input-contenedor" required>
-          <select name="" id="profesionAdm">
-            <option value="">Seleccionar Especialidad .....</option>
-            <option>ALERGIA E INMUNOLOGÝA</option>
-            <option>ANATOMÝA PATOLÓGICA</option>
-            <option>ANESTESIOLOGÝA</option>
-            <option>ANGIOLOGÝA GENERAL y HEMODINAMIA</option>
-            <option>CARDIOLOGÝA</option>
-            <option>CARDIÓLOGO INFANTIL</option>
-            <option>CIRUGÝA GENERAL</option>
-            <option>CIRUGÝA CARDIOVASCULAR</option>
-            <option>CLÝNICA MÉDICA</option>
-            <option>DERMATOLOGÝA</option>
-            <option>DIAGNOSTICO POR IMÝGENES</option>
-            <option>ENDOCRINOLOGÝA</option>
-            <option>GASTROENTEROLOGÝA</option>
-            <option>GINECOLOGÝA</option>
-            <option>HEMATOLOGÝA</option>
-            <option>INFECTOLOGÝA</option>
-            <option>MEDICINA DEL DEPORTE</option>
-            <option>NEUMONOLOGÝA</option>
-            <option>NEUROLOGÝA</option>
-            <option>OBSTETRICIA</option>
-            <option>OFTALMOLOGÝA</option>
-            <option>ONCOLOGÝA</option>
-            <option>ORTOPEDIA Y TRAUMATOLOGÝA</option>
-            <option>OTORRINOLARINGOLOGÝA</option>
-            <option>PEDIATRÝA</option>
-            <option>PSIQUIATRÝA</option>
-            <option>REUMATOLOGÝA</option>
-            <option>TERAPIA INTENSIVA</option>
-            <option>TOXICOLOGÝA</option>
-            <option>UROLOGÝA</option>
-            <option>NEFROLOGÝA</option>
-            <option>MEDICINA NUCLEAR</option>
-            <option>OTROS</option>
-          </select>
-        </div>
-        <button class="btnAdmin" id="registroAdmin">Registrar</button>
-      </form>
-    </div>
-    <div class="form-container sign-in-container">
-      <form class="formAdmin" action="#">
-        <h1>Iniciar Sesión</h1>
-        <div class="social-container">
-          <a href="#" class="social socialAdmin"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social socialAdmin"><i class="fab fa-google-plus-g"></i></a>
-          <a href="#" class="social socialAdmin"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-<<<<<<< HEAD
-        <input id="adminEmail" class="inputAdmin" type="email" placeholder="Email" required />
-        <input id="adminPassword" class="inputAdmin" type="password" placeholder="Password" required />
-        <a class="socialAdmin" href="#">¿Olvidaste tu contraseña?</a>
-
-        <button onclick="logear()" class="btnAdmin" type="button" id="inicioSesion"><a href="./adm.html">Iniciar
-            Sesión</a></button>
-
-      </form>
-    </div>
-    <div class="overlay-container">
-      <div class="overlay">
-        <div class="overlay-panel overlay-left">
-          <h1 class="adminTittle">Bienvenido!</h1>
-          <p class="adminP">Para mantenerse conectado con nosotros, inicie sesión con su información personal</p>
-          <button class="ghost" class="btnAdmin" id="signIn">Iniciar Sesión</button>
-=======
-        <div class="form-container sign-in-container">
-          <form class="formAdmin" action="#">
-            <h1>Iniciar Sesión</h1>
-            <div class="social-container">
-              <a href="#" class="social socialAdmin"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="social socialAdmin"><i class="fab fa-google-plus-g"></i></a>
-              <a href="#" class="social socialAdmin"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <input id="adminEmail" class="inputAdmin" type="email" placeholder="Email" required/>
-            <input id="adminPassword" class="inputAdmin" type="password" placeholder="Password" required/>
-            <a class="socialAdmin" href="#">¿Olvidaste tu contraseña?</a>
-
-            <button onclick="logear()" class="btnAdmin" type="button" id="inicioSesion"><a href="#" class="btnLink">Iniciar Sesión</a></button>
-              <div id="contenido"></div>
-          </form>
->>>>>>> 72a36a868d1554366b2e6ecee5c1d1ae8248ed7c
-        </div>
-        <div class="overlay-panel overlay-right">
-          <h1 adminTittle>Bienvenidos al panel de Administración</h1>
-          <p class="adminP">Ingrese sus datos personales y comience su viaje con nosotros.</p>
-          <button class="ghost" class="btnAdmin" id="signUp">Registrate</button>
+      <div class="form-container sign-up-container">
+        <form class="formAdmin" action="#">
+          <h1 adminTittle>Crear Cuenta</h1>
+          <div class="social-container">
+            <a href="#" class="social socialAdmin"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social socialAdmin"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social socialAdmin"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <input class="inputAdmin" type="text" placeholder="Nombres" id="nombresAdm" required/>
+          <input class="inputAdmin" type="text" placeholder="Apellidos" id="apellidosAdm" required/>
+          <input class="inputAdmin" type="email" placeholder="Email" id="emailAdm" required/>
+          <input class="inputAdmin" type="password" placeholder="Contraseña" id="passwordAdm" required>
+          <input class="inputAdmin" type="text" placeholder="N° Matricula Prof." id="matriculaProfAdm" required/>
+          <div class="input-contenedor" required>
+            <select name="" id="profesionAdm">
+              <option value="">Seleccionar Especialidad .....</option>
+              <option>ALERGIA E INMUNOLOGÍA</option>
+              <option>ANATOMÍA PATOLÓGICA</option>
+              <option>ANESTESIOLOGÍA</option>
+              <option>ANGIOLOGÍA GENERAL y HEMODINAMIA</option>
+              <option>CARDIOLOGÍA</option>
+              <option>CARDIÓLOGO INFANTIL</option>
+              <option>CIRUGÍA GENERAL</option>
+              <option>CIRUGÍA CARDIOVASCULAR</option>
+              <option>CLÍNICA MÉDICA</option>
+              <option>DERMATOLOGÍA</option>
+              <option>DIAGNOSTICO POR IMÁGENES</option>
+              <option>ENDOCRINOLOGÍA</option>
+              <option>GASTROENTEROLOGÍA</option>
+              <option>GINECOLOGÍA</option>
+              <option>HEMATOLOGÍA</option>
+              <option>INFECTOLOGÍA</option>
+              <option>MEDICINA DEL DEPORTE</option>
+              <option>NEUMONOLOGÍA</option>
+              <option>NEUROLOGÍA</option>
+              <option>OBSTETRICIA</option>
+              <option>OFTALMOLOGÍA</option>
+              <option>ONCOLOGÍA</option>
+              <option>ORTOPEDIA Y TRAUMATOLOGÍA</option>
+              <option>OTORRINOLARINGOLOGÍA</option>
+              <option>PEDIATRÍA</option>
+              <option>PSIQUIATRÍA</option>
+              <option>REUMATOLOGÍA</option>
+              <option>TERAPIA INTENSIVA</option>
+              <option>TOXICOLOGÍA</option>
+              <option>UROLOGÍA</option>
+              <option>NEFROLOGÍA</option>
+              <option>MEDICINA NUCLEAR</option>
+              <option>OTROS</option>
+            </select>  
+         </div>
+          <button class="btnAdmin" id="registroAdmin">Registrar</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form class="formAdmin" action="#">
+          <h1>Iniciar Sesión</h1>
+          <div class="social-container">
+            <a href="#" class="social socialAdmin"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social socialAdmin"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social socialAdmin"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <input id="adminEmail" class="inputAdmin" type="email" placeholder="Email" required/>
+          <input id="adminPassword" class="inputAdmin" type="password" placeholder="Password" required/>
+          <a class="socialAdmin" href="#">¿Olvidaste tu contraseña?</a>
+          <button onclick=logear() class="btnAdmin" type="button" id="inicioSesion">Iniciar Sesión</button>
+          <div id="contenido"></div>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1 class="adminTittle">Bienvenido!</h1>
+            <p class="adminP">Para mantenerse conectado con nosotros, inicie sesión con su información personal</p>
+            <button class="ghost" class="btnAdmin" id="signIn">Iniciar Sesión</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1 adminTittle>Bienvenidos al panel de Administración</h1>
+            <p class="adminP">Ingrese sus datos personales y comience su viaje con nosotros.</p>
+            <button class="ghost" class=" btnAdmin" id="signUp">Registrate</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
 
 
 
-<<<<<<< HEAD
-
-  <script src="../src/loginAdmin.js"></script>
-=======
      
     
 
@@ -204,7 +136,7 @@
     
     </script>
     <script src="../src/loginAdmin.js"></script>
->>>>>>> 72a36a868d1554366b2e6ecee5c1d1ae8248ed7c
 </body>
 
 </html>
+
