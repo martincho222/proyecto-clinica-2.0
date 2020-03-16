@@ -14,6 +14,7 @@ module.exports = {
     historial: "./src/historial.js",
     abmMedicos: "./src/abmMedicos.js",
     aceptarP: "./src/aceptarP.js",
+    abmMedicos: "./src/abmMedicos.js"
 
 
   },
@@ -110,6 +111,13 @@ module.exports = {
       inject: true,
       chunks: ['user'],
       filename: 'loginPaciente.html'
+
+    }),
+    new HtmlWebpackPlugin({
+      template: "./public/abmMedicos.html",
+      inject: true,
+      chunks: ['abmMedicos'],
+      filename: 'abmMedicos.html'
 
     }),
 

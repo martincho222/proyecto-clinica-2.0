@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Document</title>
     <link rel="stylesheet" href="/src/abmMedicos.css">
-    <link rel="stylesheet" href="../src/adm.css">
     <script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-
+     
 <body>
     <div class="wrapper">
         <!-- Sidebar  -->
@@ -19,23 +15,23 @@
             <div id="dismiss">
                 <i class="fas fa-arrow-left"></i>
             </div>
-
-
+    
+    
             <div class="sidebar-header">
                 <h3>Kalima</h3>
             </div>
-
+    
             <ul class="list-unstyled components">
                 <p class="paragraph">Panel Administrador</p>
                 <li>
                     <a class="linkAdmin" href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Inicio</a>
-
-
+    
+    
                 </li>
                 <li>
                     <a class="linkAdmin" href="#">Turnos</a>
                 </li>
-
+    
                 <li>
                     <a class="linkAdmin" href="#">Notificaciones</a>
                 </li>
@@ -52,183 +48,176 @@
                     <a class="linkAdmin" href="abmMedicos.html">Administración Médicos</a>
                 </li>
             </ul>
-
-
+    
+    
         </nav>
-
+    
         <!-- Page Content  -->
         <div id="content">
-        
-            <nav
-              class="navbar-admin navbar-expand-lg navbar-light navbarAdministracion"
-                >
-                <button type="button" id="sidebarCollapse" class="btn btn-info">
-                  <i class="fas fa-align-left"></i>
-                </button>
-              
-            </nav>
-           
     
-            <div class="container-fluid">
-                <h1 class="titulo">Administración de Médicos</h1>
-                <input type="text" class="form-control my-2" id="nombre" placeholder="Nombre">
-                <input type="text" class="form-control my-2" id="apellido" placeholder="Apellido">
-                <div class="input-contenedor my-2" required>
-                    <select name="" id="especialidad">
-                        <option value="">Seleccionar Especialidad .....</option>
-                        <option>ALERGIA E INMUNOLOGÍA</option>
-                        <option>ANATOMÍA PATOLÓGICA</option>
-                        <option>ANESTESIOLOGÍA</option>
-                        <option>ANGIOLOGÍA GENERAL y HEMODINAMIA</option>
-                        <option>CARDIOLOGÍA</option>
-                        <option>CARDIÓLOGO INFANTIL</option>
-                        <option>CIRUGÍA GENERAL</option>
-                        <option>CIRUGÍA CARDIOVASCULAR</option>
-                        <option>CLÍNICA MÉDICA</option>
-                        <option>DERMATOLOGÍA</option>
-                        <option>DIAGNOSTICO POR IMÁGENES</option>
-                        <option>ENDOCRINOLOGÍA</option>
-                        <option>GASTROENTEROLOGÍA</option>
-                        <option>GINECOLOGÍA</option>
-                        <option>HEMATOLOGÍA</option>
-                        <option>INFECTOLOGÍA</option>
-                        <option>MEDICINA DEL DEPORTE</option>
-                        <option>NEUMONOLOGÍA</option>
-                        <option>NEUROLOGÍA</option>
-                        <option>OBSTETRICIA</option>
-                        <option>OFTALMOLOGÍA</option>
-                        <option>ONCOLOGÍA</option>
-                        <option>ORTOPEDIA Y TRAUMATOLOGÍA</option>
-                        <option>OTORRINOLARINGOLOGÍA</option>
-                        <option>PEDIATRÍA</option>
-                        <option>PSIQUIATRÍA</option>
-                        <option>REUMATOLOGÍA</option>
-                        <option>TERAPIA INTENSIVA</option>
-                        <option>TOXICOLOGÍA</option>
-                        <option>UROLOGÍA</option>
-                        <option>NEFROLOGÍA</option>
-                        <option>MEDICINA NUCLEAR</option>
-                        <option>OTROS</option>
-                    </select>
-                </div>
-
-                <button class="btn btn-info my-3" id="boton" onclick="guardar()">Guardar</button>
-                <table class="table my-3">
-                    <thead class="thead">
-                        <tr>
-                            <th scope="col" class="colRegistro">ID de registro</th>
-                            <th scope="col"><button id="buscaN" onclick="buscarNom()">Nombre</button><input
-                                    id="botonSearchN" type="search"><button id="filtrar"
-                                    onclick="filtroNombre()"><i class="fas fa-filter"></i></button><button
-                                    id="cerrarFiltroN" style="display:none" onclick="cerrarfiltro()"><i
-                                        class="fas fa-times-circle"></i></button></th>
-
-                            <th scope="col"><button id="buscaA" onclick="buscarApe()">Apellido</button> <input
-                                    id="botonSearchA" type="search"><button id="filtrar"
-                                    onclick="filtroApellido()"><i class="fas fa-filter"></i><button
-                                        id="cerrarFiltroA" style="display:none" onclick="cerrarfiltro()"><i
-                                            class="fas fa-times-circle"></i></button></th>
-
-                            <th scope="col"><button id="buscaE" onclick="buscarEspe()">Especialidad
-                                </button><button id="filtrar" onclick="filtroEspecialidad()"><i
-                                        class="fas fa-filter"></i></button></th>
-                            <th scope="col">Eliminar</th>
-                            <th scope="col">Editar</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tabla">
-                        <tr>
-                            <th scope="row" class="colRegistro">1</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-                    </tbody>
-                </table>
-
-
-            </div>
-          </div>
-        </div>
-                    <!--AQUI TERMINA EL BOTON QUE ACCIONA EL SIDEBAR-->
-
-                    <div class="overlay"></div>     <!--AQUI EMPIEZA EL CONTENIDO DEL NAVBAR-->
-
-
-
+            <nav class="navbar navbar-expand-lg navbar-light navbarAdministracion">
+                <div class="container-fluid">
                     
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                     <h1 class="titulo col-12 col-lg-10">Administración de Médicos</h1>
 
+                </nav>
+                    <!--AQUI TERMINA EL BOTON QUE ACCIONA EL SIDEBAR-->
+                    
+                    <!--AQUI EMPIEZA EL CONTENIDO DEL NAVBAR-->
+    
+                  
+                   
+                    <div class="container-fluid">
+                        <div class="input-contenedor my-2 col-12" id="contenedorForm"required>
+                            <input type="text" class="form-control my-2" id="nombre" placeholder="Nombre">
+     <input type="text" class="form-control my-2" id="apellido" placeholder="Apellido">
+                  <select name="" class="col-12"id="especialidad">
+             <option value="">Seleccionar Especialidad .....</option>
+             <option>ALERGIA E INMUNOLOGÍA</option>
+             <option>ANATOMÍA PATOLÓGICA</option>
+              <option>ANESTESIOLOGÍA</option>
+              <option>ANGIOLOGÍA GENERAL y HEMODINAMIA</option>
+              <option>CARDIOLOGÍA</option>
+              <option>CARDIÓLOGO INFANTIL</option>
+              <option>CIRUGÍA GENERAL</option>
+              <option>CIRUGÍA CARDIOVASCULAR</option>
+              <option>CLÍNICA MÉDICA</option>
+              <option>DERMATOLOGÍA</option>
+              <option>DIAGNOSTICO POR IMÁGENES</option>
+              <option>ENDOCRINOLOGÍA</option>
+              <option>GASTROENTEROLOGÍA</option>
+              <option>GINECOLOGÍA</option>
+              <option>HEMATOLOGÍA</option>
+              <option>INFECTOLOGÍA</option>
+              <option>MEDICINA DEL DEPORTE</option>
+              <option>NEUMONOLOGÍA</option>
+              <option>NEUROLOGÍA</option>
+              <option>OBSTETRICIA</option>
+              <option>OFTALMOLOGÍA</option>
+              <option>ONCOLOGÍA</option>
+              <option>ORTOPEDIA Y TRAUMATOLOGÍA</option>
+              <option>OTORRINOLARINGOLOGÍA</option>
+              <option>PEDIATRÍA</option>
+              <option>PSIQUIATRÍA</option>
+              <option>REUMATOLOGÍA</option>
+              <option>TERAPIA INTENSIVA</option>
+              <option>TOXICOLOGÍA</option>
+              <option>UROLOGÍA</option>
+              <option>NEFROLOGÍA</option>
+              <option>MEDICINA NUCLEAR</option>
+              <option>OTROS</option>
+            </select>  
+            <input type="text" class="form-control my-2" id="matricula" placeholder="Matricula Profesional">
+            <input type="text" class="form-control my-2" id="email" placeholder="Email">
+            <input type="password" class="form-control my-2" id="password" placeholder="Contraseña">
 
+            <button class="btn btn-info my-3" id="boton" onclick="guardar()">Guardar</button>
+        </div>
+        
+    <table class="table my-3" id="table">
+      <thead class="thead">
+        <tr>
+          <th scope="col"><button id="buscaN" onclick="buscarNom()">Nombre</button><input id="botonSearchN"type="search"><button id="filtrar" onclick="filtroNombre()"><i class="fas fa-filter"></i></button><button id="cerrarFiltroN" style= "display:none"onclick="cerrarfiltro()"><i class="fas fa-times-circle"></i></button></th>
 
-                    <!-- jQuery CDN - Slim version (=without AJAX) -->
-                    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          <th scope="col"><button id="buscaA" onclick="buscarApe()">Apellido</button> <input id="botonSearchA"type="search"><button id="filtrar" onclick="filtroApellido()"><i class="fas fa-filter"></i><button id="cerrarFiltroA" style= "display:none"onclick="cerrarfiltro()"><i class="fas fa-times-circle"></i></button></th>
+          
+          <th scope="col"><button id="buscaE" onclick="buscarEspe()">Especialidad </button><input id="botonSearchE"type="search"><button id="filtrar" onclick="filtroEspecialidad()"><i class="fas fa-filter"></i></button><button id="cerrarFiltroE" style= "display:none"onclick="cerrarfiltro()"><i class="fas fa-times-circle"></i></button></th>
+          <th scope="col" class="matriculaCol">Matricula</th>
+          <th scope="col" class="mail">Email</th>
+          <th scope="col">Eliminar</th>
+          <th scope="col">Editar</th>
+        </tr>
+      </thead>
+      <tbody id="tabla">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+        </tr>
+        
+      </tbody>
+    </table>
+    
+        
+      </div>
+     
+     
+
+      <!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 crossorigin="anonymous"></script>
-                    <!-- Popper.JS -->
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
-                        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-                        crossorigin="anonymous"></script>
-                    <!-- Bootstrap JS -->
-                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
-                        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-                        crossorigin="anonymous"></script>
-                    <!-- jQuery Custom Scroller CDN -->
-                    <script
-                        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+crossorigin="anonymous"></script>
+<!-- jQuery Custom Scroller CDN -->
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
 
-                    <script type="text/javascript">
-                        $(document).ready(function () {
-                            $("#sidebar").mCustomScrollbar({
-                                theme: "minimal"
-                            });
+        $('#dismiss, .overlay1').on('click', function () {
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+        });
 
-                            $('#dismiss, .overlay1').on('click', function () {
-                                $('#sidebar').removeClass('active');
-                                $('.overlay').removeClass('active');
-                            });
-
-                            $('#sidebarCollapse').on('click', function () {
-                                $('#sidebar').addClass('active');
-                                $('.overlay').addClass('active');
-                                $('.collapse.in').toggleClass('in');
-                                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-                            });
-                        });
-                    </script>
-
-
-
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').addClass('active');
+            $('.overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+</script>
 
 
 
-                    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
-                    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-                    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
 
-                    <!-- Add Firebase products that you want to use -->
-                    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
-                    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
 
-                    <script>
-                        // Your web app's Firebase configuration
-                        var firebaseConfig = {
-                            apiKey: "AIzaSyC7rlTbny4mroeytOqwRciKolT6OGhijk0",
-                            authDomain: "prueba-validacion-d4b73.firebaseapp.com",
-                            databaseURL: "https://prueba-validacion-d4b73.firebaseio.com",
-                            projectId: "prueba-validacion-d4b73",
-                            storageBucket: "prueba-validacion-d4b73.appspot.com",
-                            messagingSenderId: "956489182896",
-                            appId: "1:956489182896:web:3262ee70f9cfb1e9309575"
-                        };
-                        // Initialize Firebase
-                        firebase.initializeApp(firebaseConfig);
+<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
-                    </script>
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
 
-                    <script src="/src/abmMedicos.js"></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyC7rlTbny4mroeytOqwRciKolT6OGhijk0",
+      authDomain: "prueba-validacion-d4b73.firebaseapp.com",
+      databaseURL: "https://prueba-validacion-d4b73.firebaseio.com",
+      projectId: "prueba-validacion-d4b73",
+      storageBucket: "prueba-validacion-d4b73.appspot.com",
+      messagingSenderId: "956489182896",
+      appId: "1:956489182896:web:3262ee70f9cfb1e9309575"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    
+        </script>
+
+    <script src="/src/abmMedicos.js"></script>
 </body>
-
 </html>
