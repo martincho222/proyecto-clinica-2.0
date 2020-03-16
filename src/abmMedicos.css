@@ -2,13 +2,13 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 *{
     scroll-behavior: smooth;
-
 }
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa !important;
     margin: auto;
 }
+
 .titulo{
     color:#343a40;
     background: #fafafa;
