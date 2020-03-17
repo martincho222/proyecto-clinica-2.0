@@ -37,8 +37,18 @@ arra1.push(usuario={
     email:email,
 });
 localStorage.setItem('pacientesAct',JSON.stringify(arra1));
+arra1.forEach((pacient,i)=>{
+    if (id===pacient.id) {
+        console.log(arrayDatos)
+        arrayDatos.splice(i,1)
+        console.log(arrayDatos)
+    
+    }
+})
+
 mostrarPacAct();
-   
+
+}
 
 
 
@@ -64,7 +74,7 @@ function mostrarPacAct() {
     
     const activos=document.getElementById('activos');
     
-      UsuariosPacientes.forEach(usuario=>{
+      UsuariosPacientes.forEach((usuario,i)=>{
          activos.innerHTML +=`
         
          <tr>
