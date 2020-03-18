@@ -113,6 +113,13 @@ module.exports = {
 
     }),
     new HtmlWebpackPlugin({
+      template: "./public/aceptarP.html",
+      inject: true,
+      chunks: ['aceptarP'],
+      filename: 'aceptarP.html'
+
+    }),
+new HtmlWebpackPlugin({
       template: "./public/abmMedicos.html",
       inject: true,
       chunks: ['abmMedicos'],
@@ -134,20 +141,6 @@ module.exports = {
       filename: 'historial.html'
 
     }),
-    new HtmlWebpackPlugin({
-      template: "./public/aceptarP.html",
-      inject: true,
-      chunks: ['aceptarP'],
-      filename: 'aceptarP.html'
-
-    }),
-new HtmlWebpackPlugin({
-      template: "./public/abmMedicos.html",
-      inject: true,
-      chunks: ['abmMedicos'],
-      filename: 'abmMedicos.html'
-    }),
-
-
+   
   ]
 };

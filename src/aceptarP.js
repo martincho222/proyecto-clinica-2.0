@@ -1,105 +1,63 @@
 var db = firebase.firestore();
 
-// $(document).on('click', 'btn-remove', removeElement);
-// function removeElement(){
-//     $(this).parent().remove();
 
-// }
 let arra1 =[];
+let arrayDatos=[];
+let array3=[];
+let idUser;
 let Tbody = document.getElementById('Tbody');
-db.collection("user").onSnapshot(querySnapshot => {
-    Tbody.innerHTML = "";
-    querySnapshot.forEach(doc => {
-        
-        Tbody.innerHTML+=`
-        
-        <tr>
-                    <th scope="row">${doc.id}</th>
-                    <td>${doc.data().nombre}</td>
-                    <td>${doc.data().apellido}</td>
-                    <td>${doc.data().email}</td>
-                    <td>
-                        <button  type="button" class="btn btn-success" data-toggle="modal" data-target="#exitoModal" onclick="acept('${doc.id}','${doc.data().nombre}','${doc.data().apellido}','${doc.data().email}')"><i class="far fa-check-circle"></i></button>
-                       <button type="button" class="btn btn-danger" onclick="borrarPas('${doc.id}')" data-toggle="modal" data-target="#deleteModal"><i class="far fa-trash-alt"></i></button>
-                    </td>
-                    
+ 
+    document.addEventListener('click', function (e) {
 
-                  </tr>
-        
-        
-        
-        `
+                if (e.toElement.parentNode.id==='btnElim') {
+            
+            let idUser=e.toElement.parentNode.parentNode.parentNode.cells["0"].innerText;
+            console.log(idUser)
+           let pes=e.toElement.parentNode.parentNode.parentNode;
+           pes.remove();
 
-//    console.log(`${doc.id} => ${doc.data()}`);
-    });
-   
-  });
-// class User{
-//     constructor(Id,Name,LastName,Email,Actions){
-//         this.Id=Id;
-//         this.Name=Name;
-//         this.LastName=LastName;
-//         this.Email=Email;
-//         this.Actions=Actions;
-//     }
-
-// }
-
-
-// function agregarUser() {
-    // const Id=localsa
-    // const Name=document.getElementById().value;
-    // const Email=document.getElementById().value;
-    // const LastName=document.getElementById().value;
-    // const Actions=document.getElementById().value;
-
-//     const user = new User('1','rochi','scarlata','rochi@roch','vamo');
-//      const ubicHtml=document.getElementById('Tbody');
-//     console.log(user);
-//     ubicHtml.innerHTML +=`<tr>
-//     <th scope="row">${user.Id}</th>
-//     <td>${user.Name}</td>
-//     <td>${user.LastName}</td>
-//     <td>${user.Email}</td>
-//     <td>
-//         <button  type="button" class="btn btn-success" data-toggle="modal" data-target="#exitoModal" ><i class="far fa-check-circle"></i></button>
-//        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"><i class="far fa-trash-alt"></i></button>
-//     </td>
-    
-
-//   </tr>`
-// }
-
-
-
-// document.addEventListener("click", function(event) {
-//     agregarUser();
-// });
-
+        }else if (e.toElement.id==='btnElim') {
+            let pas=e.toElement.parentNode.parentNode;
+            pas.remove();
+            let idUser=e.toElement.parentNode.parentNode.cells["0"].innerText;
+            console.log(idUser)
+        }
+       
+});
+  
+ 
 
 function acept(id,nombre,apellido,email) {
-    const activos=document.getElementById('activos');
-    arra1.push(array);
-    arra1.splice(id, 1)
-    activos.innerHTML+=`
+    
         
-        <tr>
-                    <th scope="row">${id}</th>
-                    <td>${nombre}</td>
-                    <td>${apellido}</td>
-                    <td>${email}</td>
-                   
-                    
+arra1.push(usuario={
+    id:id,
+    nombre:nombre,
+    apellido:apellido,
+    email:email,
+});
+localStorage.setItem('pacientesAct',JSON.stringify(arra1));
+arra1.forEach((pacient,i)=>{
+    if (id===pacient.id) {
+        console.log(arrayDatos)
+        arrayDatos.splice(i,1)
+        console.log(arrayDatos)
+    
+    }
+})
 
-                  </tr>
-        
-        
-        
-        `;
-       
+mostrarPacAct();
+
 }
 
-let idUser;
+
+
+
+
+
+
+
+
 function borrarPas(id) {
     idUser=id;
 }
@@ -112,5 +70,87 @@ function borrarP() {
     })
 }
 
-const array = []
 
+
+function mostrarPacAct() {
+    let   UsuariosPacientes=JSON.parse(localStorage.getItem('pacientesAct'));
+    arra1=UsuariosPacientes;
+    
+    const activos=document.getElementById('activos');
+    
+      UsuariosPacientes.forEach((usuario,i)=>{
+         activos.innerHTML +=`
+        
+         <tr>
+                     <th >${usuario.id}</th>
+                     <td>${usuario.nombre}</td>
+                    <td>${usuario.apellido}</td>
+                     <td>${usuario.email}</td>  
+
+                  </tr>
+    
+       `;
+        
+    
+    });
+
+      }
+     
+    
+
+    function DatosDeFirebAarray() {
+    
+        db.collection("user").onSnapshot(querySnapshot => {
+            
+            querySnapshot.forEach(doc =>{
+                arrayDatos.push(dataUser={
+                    id:doc.id,
+                    nombre:doc.data().nombre,
+                    apellido:doc.data().apellido,
+                    email:doc.data().email,
+                });
+        
+    
+            })
+           
+            localStorage.setItem('PacientesEspera',JSON.stringify(arrayDatos));
+            
+        });   
+        
+    }
+
+    function DatosPac() {
+        let pasas=JSON.parse(localStorage.getItem('PacientesEspera'));
+        array3.push(pasas)
+        
+        Tbody.innerHTML = "";
+        array3.forEach(usua =>{
+            usua.forEach(usuar=>{
+                Tbody.innerHTML += `
+            
+                <tr>
+                            <th >${usuar.id}</th>
+                            <td>${usuar.nombre}</td>
+                            <td>${usuar.apellido}</td>
+                            <td>${usuar.email}</td>
+                            <td>
+                                <button  type="button" class="btn btn-success" data-toggle="modal" data-target="#exitoModal" id="btnElim" onclick="acept('${usuar.id}','${usuar.nombre}','${usuar.apellido}','${usuar.email}')"><i class="far fa-check-circle"></i></button>
+                               <button type="button" class="btn btn-danger" onclick="borrarPas('${usuar.id}')" data-toggle="modal" data-target="#deleteModal"><i class="far fa-trash-alt"></i></button>
+                            </td>
+                            
+        
+                          </tr>
+                
+                
+                
+                `
+            })
+            
+    
+        })
+        
+    }
+    DatosPac();
+   DatosDeFirebAarray();
+   mostrarPacAct();
+  

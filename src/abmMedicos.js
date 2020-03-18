@@ -1,6 +1,7 @@
 var db = firebase.firestore();
 
   //Agrega medicos y especialidades
+ 
   function guardar(){
       var nombre= document.getElementById('nombre').value;
       var apellido= document.getElementById('apellido').value;
@@ -53,6 +54,7 @@ var db = firebase.firestore();
     });
 });
 //Borra datos
+
 function eliminar(id, nombre, apellido, especialidad, matricula, email, password){
     db.collection("admin").doc(id).delete().then(function() {
         console.log("Document successfully deleted!");
@@ -126,12 +128,17 @@ function editar(id, nombre, apellido, especialidad, matricula, email, password){
 function buscarNom(){
     document.getElementById('botonSearchN').style.display = 'block';
     document.getElementById('buscaN').style.display ='none';
+    var botonFN= document.getElementById('filtrarN');
+    botonFN.disabled = false;
+    document.getElementById('cerrarFiltroN').style.display = 'block';
+
+
     }
 
 //FILTRAR POR NOMBRE
 
 function filtroNombre(){
-    document.getElementById('filtrar').style.display ='none';
+    document.getElementById('filtrarN').style.display ='none';
     document.getElementById('cerrarFiltroN').style.display = 'block';
     var comparaN = document.getElementById('botonSearchN').value;
     tabla.innerHTML = "";
@@ -155,12 +162,16 @@ function filtroNombre(){
 
 }
 
-//CERRAR FILTRO
-function cerrarfiltro1(){
-    document.getElementById('filtrar').style.display ='block';
+//CERRAR FILTRO Nom
+var botonFN= document.getElementById('filtrarN');
+var botonSN=  document.getElementById('botonSearchN');
+function cerrarfiltroN(){
+    document.getElementById('filtrarN').style.display ='block';
     document.getElementById('cerrarFiltroN').style.display = 'none';
     document.getElementById('botonSearchN').style.display = 'none';
     document.getElementById('buscaN').style.display ='block';
+    botonFN.disabled = true;
+    botonSN.value="";
     
     var tabla= document.getElementById('tabla');
   db.collection("admin").onSnapshot((querySnapshot) => {
@@ -188,12 +199,18 @@ function cerrarfiltro1(){
 function buscarApe(){
     document.getElementById('botonSearchA').style.display = 'block';
     document.getElementById('buscaA').style.display ='none';
+    var botonFA= document.getElementById('filtrarA');
+    botonFA.disabled = false;
+    document.getElementById('cerrarFiltroA').style.display = 'block';
+
+    
+    
     }
 
 //FILTRAR POR APELLIDO
 
 function filtroApellido(){
-    document.getElementById('filtrar').style.display ='none';
+    document.getElementById('filtrarA').style.display ='none';
     document.getElementById('cerrarFiltroA').style.display = 'block';
     var comparaA = document.getElementById('botonSearchA').value;
     tabla.innerHTML = "";
@@ -209,17 +226,23 @@ function filtroApellido(){
       <td><a href="#nombre"><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad},'${doc.data().matricula}','${doc.data().email}')"><i class="far fa-edit"></i></button></a></td>
       </tr>
         `);
-    })  
+    })
+  
     });
 
 }
 
 //CERRAR FILTRO
-function cerrarfiltro2(){
-    document.getElementById('filtrar').style.display ='block';
+function cerrarfiltroA(){
+    document.getElementById('filtrarA').style.display ='block';
     document.getElementById('cerrarFiltroA').style.display = 'none';
     document.getElementById('botonSearchA').style.display = 'none';
     document.getElementById('buscaA').style.display ='block';
+    var botonFA= document.getElementById('filtrarA');
+    var botonSA=  document.getElementById('botonSearchA');
+    botonFA.disabled = true;
+    botonSA.value="";
+
     
     var tabla= document.getElementById('tabla');
   db.collection("admin").onSnapshot((querySnapshot) => {
@@ -249,12 +272,16 @@ function cerrarfiltro2(){
 function buscarEspe(){
     document.getElementById('botonSearchE').style.display = 'block';
     document.getElementById('buscaE').style.display ='none';
+    var botonFE= document.getElementById('filtrarE');
+    botonFE.disabled = false;
+    document.getElementById('cerrarFiltroE').style.display = 'block';
+    
     }
 
 //FILTRAR POR ESPECIALIDAD
 
 function filtroEspecialidad(){
-    document.getElementById('filtrar').style.display ='none';
+    document.getElementById('filtrarE').style.display ='none';
     document.getElementById('cerrarFiltroE').style.display = 'block';
     var comparaE = document.getElementById('botonSearchE').value;
     tabla.innerHTML = "";
@@ -279,11 +306,15 @@ function filtroEspecialidad(){
 }
 
 //CERRAR FILTRO ESPECIALIDAD
-function cerrarfiltro3(){
-    document.getElementById('filtrar').style.display ='block';
+function cerrarfiltroE(){
+    document.getElementById('filtrarE').style.display ='block';
     document.getElementById('cerrarFiltroE').style.display = 'none';
     document.getElementById('botonSearchE').style.display = 'none';
     document.getElementById('buscaE').style.display ='block';
+    var botonFE= document.getElementById('filtrarE');
+    var botonSE=  document.getElementById('botonSearchE');
+    botonFE.disabled = true;
+    botonSE.value="";
     
     var tabla= document.getElementById('tabla');
   db.collection("admin").onSnapshot((querySnapshot) => {

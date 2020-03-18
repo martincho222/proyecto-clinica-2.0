@@ -73,6 +73,45 @@ a {
 
 .navIcon {
   background-color:rgb(65, 155, 129);
+ /* fin de carrousel niki*/
+/*inicio slide rochy*/
+/* .gallery-item {
+	float: left;
+	width: 40%;
+	height: 0;
+  padding-bottom: 30%; 
+  display: inline-block;
+	position: relative;
+	overflow: hidden;
+	 */
+}
+
+.slider-container {
+	overflow: hidden;
+}
+.slide-holder {
+  width: 400%;
+  position: relative;
+  animation: scroller 10s infinite;
+	animation-direction: alternate;
+	/* animation-delay: 2s; */
+	animation-timing-function: ease-in-out;}
+	.slide-holder .img {
+		width: 25%;
+		display: inline-block;
+		max-width: 25%;
+		/* margin-right: -2px; */
+  }
+
+@keyframes scroller {
+  0%   { transform: translateX(0); }
+  10%  { transform: translateX(0); }
+  30%  { transform: translateX(-25%); }
+  40%  { transform: translateX(-25%); }
+  60%  { transform: translateX(-50%); }
+  70%  { transform: translateX(-50%); }
+  90% { transform: translateX(-75%); }
+  100% { transform: translateX(-75%); }
 }
 
 .navIcon1 {
@@ -179,6 +218,27 @@ a {
   
 }
 
+.footer {
+   
+    box-sizing: content-box;
+    font-family: sans-serif;
+    width: 100vw;
+    background: #202020 !important;
+    color: antiquewhite;
+}
+
+
+.copyright {
+    color: #101010 !important;
+}
+
+.footer-copyright{
+  height: 40px;
+  background: #202020 !important;
+    color: antiquewhite;
+    
+}
+
 .copyright {
   background-color:rgb(65, 155, 129);
 }
@@ -234,3 +294,63 @@ a {
   width: 600px;
   padding: 15px;
 }
+
+
+
+.primer {
+  float: left;
+
+}
+
+
+.segundoNav{
+  text-align: center !important;
+}
+
+
+
+.navIcon{
+  background: #78C2AD !important;
+}
+.navIcon1{
+  background:rgba(76, 247, 156, 0.5) !important;
+}
+
+.colorText{
+  color: #516fca  !important;
+  background:  #6CC3D5  !important;
+}
+
+.colorText1{
+  color:#516fca  !important;
+  background:  #6CC3D5 !important;
+}
+
+.nav-link{
+  color: white !important;
+}
+
+.navIcon{
+  background:#78C2AD !important;
+}
+.navIcon1{
+  background:#78C2AD !important;
+}
+
+.colorText{
+  color: #516fca  !important;
+  background:  rgb(109, 177, 157) !important;
+}
+
+.colorText1{
+  color:#516fca  !important;
+  background:  rgb(109, 177, 157) !important;
+
+}
+
+.nav-link{
+  color: white !important;
+}
+
+
+
