@@ -6,47 +6,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../src/perfilAdmin.css">
+    <link rel="stylesheet" href="perfilAdmin.css">
+    <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
   <title>Perfil Administrador</title>
 </head>
 
 <body>
-  <div class="container-fluid ">
-     
-      <div class="xl-col-5 md-col-10 sm-col-10 perfil">
-        <h4>ADMINISTRADOR</h4>
-          <div class="img">
-            <img src="https://blog.doctoralia.es/hubfs/Blog_-_SP/medico-blog-4.jpg" alt="">
-            <!-- <img src="https://lh3.googleusercontent.com/proxy/hKJDxLGke8Aqd7KT5G3xHHVLu1vi9xciTLHybz1A3-FCMpwmNRtA9ptpTO0RIbePKRGNZ_TVroW7oYfNo-dYapNhHwMZqcZKqKyNTqaP2BLrS1nCGNZOD1RzgDUv" alt=""> -->
-          </div>
-              <!-- <br>
-              <input type="text" placeholder="Nombre :"><br><br>
-              <input type="text" placeholder="apellido :"><br><br>
-              <input type="text" placeholder="E mail :"><br><br>
-              <input type="text" placeholder=" Telefono :"><br><br> -->
-             
-              
-              <hr>
-              <p> Nombre :</p>
-              <hr>
-              <p> Apellido :</p>
-              <hr>
-              <p>E mail : </p>
-              <hr>
-              <p>Telefono :</p>
-              <hr>
-              <button type="submit"> Volver</button>
-      </div>
-  
+  <!-- INICIO NAVBAR -->
+
+
+<div class="container-fluid colorText bg-dark">
+  <div class="row">
+    <div class="col-12">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark colorText1">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav mx-auto mt-2 mt-lg-0 ulNav">
+            <li class="nav-item active ml-5">
+              <a class="nav-link" href="seccionUsuario.html">Inicio</a>
+            </li>
+            <li class="nav-item ml-5">
+              <a class="nav-link" href="#">Institucional</a>
+            </li>
+            <li class="nav-item ml-5">
+
+              <a class="nav-link" href="#contacto">Contacto</a>
+
+            </li>
+            <li class="nav-item ml-5">
+              <a class="nav-link" href="./turnosAdmin.html">Nuestros Valores</a>
+            </li>
+
+
+            <li class="nav-item dropdown ml-5">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                LogIn
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./loginPaciente.html">Paciente</a>
+                <a class="dropdown-item" href="./loginAdmin.html">Administracion</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </div>
   </div>
+</div>
 
 
+  <div class="container-fluid ">
+     <div id="perfilAd">
+    </div>
+
+</div>
+<footer>
+  <div class=" container-fluid footer-copyright text-center py-3 ">
+    <p class="foot">© 2020 Copyright:</p> <a href="https://kalima.com "> Kalima.com</a>
+  </div>
+</footer>
 
 
-
-
-
-
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyC7rlTbny4mroeytOqwRciKolT6OGhijk0",
+      authDomain: "prueba-validacion-d4b73.firebaseapp.com",
+      databaseURL: "https://prueba-validacion-d4b73.firebaseio.com",
+      projectId: "prueba-validacion-d4b73",
+      storageBucket: "prueba-validacion-d4b73.appspot.com",
+      messagingSenderId: "956489182896",
+      appId: "1:956489182896:web:3262ee70f9cfb1e9309575"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="perfilAdmin.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
@@ -56,6 +106,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>

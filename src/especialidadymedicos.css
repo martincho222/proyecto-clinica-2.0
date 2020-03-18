@@ -11,9 +11,10 @@
 }
 .alto{
     height: 500px !important;
-    background-color: #78C2AD);
+
+    background-color:rgb(65, 155, 129);
 }
 .titulo{
-    background-color: #78C2AD;
-    color: dimgrey;
+    background-color:rgb(65, 155, 129);
+    color: rgb(241, 241, 241) !important;
 }

@@ -97,7 +97,7 @@ function mostrarTurnosAceptados() {
     const liHtml=document.getElementById('cuerpoTurnos2');
     // pongo los turnos en el Html
     liHtml.innerHTML+=`<li class="fadeInLeft animated">${turno.fecha} y ${turno.hora}<button type="button" class="btn btn-primary" onClick="mostrarDatos(${i})" data-toggle="modal" data-target="#exampleModal">
-    🔶
+    🔶for
   </button></li>`;
     });
     
