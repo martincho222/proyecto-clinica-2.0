@@ -47,6 +47,11 @@ arra1.forEach((pacient,i)=>{
 })
 
 mostrarPacAct();
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 7cdccdb00d4554aea8a1dce43df8a034000e5856
 
 }
 
@@ -54,6 +59,12 @@ mostrarPacAct();
 
 
 
+<<<<<<< HEAD
+=======
+
+let idUser;
+
+>>>>>>> 7cdccdb00d4554aea8a1dce43df8a034000e5856
 function borrarPas(id) {
     idUser=id;
 }

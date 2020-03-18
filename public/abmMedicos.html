@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Document</title>
     <link rel="stylesheet" href="/src/abmMedicos.css">
     <script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 
      
 <body>
@@ -57,16 +61,13 @@
     
             <nav class="navbar navbar-expand-lg navbar-light navbarAdministracion">
                 <div class="container-fluid">
-    
+                    
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
-    
                     </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
+                     <h1 class="titulo col-12 col-lg-10">Administración de Médicos</h1>
+
+                </nav>
                     <!--AQUI TERMINA EL BOTON QUE ACCIONA EL SIDEBAR-->
                     
                     <!--AQUI EMPIEZA EL CONTENIDO DEL NAVBAR-->
@@ -74,11 +75,10 @@
                   
                    
                     <div class="container-fluid">
-                        <h1 class="titulo">Administración de Médicos</h1>
-    <input type="text" class="form-control my-2" id="nombre" placeholder="Nombre">
+                        <div class="input-contenedor my-2 col-12" id="contenedorForm"required>
+                            <input type="text" class="form-control my-2" id="nombre" placeholder="Nombre">
      <input type="text" class="form-control my-2" id="apellido" placeholder="Apellido">
-     <div class="input-contenedor my-2" required>
-         <select name="" id="especialidad">
+                  <select name="" class="col-12"id="especialidad">
              <option value="">Seleccionar Especialidad .....</option>
              <option>ALERGIA E INMUNOLOGÍA</option>
              <option>ANATOMÍA PATOLÓGICA</option>
@@ -114,28 +114,37 @@
               <option>MEDICINA NUCLEAR</option>
               <option>OTROS</option>
             </select>  
-         </div>
-        
+            <input type="text" class="form-control my-2" id="matricula" placeholder="Matricula Profesional">
+            <input type="text" class="form-control my-2" id="email" placeholder="Email">
+            <input type="password" class="form-control my-2" id="password" placeholder="Contraseña">
+
             <button class="btn btn-info my-3" id="boton" onclick="guardar()">Guardar</button>
-    <table class="table my-3">
+        </div>
+        
+    <table class="table my-3" id="table">
       <thead class="thead">
         <tr>
-          <th scope="col" class="colRegistro">ID de registro</th>
-          <th scope="col"><button id="buscaN" onclick="buscarNom()">Nombre</button><input id="botonSearchN"type="search"><button id="filtrar" onclick="filtroNombre()"><i class="fas fa-filter"></i></button><button id="cerrarFiltroN" style= "display:none"onclick="cerrarfiltro()"><i class="fas fa-times-circle"></i></button></th>
+          <th scope="col"><button id="buscaN" onclick="buscarNom()">Nombre</button><input id="botonSearchN"type="search"><button disabled id="filtrarN" onclick="filtroNombre()"><i class="fas fa-filter"></i></button><button id="cerrarFiltroN" style= "display:none"onclick="cerrarfiltroN()"><i class="fas fa-times-circle"></i></button></th>
 
-          <th scope="col"><button id="buscaA" onclick="buscarApe()">Apellido</button> <input id="botonSearchA"type="search"><button id="filtrar" onclick="filtroApellido()"><i class="fas fa-filter"></i><button id="cerrarFiltroA" style= "display:none"onclick="cerrarfiltro()"><i class="fas fa-times-circle"></i></button></th>
+          <th scope="col"><button id="buscaA" onclick="buscarApe()">Apellido</button> <input id="botonSearchA"type="search"><button disabled id="filtrarA" onclick="filtroApellido()"><i class="fas fa-filter"></i><button id="cerrarFiltroA" style= "display:none"onclick="cerrarfiltroA()"><i class="fas fa-times-circle"></i></button></th>
           
-          <th scope="col"><button id="buscaE" onclick="buscarEspe()">Especialidad </button><button id="filtrar" onclick="filtroEspecialidad()"><i class="fas fa-filter"></i></button></th>
+          <th scope="col"><button id="buscaE" onclick="buscarEspe()">Especialidad </button><input id="botonSearchE"type="search"><button disabled id="filtrarE" onclick="filtroEspecialidad()"><i class="fas fa-filter"></i></button><button id="cerrarFiltroE" style= "display:none"onclick="cerrarfiltroE()"><i class="fas fa-times-circle"></i></button></th>
+          <th scope="col" class="matriculaCol">Matricula</th>
+          <th scope="col" class="mail">Email</th>
           <th scope="col">Eliminar</th>
           <th scope="col">Editar</th>
         </tr>
       </thead>
       <tbody id="tabla">
         <tr>
-          <th scope="row" class="colRegistro">1</th>
           <td></td>
           <td></td>
           <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
         </tr>
         
       </tbody>

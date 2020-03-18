@@ -1,10 +1,14 @@
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+*{
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa !important;
-
+    margin: auto;
 }
+
 .titulo{
     color:#343a40;
     background: #fafafa;
@@ -14,23 +18,28 @@ body {
     margin: auto;
     
 }
+
+
 .navbarAdministracion {
     background-color: #fafafa !important;
 }
 
 
-#filtrar{
+#filtrarN, #filtrarA, #filtrarE{
     background-color: transparent;
     color: #FFC107;
     border-color: transparent;
     font-size: 12px;
 }
-#buscaN, #buscaA, #buscaE, #cerrarFiltroN, #cerrarFiltro, #cerrarFiltroE  {
+#buscaN, #buscaA, #buscaE, #cerrarFiltroN, #cerrarFiltroA, #cerrarFiltroE  {
     background-color: transparent;
     border-color: transparent;
     color: #fff;
     font-weight: bold;
 
+}
+#botonSearchN :hover{
+    color: red !important;
 }
 #botonSearchN, #botonSearchA, #botonSearchE{
     border: none;
@@ -53,3 +62,9 @@ input, select{
     
 }
 
+@media screen and (max-width: 900px) {
+    #table {
+      display: block;
+      overflow-x: auto;
+    }
+}
