@@ -1,11 +1,25 @@
-@import './index.scss';
 
-
-.turnosAdmin > .card > .card-header{
-    background-color: gray;
-    text-align: center;
+.body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #888;
+    text-align: left;
+    background-color: black;
 }
 
-.turnosAdmin > .card > .card-body{
-    border: solid 1px black ;
+ .turnosAdmin > .card > .card-header{
+    background: linear-gradient(to right, #1abc9c, #7edad5);
+    border:0;
+    outline: none;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+} 
+
+ .turnosAdmin > .card > .card-body{
+    box-shadow: 0 0 10px 6px #16a085 ;
+
 }

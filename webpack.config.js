@@ -141,6 +141,7 @@ new HtmlWebpackPlugin({
       filename: 'historial.html'
 
     }),
+
     new HtmlWebpackPlugin({
       template: "./public/aceptarP.html",
       inject: true,
@@ -166,7 +167,6 @@ new HtmlWebpackPlugin({
       chunks: ['main'],
       filename: 'codVid.html'
     }),
-
 
   ]
 };

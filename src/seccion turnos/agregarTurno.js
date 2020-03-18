@@ -30,7 +30,7 @@ function localstorageListo() {
     // busco el lugar donde se ubica en el html
     const liHtml=document.getElementById('cuerpoTurnos');
     // pongo los turnos en el Html
-    liHtml.innerHTML+=`<li class="fadeInLeft animated">${turno.descripcion}<button class="btn btn-danger m-3" id="denegarTurno">✖</button><button class="btn btn-success m-3" id="aceptarTurno">✔</button> </li>`;
+    liHtml.innerHTML+=`<li class="fadeInLeft animated"> <i class="far fa-calendar-alt"></i> Motivo de turno: ${turno.descripcion}, <br> el dia:  ${turno.fecha}, <br> a las  ${turno.hora}, <br> con ${turno.medico} especializado en ${turno.especialidad}<br><button class="btn btn-danger m-3" id="denegarTurno">✖</button><button class="btn btn-success m-3" id="aceptarTurno">✔</button> </li>`;
         console.log(turno)
         
     });
