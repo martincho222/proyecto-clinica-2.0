@@ -15,7 +15,10 @@
   
   .titulosUsuarios {
     margin-top: 20px;
-    padding: 20px;
+    padding: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
   }
   
   .acordionUsuario {
@@ -58,4 +61,7 @@
 .doc{
   font-weight: 600;
   font-size: larger;
+}
+span{
+  font-weight:bold
 }

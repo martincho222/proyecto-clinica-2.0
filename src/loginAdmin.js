@@ -14,7 +14,6 @@ signInButton.addEventListener("click", () => {
 });
 
 // INICIO LOGIN Y REGISTRO DE ADMINISTRADOR.-
-
 var db = firebase.firestore();
 
 // registro de nuevos usuarios
@@ -22,9 +21,7 @@ let nombres, apellidos, email, password, matriculaProf, profesion;
 
 // const email2 = 'lala@kalima.com.ar';
 
-document
-  .getElementById("formAdmin")
-  .addEventListener("submit", validarRegistroAdmin);
+// document.getElementById("formAdmin").addEventListener("submit", validarRegistroAdmin);
 
 function validarRegistroAdmin(e) {
   e.preventDefault();
@@ -56,7 +53,6 @@ function validarRegistroAdmin(e) {
         password: password,
         matricula: matriculaProf,
         especialidad: profesion,
-        historia: ""
       })
       .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
@@ -119,8 +115,9 @@ function observador() {
     } else {
       // User is signed out.
       console.log("no existe usuario activo");
-      contenido.innerHTML = `Usuario no Registrado`;
+      
       contenido.style.setProperty("color", "#f81321");
+      contenido.innerHTML = `Usuario no Registrado`;
       
       // ...
     }
