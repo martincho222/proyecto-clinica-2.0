@@ -5,11 +5,11 @@ body{
   overflow-x: hidden;
   margin: 0px;
   padding: 0px;
-  background: rgba(76, 247, 156, 0.5) !important;
+  background: #fff !important;
   box-sizing: border-box;
 }
 .dropdown-menu{
-  background: rgb(76, 247, 156) !important;
+  background:  rgb(88, 150, 131) !important;
 }
 .dropdown-menu .dropdown-item{
 color: white;
@@ -31,6 +31,46 @@ color: white;
 }
 .carousel-item{
   display: flex;
+}
+ /* fin de carrousel niki*/
+/*inicio slide rochy*/
+/* .gallery-item {
+	float: left;
+	width: 40%;
+	height: 0;
+  padding-bottom: 30%; 
+  display: inline-block;
+	position: relative;
+	overflow: hidden;
+	 */
+
+
+.slider-container {
+	overflow: hidden;
+}
+.slide-holder {
+  width: 400%;
+  position: relative;
+  animation: scroller 10s infinite;
+	animation-direction: alternate;
+	/* animation-delay: 2s; */
+	animation-timing-function: ease-in-out;}
+	.slide-holder .img {
+		width: 25%;
+		display: inline-block;
+		max-width: 25%;
+		/* margin-right: -2px; */
+  }
+
+@keyframes scroller {
+  0%   { transform: translateX(0); }
+  10%  { transform: translateX(0); }
+  30%  { transform: translateX(-25%); }
+  40%  { transform: translateX(-25%); }
+  60%  { transform: translateX(-50%); }
+  70%  { transform: translateX(-50%); }
+  90% { transform: translateX(-75%); }
+  100% { transform: translateX(-75%); }
 }
 
 
@@ -88,7 +128,7 @@ color: white;
 
 .footer {
    
-    box-sizing: border-box;
+    box-sizing: content-box;
     font-family: sans-serif;
     width: 100vw;
     background: #202020 !important;
@@ -101,7 +141,7 @@ color: white;
 }
 
 .footer-copyright{
-  
+  height: 40px;
   background: #202020 !important;
     color: antiquewhite;
     
@@ -171,20 +211,20 @@ color: white;
 
 
 .navIcon{
-  background: rgba(76, 247, 156, 0.5) !important;
+  background: #78C2AD !important;
 }
 n.navIcon1{
-  background:rgba(76, 247, 156, 0.5) !important;
+  background:#78C2AD !important;
 }
 
 .colorText{
   color: #516fca  !important;
-  background: #36e186  !important;
+  background:  #6CC3D5  !important;
 }
 
 .colorText1{
   color:#516fca  !important;
-  background: #36e186 !important;
+  background:  #6CC3D5 !important;
 }
 
 .nav-link{
@@ -192,20 +232,21 @@ n.navIcon1{
 }
 
 .navIcon{
-  background: rgba(76, 247, 156, 0.5) !important;
+  background:#78C2AD !important;
 }
 .navIcon1{
-  background:rgba(76, 247, 156, 0.5) !important;
+  background:#78C2AD !important;
 }
 
 .colorText{
   color: #516fca  !important;
-  background: #36e186  !important;
+  background:  rgb(109, 177, 157) !important;
 }
 
 .colorText1{
   color:#516fca  !important;
-  background: #36e186 !important;
+  background:  rgb(109, 177, 157) !important;
+
 }
 
 .nav-link{
