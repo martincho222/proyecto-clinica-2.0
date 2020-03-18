@@ -1,5 +1,6 @@
 //objeto turno
 let turnos="";
+
 class Turno{
     constructor(descripcion,especialidad,medico,fecha,hora){
         this.descripcion=descripcion;
@@ -9,10 +10,6 @@ class Turno{
         this.hora=hora;
     }
 }
-
-
-
-
 
 
 
@@ -31,13 +28,14 @@ function formularioTurnos() {
 function agregarTurno(e) {
     e.preventDefault();
 //     // capturar mensaje de turno
+    const medico=document.getElementById('doctores').value;
     const Turnostext=document.getElementById('descripcionTurno').value;
     const turnoEspe=document.getElementById('especialidades').value;
-    const turnoMed=document.getElementById('doctores').value;
     const turnoFech=document.getElementById('fecha').value;
     const turnoHor=document.getElementById('hora').value;
+   
     
-    const turnoObjet=new Turno(Turnostext,turnoEspe,turnoMed,turnoFech,turnoHor);
+    const turnoObjet=new Turno(Turnostext,turnoEspe,medico,turnoFech,turnoHor);
 
     
   
@@ -51,15 +49,7 @@ console.log(turnoObjet)
 function localstorageListo() {
     let turnos;
     turnos=obtenerTurnosLocalStorage();
-    // turnos.forEach(turno => {
-        
-    // // busco el lugar donde se ubica en el html
-    // const liHtml=document.getElementById('cuerpoTurnos');
-    // // pongo los turnos en el Html
-    // liHtml.innerHTML+=`<li class="fadeInLeft animated">${turno} </li>`;
-
-        
-    // });
+   
     
 }
 
@@ -107,7 +97,7 @@ function mostrarTurnosAceptados() {
     const liHtml=document.getElementById('cuerpoTurnos2');
     // pongo los turnos en el Html
     liHtml.innerHTML+=`<li class="fadeInLeft animated">${turno.fecha} y ${turno.hora}<button type="button" class="btn btn-primary" onClick="mostrarDatos(${i})" data-toggle="modal" data-target="#exampleModal">
-    🔶
+    🔶for
   </button></li>`;
     });
     

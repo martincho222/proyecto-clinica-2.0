@@ -17,8 +17,8 @@
     <!-- INCIO NAVBAR -->
     <div class="container-fluid navIcon">
       <nav class="navbar navbar-light navIcon1">
-        <a class="navbar-brand" href="#"><img class="img-fluid img1" src="../src/navbar/img/Icono1.svg" alt="">
-          <img class="img-fluid img2" src="../src/navbar/img/Kalima Font.svg" alt=""></a>
+        <a class="navbar-brand" href="#"><img class="img-fluid img1" src="../src/img/Icono1.svg" alt="">
+          <img class="img-fluid img2" src="../src/img/Kalima-Font.svg" alt=""></a>
           
       </nav>
     </div>
@@ -41,7 +41,7 @@
                   <a class="nav-link" href="#">Contacto</a>
                 </li>
                 <li class="nav-item ml-5">
-                  <a class="nav-link" href="#">Desconectar</a>
+                  <a class="nav-link" href="#" id="desconectar">Desconectar</a>
                 </li>
               
               </ul>
@@ -54,12 +54,13 @@
     
     <!-- FIN NAVBAR -->
 
+  
     <!-- INICIO DATOS PACIENTE -->
 
     <div class="container containerDatos">
       <div class="row">
         <div class="col-md-4 col-sm-12">
-          <h3 class="titulosUsuarios">Info. Paciente</h3>
+          <h3 class="titulosUsuarios">Información Paciente</h3>
           <ul class="list-group ulUsuarios" id="ulUsuarios">
             
           </ul>
@@ -97,11 +98,8 @@
                 class="collapse hide"
                 aria-labelledby="headingOne"
                 data-parent="#accordionExample"
-              >
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life
-                  accusamus terry richardson ad squid.
-                </div>
+               >
+                
               </div>
             </div>
             <!--hasta aqui card-->
@@ -113,12 +111,12 @@
     <!-- FIN DATOS PACIENTE -->
     <br>
     <!-- INICIO ESPECIALIDAD Y MEDICOS -->
-    <div class="container containerDatos">
+    <div class="container containerDatos" data-aos="fade-left">
       <div class="row">
         <div class="col-md-6 col-sm-12">
           <h3>Selecciona Especialidad</h3>
           <div class="form-group">
-            <select multiple class="form-control selecEsp" id="exampleFormControlSelect2">
+            <select multiple class="form-control selecEsp"  id="especialidades">
               <option>ALERGIA E INMUNOLOGÍA</option>
                 <option>ANATOMÍA PATOLÓGICA</option>
                 <option>ANESTESIOLOGÍA</option>
@@ -154,25 +152,24 @@
             </select>
           </div>
         </div>
-  
-        <div class="col-6" >
-          <h3>Lista de Medicos</h3>
-          <ul class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+            <div class="col-md-6 col-sm-12">
+              <h3>Selecciona medico</h3>
+              <div class="form-group">
+                <select multiple class="form-control "  id="doctores">
+                  <option class="doc">Cras justo odio</option>
+                    <option class="doc">Dapibus ac facilisis in</option>
+                    <option class="doc">Morbi leo risus</option>
+                    <option class="doc">Vestibulum at eros</option>                 
+                    </select>
+              </div>
    
     
     <!-- FIN ESPECIALIDAD Y MEDICOS -->
 
 
 <!-- INICIO TURNOS - LISTA DE TURNOS -->
+
+    </div>
 <div  class="container containerDatos" data-aos="fade-down">
   <div class="row" data-aos="fade-left">
     <div id="efectoCard" class="col-md-6 col-sm-12 outline-primary">
@@ -185,58 +182,10 @@
           <textarea class="form-control" id="descripcionTurno" rows="3"></textarea>
         </div>
         <div class="form-group" data-aos="fade-left">
-          <label  >Especialidad</label>
-          <select  class="form-control " id="especialidades">
-            <option>ALERGIA E INMUNOLOGÍA</option>
-            <option>ANATOMÍA PATOLÓGICA</option>
-            <option>ANESTESIOLOGÍA</option>
-            <option>ANGIOLOGÍA GENERAL y HEMODINAMIA</option>
-            <option>CARDIOLOGÍA</option>
-            <option>CARDIÓLOGO INFANTIL</option>
-            <option>CIRUGÍA GENERAL</option>
-            <option>CIRUGÍA CARDIOVASCULAR</option>
-            <option>CLÍNICA MÉDICA</option>
-            <option>DERMATOLOGÍA</option>
-            <option>DIAGNOSTICO POR IMÁGENES</option>
-            <option>ENDOCRINOLOGÍA</option>
-            <option>GASTROENTEROLOGÍA</option>
-            <option>GINECOLOGÍA</option>
-            <option>HEMATOLOGÍA</option>
-            <option>INFECTOLOGÍA</option>
-            <option>MEDICINA DEL DEPORTE</option>
-            <option>NEUMONOLOGÍA</option>
-            <option>NEUROLOGÍA</option>
-            <option>OBSTETRICIA</option>
-            <option>OFTALMOLOGÍA</option>
-            <option>ONCOLOGÍA</option>
-            <option>ORTOPEDIA Y TRAUMATOLOGÍA</option>
-            <option>OTORRINOLARINGOLOGÍA</option>
-            <option>PEDIATRÍA</option>
-            <option>PSIQUIATRÍA</option>
-            <option>REUMATOLOGÍA</option>
-            <option>TERAPIA INTENSIVA</option>
-            <option>TOXICOLOGÍA</option>
-            <option>UROLOGÍA</option>
-            <option>NEFROLOGÍA</option>
-            <option>MEDICINA NUCLEAR</option>
-          </select>
-        </div>
-        <div class="form-group " data-aos="fade-left">
-          <label>Medicos</label>
-          <select  class="form-control" id="doctores">
-            <option>Dr. ....</option>
-            <option>Dra. ....</option>
-            <option>Dr. ....</option>
-            <option>Dr. ....</option>
-            <option>Dra. ....</option>
-            <option>Dr. ....</option>
-          </select>
-        </div>
-        <div class="form-group" data-aos="fade-left">
           <label >Fecha</label>
           <input class="form-control" id="fecha" type="date" value='2020-03-20'>
           <label >Hora</label>
-          <input class="form-control" id='hora' type="time" value='00:00'>
+          <input class="form-control" id='hora' type="time" value="08:00" min='07:00' max="18:00">
         </div>
         <div class="text-center " data-aos="fade-left">
         <button type="submit" class="btn btn-primary" >Enviar</button>
@@ -261,8 +210,8 @@
 
     <!--INICIO FOOTER-->
     <div class="container-fluid contenedorFooter">
-      <div class="footer-copyright text-center py-3">
-        <p>© 2020 Copyright:</p> <a href="https://kalima.com "> Kalima.com</a>
+      <div class="footer-copyright text-center ">
+        <p>© 2020 Copyright: <a href="https://kalima.com "> Kalima.com</a></p>
       </div>
     </div>
     <!--FIN FOOTER-->
@@ -287,6 +236,16 @@
     </div>
   </div>
 
+        <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+
+  <script src="../src/seccionUsuario.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="../src/seccion turnos/indexSeccionTurnos.js"></script>
   <script>
