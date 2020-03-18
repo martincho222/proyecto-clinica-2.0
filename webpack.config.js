@@ -11,7 +11,10 @@ module.exports = {
     perfilAdmin: "./src/perfilAdmin.js",
     turnosAdmin: "./src/turnosAdmin.js",
     user: "./src/loginPaciente.js",
+    historial: "./src/historial.js",
+    abmMedicos: "./src/abmMedicos.js",
     aceptarP: "./src/aceptarP.js",
+    abmMedicos: "./src/abmMedicos.js"
 
 
   },
@@ -90,19 +93,11 @@ module.exports = {
 
     }),
     new HtmlWebpackPlugin({
-      template: "./public/loginUser.html",
-      inject: true,
-      chunks: ['user'],
-      filename: 'loginUser.html'
-
-    }),
-    new HtmlWebpackPlugin({
       template: "./public/adm.html",
       inject: true,
       chunks: ['adm'],
       filename: 'adm.html'
-
-
+      
     }),
     new HtmlWebpackPlugin({
       template:"./public/turnosAdmin.html",
@@ -117,6 +112,13 @@ module.exports = {
       filename: 'loginPaciente.html'
 
     }),
+    new HtmlWebpackPlugin({
+      template: "./public/abmMedicos.html",
+      inject: true,
+      chunks: ['abmMedicos'],
+      filename: 'abmMedicos.html'
+
+    }),
 
     new HtmlWebpackPlugin ({
       template: "./public/perfilAdmin.html",
@@ -125,6 +127,13 @@ module.exports = {
       filename: 'perfilAdmin.html' 
     }),
 
+    new HtmlWebpackPlugin({
+      template: "./public/historial.html",
+      inject: true,
+      chunks: ['historial'],
+      filename: 'historial.html'
+
+    }),
     new HtmlWebpackPlugin({
       template: "./public/aceptarP.html",
       inject: true,
@@ -135,9 +144,8 @@ module.exports = {
 new HtmlWebpackPlugin({
       template: "./public/abmMedicos.html",
       inject: true,
-      chunks: ['adm'],
+      chunks: ['abmMedicos'],
       filename: 'abmMedicos.html'
-
     }),
 
 

@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-* {
+*{
   font-family: 'Roboto', sans-serif;
   color: rgb(83, 83, 83);
 }
 
-.body {}
+html, body{
+  overflow-y: scroll;
+}
+
+#notif-turnos-nuevos, h1, p{
+  color: rgb(83, 83, 83) !important;
+}
 
 /* Modulos */
 
@@ -168,7 +174,7 @@ a, a:hover, a:focus {
   height: 100vh;
   z-index: 999;
   background: #7386d5;
-  color: #fff;
+  color: #fff !important;
   transition: all 0.3s;
   overflow-y: scroll;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
@@ -220,6 +226,7 @@ a, a:hover, a:focus {
 }
 
 #sidebar ul.components {
+  color: #fff !important;
   padding: 20px 0;
   border-bottom: 1px solid #47748b;
 }
@@ -233,29 +240,18 @@ a, a:hover, a:focus {
   padding: 10px;
   font-size: 1.1em;
   display: block;
+  text-decoration: none;
 }
 
 
 #sidebar ul li a:hover {
-  color: #7386d5;
-  background: #fff;
+  color: #7386d5 !important;
+  background: #fff !important;
 }
 
 #sidebar ul li.active>a, a[aria-expanded="true"] {
-  color: #fff;
-  background: #6d7fcc;
-}
-
-a[data-toggle="collapse"] {
-  position: relative;
-}
-
-.dropdown-toggle::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
+  color: #fff !important;
+  background: #6d7fcc   !important;
 }
 
 ul ul a {
@@ -297,10 +293,22 @@ a.article, a.article:hover {
   transition: all 0.3s;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 0; 
 }
 
 .fa-bell {
   margin: 5px;
   font-size: 20px;
+}
+
+.paragraph{
+  color: #fff;
+  text-decoration: none !important;
+  font-size: 20px;
+
+}
+
+.paragraph:hover{
+  background: #fff;
+  color: #6d7fcc;
 }
