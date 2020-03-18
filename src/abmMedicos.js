@@ -1,4 +1,4 @@
-  var db = firebase.firestore();
+var db = firebase.firestore();
 
   //Agrega medicos y especialidades
  
@@ -49,7 +49,6 @@
       <td>${doc.data().email}</td>
       <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
       <td><a href="#nombre"><button class= "btn btn-warning" onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}','${doc.data().matricula}','${doc.data().email}','${doc.data().password}')"><i class="far fa-edit"></i></button></a></td>
-
       </tr>
         `
     });
@@ -156,7 +155,6 @@ function filtroNombre(){
   
       <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
       <td><a href="#nombre"><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}','${doc.data().matricula}','${doc.data().email}')"><i class="far fa-edit"></i></a></button></td>
-
       </tr>
         `);
     })  
@@ -190,7 +188,6 @@ function cerrarfiltroN(){
   
       <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
       <td><a href="#nombre"><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}','${doc.data().matricula}','${doc.data().email}')"><i class="far fa-edit"></i></button></a></td>
-
       </tr>
         `
     });
@@ -227,7 +224,6 @@ function filtroApellido(){
       <td>${doc.data().especialidad}</td>
       <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
       <td><a href="#nombre"><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad},'${doc.data().matricula}','${doc.data().email}')"><i class="far fa-edit"></i></button></a></td>
-
       </tr>
         `);
     })
@@ -263,7 +259,6 @@ function cerrarfiltroA(){
   
       <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
       <td><a href="#nombre"><button class= "btn btn-warning"onclick="editar('${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}','${doc.data().matricula},'${doc.data().email}')"><i class="far fa-edit"></i></a></button></td>
-
       </tr>
         `
     });
@@ -303,7 +298,6 @@ function filtroEspecialidad(){
   
       <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
       <td><a href="#nombre"><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}','${doc.data().matricula}','${doc.data().email}')"><i class="far fa-edit"></i></button></a></td>
-
       </tr>
         `);
     })  
@@ -337,7 +331,6 @@ function cerrarfiltroE(){
   
       <td><button class= "btn btn-danger"onclick="eliminar('${doc.id}')"><i class="far fa-trash-alt"></i></button></td>
       <td><a href="#nombre"><button class= "btn btn-warning"onclick="editar('${doc.id}', '${doc.data().nombre}','${doc.data().apellido}','${doc.data().especialidad}','${doc.data().matricula}','${doc.data().email}')"><i class="far fa-edit"></i></button></a></td>
-
       </tr>
         `
     });

@@ -1,8 +1,9 @@
 /* Notifications */
+let nuevo=JSON.parse(localStorage.getItem('turnoAceptado'));
 
 /* Turnos Nuevos */
-let cantidadTurnos = [5, 9, 6, 14, 8, 17, 12]; /* Conexion con los turnos recibidos */
-
+let cantidadTurnos =[]; /* Conexion con los turnos recibidos */
+    cantidadTurnos.push(nuevo.length)
 function NotificarTurnos() {
     let totalTurnos = 0;
     for (let i = 0; i < cantidadTurnos.length; i++) {
@@ -40,7 +41,10 @@ function NotificarActividades() {
 
 NotificarActividades();
 
-/* Generate Event Card */
-let turnoTest = new Turno("23", "Mar", "Inyectado por Js");
+nuevo.forEach(element => {
+   
+
+    let turnoTest = new Turno(element.fecha, element.hora, element.descripcion);
 
 moduloEventos.innerHTML += turnoTest.htmlCard;
+});/* Generate Event Card */

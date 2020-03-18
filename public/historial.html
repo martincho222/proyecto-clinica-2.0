@@ -1,199 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="stylesheet" href="../src/historial.css">
-    <link rel="stylesheet" href="../src/adm.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-LV/SIoc08vbV9CCeAwiz7RJZMI5YntsH8rGov0Y2nysmepqMWVvJqds6y0RaxIXT" crossorigin="anonymous">    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 
-    <!-- Scrollbar Custom CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="../src/historial.css">
+  <link rel="stylesheet" href="../src/adm.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cerulean/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LV/SIoc08vbV9CCeAwiz7RJZMI5YntsH8rGov0Y2nysmepqMWVvJqds6y0RaxIXT" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 
-    <!-- Font Awesome JS -->
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
-      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
-      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" />
 
-  <body>
-    <div class="wrapper">
-      <!-- Sidebar  -->
-      <nav id="sidebar">
-        <div id="dismiss">
-          <i class="fas fa-arrow-left"></i>
-        </div>
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+    crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+    crossorigin="anonymous"></script>
+</head>
 
-        <div class="sidebar-header">
-          <h3>Kalima</h3>
-        </div>
+<body>
+  <div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+      <div id="dismiss">
+        <i class="fas fa-arrow-left"></i>
+      </div>
 
-        <ul class="list-unstyled components">
-          <a class="paragraph" href="./adm.html">Panel Administrador</a>
-          <li class="active">
-            <a
-              class="linkAdmin"
-              href="#homeSubmenu"
-              data-toggle="collapse"
-              aria-expanded="false"
-              >Inicio</a
-            >
-          </li>
-          <li class="active">
-            <a class="linkAdmin" href="http://localhost:8080/turnosAdmin.html"
-              >Turnos</a
-            >
-          </li>
-          <li class="active">
-            <a class="linkAdmin" href="#">Notificaciones</a>
-          </li>
-          <li class="active">
-            <a class="linkAdmin" href="#">Estadisticas</a>
-          </li>
-          <li class="active">
-            <a class="linkAdmin" href="#">Especialidades</a>
-          </li>
-          <li class="active">
-            <a class="linkAdmin" href="#">Pacientes</a>
-          </li>
-          <li class="active">
-            <a class="linkAdmin" href="#">Historia Clinica y Obra Social</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="sidebar-header">
+        <h3>Kalima</h3>
+      </div>
 
-      <!-- Page Content  -->
-      <div id="content">
+      <ul class="list-unstyled components">
+        <a class="paragraph" href="./adm.html">Panel Administrador</a>
+        <li class="active">
+          <a class="linkAdmin" href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Inicio</a>
+        </li>
+        <li class="active">
+          <a class="linkAdmin" href="http://localhost:8080/turnosAdmin.html">Turnos</a>
+        </li>
+        <li class="active">
+          <a class="linkAdmin" href="#">Notificaciones</a>
+        </li>
+        <li class="active">
+          <a class="linkAdmin" href="#">Estadisticas</a>
+        </li>
+        <li class="active">
+          <a class="linkAdmin" href="#">Especialidades</a>
+        </li>
+        <li class="active">
+          <a class="linkAdmin" href="#">Pacientes</a>
+        </li>
+        <li class="active">
+          <a class="linkAdmin" href="#">Historia Clinica y Obra Social</a>
+        </li>
+      </ul>
+    </nav>
 
-        <!-- Navbar -->
-        <div class="navbar-panel">
-            <nav class="navbar-expand-lg">
-                <div class="row">
-                    <div class="col-12 row mt-4 ml-3 mb-4">
+    <!-- Page Content  -->
+    <div id="content">
 
-                        <div class="col-auto d-flex
+      <!-- Navbar -->
+      <div class="navbar-panel">
+        <nav class="navbar-expand-lg">
+          <div class="row">
+            <div class="col-12 row mt-4 ml-3 mb-4">
+
+              <div class="col-auto d-flex
                                 align-items-center">
-                            <button type="button" id="sidebarCollapse" class="btn btn-info">
-                                <i class="fas fa-align-left"></i>
-                            </button>
-                        </div>
-                        <div class="col-auto d-flex
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                  <i class="fas fa-align-left"></i>
+                </button>
+              </div>
+              <div class="col-auto d-flex
                                 align-items-center">
-                            <img class="" src="../src/img/Kalima-Font.svg" height="40" alt="">
-                        </div>
+                <img class="" src="../src/img/Kalima-Font.svg" height="40" alt="">
+              </div>
 
 
-                        <div class="col-md-9">
-                            <div class="col-auto d-flex
+              <div class="col-md-9">
+                <div class="col-auto d-flex
                                     align-items-center">
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </nav>
-        </div>
-        <table class="table table-responsive-xl table-bordered">
-            <thead>
-              <tr>
-                <!-- <th class="text-center" scope="col">Id</th> -->
-                <th class="text-center" scope="col">Nombre</th>
-                <th class="text-center" scope="col">Apellido</th>
-                <th class="text-center" scope="col">Email</th>
-                <th class="text-center" scope="col">historia</th>
-              </tr>
-            </thead>
-            <tbody id="tabla"></tbody>
-          </table>
-
-  
-          <div class="container">
-            <div class="row">
-              <div class="col-6" id="historial"></div>
-  
-              <div class="col-6" id="datosObraSocial"></div>
+              </div>
             </div>
           </div>
-
+        </nav>
       </div>
+      <table class="table table-responsive-xl table-bordered">
+        <thead>
+          <tr>
+            <!-- <th class="text-center" scope="col">Id</th> -->
+            <th class="text-center" scope="col">Nombre</th>
+            <th class="text-center" scope="col">Apellido</th>
+            <th class="text-center" scope="col">Email</th>
+            <th class="text-center" scope="col">historia</th>
+          </tr>
+        </thead>
+        <tbody id="tabla"></tbody>
+      </table>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-6" id="historial"></div>
+
+          <div class="col-6" id="datosObraSocial"></div>
+        </div>
+      </div>
+
     </div>
+  </div>
 
-    <div class="overlay"></div>
+  <div class="overlay"></div>
 
-        <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
-    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
 
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
 
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyC7rlTbny4mroeytOqwRciKolT6OGhijk0",
-        authDomain: "prueba-validacion-d4b73.firebaseapp.com",
-        databaseURL: "https://prueba-validacion-d4b73.firebaseio.com",
-        projectId: "prueba-validacion-d4b73",
-        storageBucket: "prueba-validacion-d4b73.appspot.com",
-        messagingSenderId: "956489182896",
-        appId: "1:956489182896:web:3262ee70f9cfb1e9309575"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
-<script src="../src/historial.js"></script>
-
-
-    <!-- jQuery Custom Scroller CDN -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyC7rlTbny4mroeytOqwRciKolT6OGhijk0",
+      authDomain: "prueba-validacion-d4b73.firebaseapp.com",
+      databaseURL: "https://prueba-validacion-d4b73.firebaseio.com",
+      projectId: "prueba-validacion-d4b73",
+      storageBucket: "prueba-validacion-d4b73.appspot.com",
+      messagingSenderId: "956489182896",
+      appId: "1:956489182896:web:3262ee70f9cfb1e9309575"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 
 
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $("#sidebar").mCustomScrollbar({
-          theme: "minimal"
-        });
+  <!-- jQuery Custom Scroller CDN -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
-        $("#dismiss, .overlay").on("click", function() {
-          $("#sidebar").removeClass("active");
-          $(".overlay").removeClass("active");
-        });
 
-        $("#sidebarCollapse").on("click", function() {
-          $("#sidebar").addClass("active");
-          $(".overlay").addClass("active");
-          $(".collapse.in").toggleClass("in");
-          $("a[aria-expanded=true]").attr("aria-expanded", "false");
-        });
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
       });
-    </script>
-    
-    <script src="../src/adm.js"></script>
-    <script src="../src/seccionUsuario/agregarTurno.js"></script>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+      $("#dismiss, .overlay").on("click", function () {
+        $("#sidebar").removeClass("active");
+        $(".overlay").removeClass("active");
+      });
+
+      $("#sidebarCollapse").on("click", function () {
+        $("#sidebar").addClass("active");
+        $(".overlay").addClass("active");
+        $(".collapse.in").toggleClass("in");
+        $("a[aria-expanded=true]").attr("aria-expanded", "false");
+      });
+    });
+  </script>
+
+
+
+  <!-- <scrzzzipt src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <script src="../src/historial.js"></script>
+  <script src="../src/adm.js"></script>
+  <script src="../src/seccionUsuario/agregarTurno.js"></script>
+</body>
+
 </html>

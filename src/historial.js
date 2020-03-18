@@ -1,4 +1,3 @@
-
 var db = firebase.firestore();
 
 const tabla = document.getElementById("tabla");

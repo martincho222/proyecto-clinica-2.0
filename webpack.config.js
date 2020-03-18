@@ -97,8 +97,7 @@ module.exports = {
       inject: true,
       chunks: ['adm'],
       filename: 'adm.html'
-
-
+      
     }),
     new HtmlWebpackPlugin({
       template:"./public/turnosAdmin.html",
@@ -114,6 +113,13 @@ module.exports = {
 
     }),
     new HtmlWebpackPlugin({
+      template: "./public/aceptarP.html",
+      inject: true,
+      chunks: ['aceptarP'],
+      filename: 'aceptarP.html'
+
+    }),
+new HtmlWebpackPlugin({
       template: "./public/abmMedicos.html",
       inject: true,
       chunks: ['abmMedicos'],

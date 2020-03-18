@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-* {
+*{
   font-family: 'Roboto', sans-serif;
   color: rgb(83, 83, 83);
 }
 
+html, body{
+  overflow-y: scroll;
+}
+
+#notif-turnos-nuevos, h1, p{
+  color: rgb(83, 83, 83) !important;
+}
 
 /* Modulos */
 
@@ -108,7 +115,7 @@ h3 {
   background: rgb(44, 62, 80);
 }
 
-.event-date h2, h5 {
+.event-date h2, h5, h4 {
   color: rgb(230, 230, 230);
 }
 
