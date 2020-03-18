@@ -1,9 +1,9 @@
 /* Notifications */
-let nuevo=JSON.parse(localStorage.getItem('turnoAceptado'));
+let nuevo = JSON.parse(localStorage.getItem('turnoAceptado'));
 
 /* Turnos Nuevos */
-let cantidadTurnos =[]; /* Conexion con los turnos recibidos */
-    cantidadTurnos.push(nuevo.length)
+let cantidadTurnos = []; /* Conexion con los turnos recibidos */
+cantidadTurnos.push(nuevo.length)
 function NotificarTurnos() {
     let totalTurnos = 0;
     for (let i = 0; i < cantidadTurnos.length; i++) {
@@ -29,7 +29,7 @@ function NotificarConsultas() {
 NotificarConsultas();
 
 /* Actividades Nuevas */
-let cantidadActividades = [6,1,8]; /* Conexion con las actividades */
+let cantidadActividades = [6, 1, 8]; /* Conexion con las actividades */
 
 function NotificarActividades() {
     let totalActividades = 0;
@@ -42,9 +42,9 @@ function NotificarActividades() {
 NotificarActividades();
 
 nuevo.forEach(element => {
-   
+
 
     let turnoTest = new Turno(element.fecha, element.hora, element.descripcion);
 
-moduloEventos.innerHTML += turnoTest.htmlCard;
+    moduloEventos.innerHTML += turnoTest.htmlCard;
 });/* Generate Event Card */

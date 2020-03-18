@@ -2,6 +2,7 @@
 *{
   font-family: 'Roboto', sans-serif;
   color: rgb(83, 83, 83);
+  overflow-x: hidden;
 }
 
 html, body{

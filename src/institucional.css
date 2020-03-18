@@ -1,39 +1,37 @@
-h4, p{
+h4,
+p {
   text-align: center;
-  margin:150px;
-  font-family: 'Montserrat', sans-serif;
-
-
+  margin: 150px;
+  font-family: "Montserrat", sans-serif;
 }
 
-.primert, .segundot{
+.primert,
+.segundot {
   margin-left: 265px;
   opacity: 0.9;
 }
 /* .navbar{
   background-color: ;
 } */
-.container-fluid{
-  background-color: azure;
-  background-image: url(https://images.unsplash.com/photo-1508231765772-136ff234bd39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1543&q=80);
+.container-fluid {
+  background: url(https://images.unsplash.com/photo-1508231765772-136ff234bd39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1543&q=80);
 }
-p, .letra, h4{
+p,
+.letra,
+h4 {
   color: rgb(99, 98, 98);
 }
-h4{
-  font-family: 'Montserrat', sans-serif;
+h4 {
+  font-family: "Montserrat", sans-serif;
 }
 
 .primer {
   float: left;
-
 }
 
-
-.segundoNav{
+.segundoNav {
   text-align: center !important;
 }
-
 
 /* 
 .navIcon{
@@ -43,47 +41,45 @@ h4{
   background:rgba(29, 31, 30, 0.5) !important;
 } */
 
-.colorText{
-  color: #516fca  !important;
-  background: #36e186  !important;
-}
-
-.colorText1{
-  color:#516fca  !important;
+.colorText {
+  color: #516fca !important;
   background: #36e186 !important;
 }
 
-.nav-link{
+.colorText1 {
+  color: #516fca !important;
+  background: #36e186 !important;
+}
+
+.nav-link {
   color: white !important;
 }
 
-.navIcon{
-  background: rgba(76, 247, 156, 0.5) !important;
+.navIcon {
+  background: #78c2ad !important;
 }
-.navIcon1{
-  background:rgba(76, 247, 156, 0.5) !important;
-}
-
-.colorText{
-  color: #516fca  !important;
-  background: #36e186  !important;
+.navIcon1 {
+  background: #78c2ad !important;
 }
 
-.colorText1{
-  color:#516fca  !important;
+.colorText {
+  color: #516fca !important;
   background: #36e186 !important;
 }
 
-.nav-link{
+.colorText1 {
+  color: #516fca !important;
+  background: #36e186 !important;
+}
+
+.nav-link {
   color: white !important;
 }
 .copyright {
   color: #101010 !important;
 }
 
-.footer-copyright{
-
-background: #202020 !important;
+.footer-copyright {
+  background: #202020 !important;
   color: antiquewhite;
-  
 }
