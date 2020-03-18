@@ -16,9 +16,9 @@ let moduloEventos = document.getElementById("modulo-eventos");
 
 /* Events Object */
 class Turno {
-    constructor(dia, mes, descripcion) {
-        this.dia = dia;
-        this.mes = mes;
+    constructor(fecha, hora, descripcion) {
+        this.fecha= fecha;
+        this.hora = hora;
         this.descripcion = descripcion;
 
         this.htmlCard = `<div class="event modulo rounded row
@@ -30,11 +30,11 @@ class Turno {
         <div class="d-block">
             <h2 class="event-date-day
                     mb-0">
-                    `+ this.dia + `
+                    `+ this.fecha + `
                     </h2>
             <h5 class="event-date-month
                     mt-0">
-                    ` + this.mes + `
+                    ` + this.hora + `
                     </h5>
         </div>
     </div>

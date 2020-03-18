@@ -1,3 +1,4 @@
+
 let turnos;
 class Turno{
     constructor(descripcion,especialidad,medico,fecha,hora){
@@ -111,4 +112,5 @@ btnAceptarTurno.forEach(function (userItem) {
     btn.addEventListener("click",aceptarTurno)
     
 });
+
 
