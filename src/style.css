@@ -1,10 +1,11 @@
 *{
   scroll-behavior: smooth !important;
+  margin: 0px;
+  padding: 0px;
 }
 body{
   overflow-x: hidden;
-  margin: 0px;
-  padding: 0px;
+  
  background-color: rgba(76, 247, 156, 0.5) !important;
 }
 .tamano{
@@ -50,48 +51,79 @@ color: white;
 
 
 /*INICIO SERVICIOS*/
-.tarjeta{
+.container{
+  margin: 0px 0px !important;
+  margin-top: 10px;
+  margin-bottom: 0px;
   display: flex;
-  flex-flow: row nowrap;
-  margin: 20px 30px;
-  height: auto;
-  padding: 10px;
-  align-items: center;
-  border: 0.5px solid gainsboro;
-  border-radius: 15px;
-}
-.cuerpoImagen{
-  flex: 1 1 auto;
-  justify-content: center;
-  margin: auto;
-  
-}
-  .cuerpoImagen img{
-      padding: 25px;        
-  }
-.cuerpoTexto{
-  flex: 4 1 auto;
-  padding: 20px;
-  padding-top: 0%;
-}
-.imagenCard {
-  border-radius: 50%;
-}
-  
-.tarjeta:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-}
-@media all and (max-width: 800px){
-  .tarjeta{
-      flex-direction: column;
-      height: auto;
-  }
-  .tarjetaDos{
-      flex-direction: column-reverse;
-  }
-}
+  flex-direction: row;
+  flex-flow: row wrap;
+  background-color: #282828;
 
+  margin: initial;
+  padding-bottom: 0px;
+}
+.imagen{
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+  }
+.imagen img{
+  width: 100%;
+  margin: -2px;
+}
+.imagen:hover {filter: opacity(.5);
+transition: .9s;}
+.texto{
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+}
+.prevencion{
+  color:#D18C54;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  font-style: inherit;
+  letter-spacing: 1.5px;
+  margin: 15px 50px 17px;
+
+}
+h2{
+  line-height: 40px;
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: -0.5px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 20px 50px 10px;
+  color: white !important;
+
+
+}
+.lorem{
+  font-size: 20px;
+  font-style: initial;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1.5px;
+  margin: 25px 50px 17px;
+  color: white !important;
+
+}
+#informa{
+  color: yellow;
+  margin: 5px 0px 0px;
+  text-decoration: none;
+  
+}
+@media (max-width: 1060px) {
+  .imagen{
+      display: none;
+}
+  .texto{
+      margin: auto;
+      width: 100%;
+  }
+}
 
 /*FIN SERVICIOS*/
 
