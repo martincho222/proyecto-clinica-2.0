@@ -2,192 +2,314 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="../src/adm.css">
-    <script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
-    <title>Document</title>
 
+    <!-- FontAwesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+    <!-- GridStack -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridstack@1.1.0/dist/gridstack.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gridstack@1.1.0/dist/gridstack.all.js"></script>
+    <!-- Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <title>Admin Panel</title>
 </head>
 
 <body>
-  <div class="wrapper">
-    <!-- Sidebar  -->
-    <nav id="sidebar">
-        <div id="dismiss">
-            <i class="fas fa-arrow-left"></i>
-        </div>
 
-        <div class="sidebar-header">
-            <h3>Kalima</h3>
-        </div>
+    <!-- Main -->
+    <div class="wrapper">
 
-        <ul class="list-unstyled components">
-            <p class="paragraph">Panel Administrador</p>
-            <li>
-                <a class="linkAdmin" href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Inicio</a>
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
 
-            </li>
-            <li>
-                <a class="linkAdmin" href="#">Turnos</a>
-            </li>
+            <div class="sidebar-header">
+                <h3>Kalima</h3>
+            </div>
 
-            <li>
-                <a class="linkAdmin" href="#">Notificaciones</a>
-            </li>
-            <li>
-                <a class="linkAdmin" href="#">Estadisticas</a>
-            </li>
-            <li>
-                <a class="linkAdmin" href="#">Especialidades</a>
-            </li>
-            <li>
-                <a class="linkAdmin" href="#">Pacientes</a>
-            </li>
-        </ul>
+            <ul class="list-unstyled components">
+
+                <p class="paragraph">Panel Administrador</p>
+                <li class="active">
+                    <a class="linkAdmin" href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Inicio</a>
+                </li>
+                <li class="active">
+                    <a class="linkAdmin" href="#">Turnos</a>
+                </li>
+
+                <li class="active">
+                    <a class="linkAdmin" href="#">Notificaciones</a>
+                </li>
+                <li class="active">
+                    <a class="linkAdmin" href="#">Estadisticas</a>
+                </li>
+                <li class="active">
+                    <a class="linkAdmin" href="#">Especialidades</a>
+                </li>
+                <li class="active">
+                    <a class="linkAdmin" href="#">Pacientes</a>
+                </li>
+                <li class="active">
+                    <a class="linkAdmin" href="abmMedicos.html">Administración
+                        Médicos</a>
+                </li>
+                <li class="active">
+                    <a class="linkAdmin" href="./historial.html">Historia Clinica y Obra Social</a>
+                  </li>
+
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+
+            <!-- Navbar -->
+            <div class="navbar-panel">
+                <nav class="navbar-expand-lg">
+                    <div class="row">
+                        <div class="col-12 row mt-4 ml-3 mb-4">
+
+                            <div class="col-auto d-flex
+                                    align-items-center">
+                                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                                    <i class="fas fa-align-left"></i>
+                                </button>
+                            </div>
+                            <div class="col-auto d-flex
+                                    align-items-center">
+                                <img class="" src="../src/img/Kalima-Font.svg" height="40" alt="">
+                            </div>
 
 
-    </nav>
-
-    <!-- Page Content  -->
-    <div id="content">
-
-        <nav class="navbar navbar-expand-lg navbar-light navbarAdministracion">
-            <div class="container-fluid">
-
-                <button type="button" id="sidebarCollapse" class="btn btn-info">
-                    <i class="fas fa-align-left"></i>
-
-                </button>
-                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-align-justify"></i>
-                </button>
-                <!--AQUI TERMINA EL BOTON QUE ACCIONA EL SIDEBAR-->
-
-                <!--AQUI EMPIEZA EL CONTENIDO DEL NAVBAR-->
-
-                <!--busqueda-->
-
-                <div class="container-fluid  busqueda">
-                    <div class="d-flex justify-content-center ">
-                        <div class="searchbar ">
-                            <input class="search_input" type="text" name="" placeholder="Search">
-                            <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                            <div class="col-md-9">
+                                <div class="col-auto d-flex
+                                        align-items-center">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </nav>
+            </div>
 
-                <div class="container">
-                    <div class="d-flex justify-content-center mt-2">
-                        <a class="name m-auto" href="#">
-                            <h4>Kalima</h4>
-                        </a>
+            <!-- Tablero -->
+            <div class="container-fluid">
 
+                <!-- Grid Stack -->
+                <div class="mt-3 mb-3 grid-stack">
+
+                    <!-- Primera Linea -->
+                    <div class="grid-stack-item" data-gs-min-width="2" data-gs-min-height="2" data-gs-width="4"
+                        data-gs-height="2" data-gs-max-width="6" data-gs-max-height="4">
+                        <div class="row m-1 rounded modulo
+                                grid-stack-item-content">
+                            <div class="neon-beep"></div>
+                            <div class="col-6 d-flex
+                                    align-items-center">
+                                <img class="icono img-fluid" height="60"
+                                    src="/src/seccionAdmin/img/icons/006-checklist.png" alt="">
+                            </div>
+                            <div class="row col-6 d-block">
+                                <div class="col-4 d-flex
+                                        justify-content-center mt-2
+                                        mb-0">
+                                    <h1 id="notif-turnos-nuevos">0</h1>
+                                </div>
+                                <div class="col-4 d-flex
+                                        justify-content-center
+                                        ml-4">
+                                    <h4 class="">Turnos
+                                        Solicitados</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
+                    <div class="grid-stack-item" data-gs-min-width="2" data-gs-min-height="2" data-gs-width="4"
+                        data-gs-height="2" data-gs-max-width="6" data-gs-max-height="4">
+                        <div class="row m-1 rounded modulo
+                                grid-stack-item-content">
+                            <div class="neon-beep"></div>
+                            <div class="col-6 d-flex
+                                    align-items-center">
+                                <img class="icono img-fluid" height="60" src="/src/seccionAdmin/img/icons/010-chat.png"
+                                    alt="">
+                            </div>
+                            <div class="row col-6 d-block">
+                                <div class="col-4 d-flex
+                                        justify-content-center mt-2
+                                        mb-0">
+                                    <h1 id="notif-consultas-nuevas">0</h1>
+                                </div>
+                                <div class="col-4 d-flex
+                                        justify-content-center
+                                        ml-4">
+                                    <h4 class="">Consultas
+                                        Nuevas</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-stack-item" data-gs-min-width="2" data-gs-min-height="2" data-gs-width="4"
+                        data-gs-height="2" data-gs-max-width="6" data-gs-max-height="4">
+                        <div class="row m-1 rounded modulo
+                                grid-stack-item-content">
+                            <div class="neon-beep"></div>
+                            <div class="col-6 d-flex
+                                    align-items-center">
+                                <img class="icono img-fluid" height="60"
+                                    src="/src/seccionAdmin/img/icons/004-analytics.png" alt="">
+                            </div>
+                            <div class="row col-6 d-block">
+                                <div class="col-4 d-flex
+                                        justify-content-center mt-2
+                                        mb-0">
+                                    <h1 id="notif-actividades-nuevas">0</h1>
+                                </div>
+                                <div class="col-4 d-flex
+                                        justify-content-center
+                                        ml-4">
+                                    <h4 class="">Nuevas
+                                        Actividades</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Segunda Linea -->
+                    <div class="grid-stack-item" data-gs-min-width="4" data-gs-min-height="3" data-gs-width="6"
+                        data-gs-height="4" data-gs-max-width="12" data-gs-max-height="6">
+                        <div data-simplebar class="row m-1
+                                rounded
+                                modulo
+                                grid-stack-item-content">
+                            <div class="col-12">
+                                <canvas class="col-12" id="chart-consultas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-stack-item" data-gs-min-width="4" data-gs-min-height="3" data-gs-width="6"
+                        data-gs-height="4" data-gs-max-width="12" data-gs-max-height="6">
+                        <div data-simplebar class="row m-1
+                                rounded
+                                modulo
+                                grid-stack-item-content">
+                            <div class="col-12">
+                                <canvas class="col-12" id="chart-turnos"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tecera Linea -->
+                    <div class="grid-stack-item" data-gs-min-width="3" data-gs-min-height="2" data-gs-width="6"
+                        data-gs-height="6" data-gs-max-width="6" data-gs-max-height="8">
+                        <div data-simplebar class="modulo-tareas
+                                row m-1
+                                rounded
+                                grid-stack-item-content">
+                            <div class="col-12">
+                                <input type="text" id="input-task" class="input-task mt-2
+                                        mb-2" placeholder="Agregar Tarea">
+                                <div id="notcomp-box" class="notcomp">
+                                    <h3 class="m-3">Pendientes</h3>
+                                </div>
+
+                                <div id="comp-box" class="comp">
+                                    <h3 class="m-3">Terminadas</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-stack-item" data-gs-min-width="3" data-gs-min-height="2" data-gs-width="6"
+                        data-gs-height="6" data-gs-max-width="6" data-gs-max-height="8">
+                        <div data-simplebar="" id="modulo-eventos" class="modulo-eventos row
+                                m-1 rounded
+                                grid-stack-item-content d-flex
+                                align-items-center">
+
+                            <div class="event modulo rounded row
+                                    mt-2">
+                                <div class="event-date col-3
+                                        d-flex
+                                        align-items-center
+                                        justify-content-center">
+                                    <div class="d-block">
+                                        <h2 class="event-date-day
+                                                mb-0">25</h2>
+                                        <h5 class="event-date-month
+                                                mt-0">Ene</h5>
+                                    </div>
+                                </div>
+
+                                <div class="event-content row
+                                        col-9
+                                        d-block">
+                                    <div class="event-title
+                                            d-flex">
+                                        <h6 class="mt-2 ml-3">Turno</h6>
+                                    </div>
+                                    <div class="event-description">
+                                        <p class="ml-2 mt-2">Lorem
+                                            ipsum
+                                            dolor sit
+                                            amet consectetur
+                                            adipisicing
+                                            elit.
+                                            Dolores sit ratione
+                                            tenetur
+                                            repellat architecto
+                                            maxime
+                                            natus rem, illo
+                                            obcaecati
+                                            temporibus.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
                 </div>
 
-
-
-
-
-
-
-                <div class="collapse navbar-collapse " id="navbarSupportedContent">
-
-
-                    <ul class="navbar-nav   ml-auto ">
-                        <li class="nav-item dropdown  pr-5">
-                            <a class="nav-link " id="navbarDropdown" href="#" data-toggle="dropdown"><i
-                                    class="fas fa-plus mas"></i></a>
-                            <div class="dropdown-menu " id="desple">
-                                <a class="dropdown noti " href="#">Notificación 1</a>
-                                <a class="dropdown noti " href="#">Notificación 2</a>
-
-                                <a class="dropdown noti " href="#">Notificación 3</a>
-                            </div>
-                        </li>
-
-                        <li class="nav-item dropdown pr-5">
-                            <a class="nav-link" id="navbarDropdown" href="#" data-toggle="dropdown">
-                                <i class="fas fa-bell bell"></i></a>
-                            <div class="dropdown-menu" id="desple">
-                                <a class="dropdown noti" href="#">Notificación 1</a>
-                                <a class="dropdown noti" href="#">Notificación 2</a>
-
-                                <a class="dropdown noti" href="#">Notificación 3</a>
-                            </div>
-                        </li>
-
-                        <li class="nav-item dropdown ">
-                            <a class="nav-link usuario" id="navbarDropdown" href="#" data-toggle="dropdown"><img
-                                    class="user rounded-circle " src="img\usuario.jpg" alt=""></a>
-                            <div class="dropdown-menu" id="desple">
-                                <a class="dropdown noti" href="#">Perfil</a> <br>
-                                <a class="dropdown noti" href="#">Actividad</a> <br>
-                                <a class="dropdown noti" href="#">Configuración</a> <br>
-                                <a class="dropdown noti" href="#">Cerrar sesión</a>
-                            </div>
-
-                        </li>
-                    </ul>
-
-
-                </div>
             </div>
-        </nav>
-        <!--AQUI TERMINA EL NAVBAR-->
 
-        <!--AQUI COMIENZAN LAS SECCIONES-->
-        <!--ESCRIBIR EL CODIGO AQUI-->
-        <!--AQUI TERMINA LAS SECCIONES-->
+            <!-- Footer -->
+            <div class="footer d-flex justify-content-center
+                    align-self-center">
+                <img class="img-fluid" src="../src/img/HC-Font-Light.svg" alt="">
+            </div>
+
+        </div>
+
+
+        <div class="overlay"></div>
+
     </div>
-</div>
 
-<div class="overlay"></div>
 
-<!-- jQuery CDN - Slim version (=without AJAX) -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-<!-- Popper.JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
-    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-    crossorigin="anonymous"></script>
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
-    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-    crossorigin="anonymous"></script>
-<!-- jQuery Custom Scroller CDN -->
-<script
-    src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#sidebar").mCustomScrollbar({
-            theme: "minimal"
-        });
-
-        $('#dismiss, .overlay1').on('click', function () {
-            $('#sidebar').removeClass('active');
-            $('.overlay').removeClass('active');
-        });
-
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').addClass('active');
-            $('.overlay').addClass('active');
-            $('.collapse.in').toggleClass('in');
-            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-        });
-    });
-</script>
-
-  <script src="../src/adm.js"></script>
-
+    <script src="../src/seccionAdmin/elements.js"></script>
+    <script src="../src/seccionAdmin/functions.js"></script>
+    <script src="../src/adm.js"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js">
+        </script>
 </body>
 
+
 </html>
+

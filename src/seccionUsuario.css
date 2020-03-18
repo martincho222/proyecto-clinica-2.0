@@ -55,4 +55,7 @@
   .selecEsp{
     height: 300px !important;
 }
-
+.doc{
+  font-weight: 600;
+  font-size: larger;
+}
