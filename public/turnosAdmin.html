@@ -4,18 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="../src/turnosAdmin.css">
-
     <title>Document</title>
+    <link rel="stylesheet" href="../src/turnosAdmin.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/minty/bootstrap.min.css" rel="stylesheet" integrity="sha384-4HfFay3AYJnEmbgRzxYWJk/Ka5jIimhB/Fssk7NGT9Tj3rkEChpSxLK0btOGzf2I" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/2ed0c63b08.js" crossorigin="anonymous"></script>
+
 </head>
 
-<body>
-    <a href="http://localhost:8080/adm.html">Panel de administracion</a>
+<body class="body">
+    
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Gestion pacientes</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Inicio </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="adm.html">Turnos</a>
+        </li>
+        
+       
+      </ul>
+      
+    </div>
+   </nav>
+   <br>
     <div class="container">
         <div class="row">
             <div class="col-12 turnosAdmin">
-                <div class="card ">
+               <div class="card ">
                     <div class="card-header">
                         <h1>Lista de Turnos</h1>
                     </div>
@@ -23,12 +45,28 @@
                         <ul id="cuerpoTurnos" style="list-style:none">
                         </ul>
                     </div>
-                </div>
-            </div>
+                </div>   
         </div>
     </div>
-
+    <br>
+    <div class="container-fluid contenedorFooter">
+      <div class="footer-copyright text-center py-3">
+        <p>© 2020 Copyright: <a href="https://kalima.com "> Kalima.com</a</p> 
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
     <script src="../src/seccion turnos/agregarTurno.js"></script>
+    
 </body>
 
 </html>
