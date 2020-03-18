@@ -56,7 +56,6 @@ function acept(id, nombre, apellido, email) {
 
 
 
-
 function borrarPas(id) {
     idUser = id;
 }
