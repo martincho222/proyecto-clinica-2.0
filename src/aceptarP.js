@@ -53,6 +53,10 @@ mostrarPacAct();
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 52adb921dde1c944231743120027fcc859207ab5
 
 let idUser;
 
