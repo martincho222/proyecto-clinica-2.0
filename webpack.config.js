@@ -97,8 +97,7 @@ module.exports = {
       inject: true,
       chunks: ['adm'],
       filename: 'adm.html'
-
-
+      
     }),
     new HtmlWebpackPlugin({
       template:"./public/turnosAdmin.html",

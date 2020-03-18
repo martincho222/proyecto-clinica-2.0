@@ -5,7 +5,7 @@ import "./index.scss";
 
 let ulUsuarios = document.getElementById("ulUsuarios");
 
-let datosPaciente = () => {
+let datosPacientes = () => {
   ulUsuarios.innerHTML = "";
 
   ulUsuarios.innerHTML = `
