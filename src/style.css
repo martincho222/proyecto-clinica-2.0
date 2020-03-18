@@ -1,20 +1,12 @@
+html, body {
 
-html {
-  width: 100%;
-  height: 100%;
   overflow: hidden;
-}
-
-body {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-
   background-color: rgb(243, 243, 243) !important;
-
 }
 
-p {
+
+
+p{
   color: rgb(241, 241, 241);
 }
 
@@ -32,41 +24,36 @@ p {
   box-shadow: 0px 11px 29px 0px rgba(28, 31, 30, 0.3);
 }
 
-
 .header-brand {
   background-color: rgb(250, 250, 250) !important;
   box-shadow: inset 0px 0px 71px 9px rgba(41, 41, 41, 0.22);
-
 }
 
 .header-navbar {
-  background-color: rgb(65, 155, 129);
+  background-color:rgb(65, 155, 129);
   box-shadow: inset 0px 0px 71px 9px rgba(24, 24, 24, 0.22);
 }
 
-.inicio-navbar,
-h6,
-h1,
-h7 {
+.inicio-navbar, h6, h1, h7 {
   color: rgb(243, 243, 243) !important;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
-.inicio-navbar,
-h5 {
+.inicio-navbar, h5 {
   color: rgb(231, 231, 231) !important;
 }
 
 a {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
+
+
 
 .primer {
   float: left;
 }
-
 
 .segundoNav {
   text-align: center !important;
@@ -76,11 +63,12 @@ a {
   color: white !important;
 }
 
+
 .navIcon {
-  background-color: rgb(65, 155, 129);
-  /* fin de carrousel niki*/
-  /*inicio slide rochy*/
-  /* .gallery-item {
+  background-color:rgb(65, 155, 129);
+ /* fin de carrousel niki*/
+/*inicio slide rochy*/
+/* .gallery-item {
 	float: left;
 	width: 40%;
 	height: 0;
@@ -92,52 +80,35 @@ a {
 }
 
 .slider-container {
-  overflow: hidden;
+	overflow: hidden;
 }
 .slide-holder {
   width: 400%;
   position: relative;
   animation: scroller 10s infinite;
-  animation-direction: alternate;
-  /* animation-delay: 2s; */
-  animation-timing-function: ease-in-out;
-}
-.slide-holder .img {
-  width: 25%;
-  display: inline-block;
-  max-width: 25%;
-  /* margin-right: -2px; */
-}
+	animation-direction: alternate;
+	/* animation-delay: 2s; */
+	animation-timing-function: ease-in-out;}
+	.slide-holder .img {
+		width: 25%;
+		display: inline-block;
+		max-width: 25%;
+		/* margin-right: -2px; */
+  }
 
 @keyframes scroller {
-  0% {
-    transform: translateX(0);
-  }
-  10% {
-    transform: translateX(0);
-  }
-  30% {
-    transform: translateX(-25%);
-  }
-  40% {
-    transform: translateX(-25%);
-  }
-  60% {
-    transform: translateX(-50%);
-  }
-  70% {
-    transform: translateX(-50%);
-  }
-  90% {
-    transform: translateX(-75%);
-  }
-  100% {
-    transform: translateX(-75%);
-  }
+  0%   { transform: translateX(0); }
+  10%  { transform: translateX(0); }
+  30%  { transform: translateX(-25%); }
+  40%  { transform: translateX(-25%); }
+  60%  { transform: translateX(-50%); }
+  70%  { transform: translateX(-50%); }
+  90% { transform: translateX(-75%); }
+  100% { transform: translateX(-75%); }
 }
 
 .navIcon1 {
-  background-color: rgb(65, 155, 129);
+  background-color:rgb(65, 155, 129);
 }
 
 .nav-link {
@@ -154,7 +125,7 @@ a {
 
 .dropdown-item:hover {
   /* background: rgba(79, 260, 160, 0.5) !important; */
-  background-color: rgb(65, 155, 129);
+  background-color:rgb(65, 155, 129);
 }
 
 .carousel-inner {
@@ -177,6 +148,7 @@ a {
 }
 
 /*INICIO SERVICIOS*/
+
 .container{
   margin: 0px 0px !important;
   margin-top: 10px;
@@ -249,6 +221,7 @@ h2{
       margin: auto;
       width: 100%;
 }
+}
 
 /*FIN SERVICIOS*/
 
@@ -261,46 +234,31 @@ h2{
   color: white !important;
 }
 
+
+
 .footer {
-  background: #202020 !important;
-}
-
-
-.footer{
-  background: #202020 !important
-}
-
-.bgFooter {
    
     box-sizing: content-box;
     font-family: sans-serif;
     width: 100vw;
     background: #202020 !important;
-    color: antiquewhite !important;
+    color: antiquewhite;
 }
 
-.clearfix{
-  color: antiquewhite !important;
-}
-
-.clearfix {
-  color: antiquewhite !important;
-}
 
 .copyright {
-  background: #202020 !important;
     color: #101010 !important;
 }
 
-.footer-copyright {
+.footer-copyright{
   height: 40px;
   background: #202020 !important;
-    color: antiquewhite !important;
+    color: antiquewhite;
     
 }
 
 .copyright {
-  background-color: rgb(65, 155, 129);
+  background-color:rgb(65, 155, 129);
 }
 
 .carousel-inner {
@@ -308,7 +266,7 @@ h2{
 }
 
 .carrusel {
-  box-shadow: 0px 11px 29px 0px rgb(94, 60, 32, 0.5);
+  box-shadow: 0px 11px 29px 0px rgb(94, 60, 32,0.5);
 }
 
 .tarjUno {
@@ -355,53 +313,59 @@ h2{
   padding: 15px;
 }
 
+
+
 .primer {
   float: left;
+
 }
 
-.segundoNav {
+
+.segundoNav{
   text-align: center !important;
 }
 
-.navIcon {
-  background: #78c2ad !important;
+
+
+.navIcon{
+  background: #78C2AD !important;
 }
-.navIcon1 {
-  background: rgba(76, 247, 156, 0.5) !important;
+.navIcon1{
+  background:rgba(76, 247, 156, 0.5) !important;
 }
 
-.colorText {
-  color: #516fca !important;
-  background: #6cc3d5 !important;
+.colorText{
+  color: #516fca  !important;
+  background:  #6CC3D5  !important;
 }
 
-.colorText1 {
-  color: #516fca !important;
-  background: #6cc3d5 !important;
+.colorText1{
+  color:#516fca  !important;
+  background:  #6CC3D5 !important;
 }
 
-.nav-link {
+.nav-link{
   color: white !important;
 }
 
-.navIcon {
-  background: #78c2ad !important;
+.navIcon{
+  background:#78C2AD !important;
 }
-.navIcon1 {
-  background: #78c2ad !important;
-}
-
-.colorText {
-  color: #516fca !important;
-  background: rgb(109, 177, 157) !important;
+.navIcon1{
+  background:#78C2AD !important;
 }
 
-.colorText1 {
-  color: #516fca !important;
-  background: rgb(109, 177, 157) !important;
+.colorText{
+  color: #516fca  !important;
+  background:  rgb(109, 177, 157) !important;
 }
 
-.nav-link {
+.colorText1{
+  color:#516fca  !important;
+  background:  rgb(109, 177, 157) !important;
+
+}
+
+.nav-link{
   color: white !important;
-}
 }
