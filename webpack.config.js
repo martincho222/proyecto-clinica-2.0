@@ -141,6 +141,32 @@ new HtmlWebpackPlugin({
       filename: 'historial.html'
 
     }),
-   
+    new HtmlWebpackPlugin({
+      template: "./public/aceptarP.html",
+      inject: true,
+      chunks: ['aceptarP'],
+      filename: 'aceptarP.html'
+
+    }),
+new HtmlWebpackPlugin({
+      template: "./public/abmMedicos.html",
+      inject: true,
+      chunks: ['abmMedicos'],
+      filename: 'abmMedicos.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: "./public/institucional.html",
+      inject: true,
+      chunks: ['main'],
+      filename: 'institucional.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: "./public/codVid.html",
+      inject: true,
+      chunks: ['main'],
+      filename: 'codVid.html'
+    }),
+
+
   ]
 };

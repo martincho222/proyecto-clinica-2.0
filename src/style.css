@@ -218,24 +218,34 @@ a {
   
 }
 
-.footer {
+
+.footer{
+  background: #202020 !important
+}
+
+.bgFooter {
    
     box-sizing: content-box;
     font-family: sans-serif;
     width: 100vw;
     background: #202020 !important;
-    color: antiquewhite;
+    color: antiquewhite !important;
+}
+
+.clearfix{
+  color: antiquewhite !important;
 }
 
 
 .copyright {
+  background: #202020 !important;
     color: #101010 !important;
 }
 
 .footer-copyright{
   height: 40px;
   background: #202020 !important;
-    color: antiquewhite;
+    color: antiquewhite !important;
     
 }
 

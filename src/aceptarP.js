@@ -57,7 +57,6 @@ mostrarPacAct();
 
 
 
-
 function borrarPas(id) {
     idUser=id;
 }

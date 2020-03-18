@@ -91,7 +91,7 @@ function agregarHistoriaClinica(id, nombre, apellido, email) {
       historial.innerHTML = "";
     });
 }
-console.profileEnd('prueba')
+// console.profileEnd('prueba')
 //MODIFICAR HISTORIA CLINICA
 function modificarHistoriaClinica(id, nombre, apellido, email, historia) {
   if (historial !== "") {
