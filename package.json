@@ -39,7 +39,7 @@
     "hover.css": "^2.3.2",
     "iconate": "^0.3.1",
     "izimodal": "^1.5.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.19",
     "popper.js": "^1.16.1",
     "postcss-cli": "^7.1.0",
